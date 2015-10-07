@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		F6AA36C91BC5B9E0007F4F26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36C81BC5B9E0007F4F26 /* main.m */; };
 		F6AA36CC1BC5B9E0007F4F26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36CB1BC5B9E0007F4F26 /* AppDelegate.m */; };
-		F6AA36CF1BC5B9E0007F4F26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36CE1BC5B9E0007F4F26 /* ViewController.m */; };
 		F6AA36D21BC5B9E0007F4F26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6AA36D01BC5B9E0007F4F26 /* Main.storyboard */; };
 		F6AA36D51BC5B9E0007F4F26 /* Jhana.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36D31BC5B9E0007F4F26 /* Jhana.xcdatamodeld */; };
 		F6AA36D71BC5B9E0007F4F26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6AA36D61BC5B9E0007F4F26 /* Assets.xcassets */; };
 		F6AA36DA1BC5B9E0007F4F26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6AA36D81BC5B9E0007F4F26 /* LaunchScreen.storyboard */; };
 		F6AA36E51BC5B9E0007F4F26 /* JhanaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36E41BC5B9E0007F4F26 /* JhanaTests.m */; };
 		F6AA36F01BC5B9E0007F4F26 /* JhanaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36EF1BC5B9E0007F4F26 /* JhanaUITests.m */; };
+		F6AA36FF1BC5BA69007F4F26 /* JHListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36FE1BC5BA69007F4F26 /* JHListViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +40,6 @@
 		F6AA36C81BC5B9E0007F4F26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F6AA36CA1BC5B9E0007F4F26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F6AA36CB1BC5B9E0007F4F26 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F6AA36CD1BC5B9E0007F4F26 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F6AA36CE1BC5B9E0007F4F26 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F6AA36D11BC5B9E0007F4F26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6AA36D41BC5B9E0007F4F26 /* Jhana.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jhana.xcdatamodel; sourceTree = "<group>"; };
 		F6AA36D61BC5B9E0007F4F26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +51,8 @@
 		F6AA36EB1BC5B9E0007F4F26 /* JhanaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JhanaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6AA36EF1BC5B9E0007F4F26 /* JhanaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JhanaUITests.m; sourceTree = "<group>"; };
 		F6AA36F11BC5B9E0007F4F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6AA36FD1BC5BA69007F4F26 /* JHListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHListViewController.h; sourceTree = "<group>"; };
+		F6AA36FE1BC5BA69007F4F26 /* JHListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,14 +105,14 @@
 			children = (
 				F6AA36CA1BC5B9E0007F4F26 /* AppDelegate.h */,
 				F6AA36CB1BC5B9E0007F4F26 /* AppDelegate.m */,
-				F6AA36CD1BC5B9E0007F4F26 /* ViewController.h */,
-				F6AA36CE1BC5B9E0007F4F26 /* ViewController.m */,
 				F6AA36D01BC5B9E0007F4F26 /* Main.storyboard */,
 				F6AA36D61BC5B9E0007F4F26 /* Assets.xcassets */,
 				F6AA36D81BC5B9E0007F4F26 /* LaunchScreen.storyboard */,
 				F6AA36DB1BC5B9E0007F4F26 /* Info.plist */,
 				F6AA36D31BC5B9E0007F4F26 /* Jhana.xcdatamodeld */,
 				F6AA36C71BC5B9E0007F4F26 /* Supporting Files */,
+				F6AA36FD1BC5BA69007F4F26 /* JHListViewController.h */,
+				F6AA36FE1BC5BA69007F4F26 /* JHListViewController.m */,
 			);
 			path = Jhana;
 			sourceTree = "<group>";
@@ -274,8 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6AA36D51BC5B9E0007F4F26 /* Jhana.xcdatamodeld in Sources */,
-				F6AA36CF1BC5B9E0007F4F26 /* ViewController.m in Sources */,
 				F6AA36CC1BC5B9E0007F4F26 /* AppDelegate.m in Sources */,
+				F6AA36FF1BC5BA69007F4F26 /* JHListViewController.m in Sources */,
 				F6AA36C91BC5B9E0007F4F26 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
