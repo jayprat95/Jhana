@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>BFPaperButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Canvas.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UIColor+BFPaperColors.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9CB655C17778D1A4132A5D2665A82981</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BA4C271D6BF855A9E545C850A657E59C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E14074BF805499AB3BDCEEB56D6A5C52</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F43885B233F4B9CCC43E1736A5087DD7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

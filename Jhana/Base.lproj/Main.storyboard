@@ -65,7 +65,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="BQt-p4-xoz">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="co5-QC-mmY" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="co5-QC-mmY" customClass="TPTabBarController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="CNN-fg-Ccr">
                         <autoresizingMask key="autoresizingMask"/>

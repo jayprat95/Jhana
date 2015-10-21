@@ -1,0 +1,16 @@
+PODS:
+  - BFPaperButton (2.0.18):
+    - UIColor+BFPaperColors
+  - Canvas (0.1.2)
+  - UIColor+BFPaperColors (1.7.1)
+
+DEPENDENCIES:
+  - BFPaperButton (~> 2.0.18)
+  - Canvas
+
+SPEC CHECKSUMS:
+  BFPaperButton: 16b3ec9c2964d24f89f623a4113321d3f003ed60
+  Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
+  UIColor+BFPaperColors: b1efa4320e2f56c4b14f73232faf967ba0e5b4a2
+
+COCOAPODS: 0.38.2
