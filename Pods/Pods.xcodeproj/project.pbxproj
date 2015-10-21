@@ -8,145 +8,181 @@
 
 /* Begin PBXBuildFile section */
 		0C1CB37613966B323D6CDCC62F192EA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4283CA0D399F2A6C6CB7A7CCE8526C15 /* Foundation.framework */; };
-		0E32FDC7D4D503175E6EE77FC023FAB9 /* UITextField+TCCustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = A07B9AF38D0BE934146921C8297B1EB3 /* UITextField+TCCustomFont.h */; };
-		1A465134870C1C12EB9F1B68ECC9F200 /* CSAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E099F548278C39AB9883B48068C70C /* CSAnimationView.m */; };
-		1C1BCAA6F13E99ACA934A88D64849BDA /* UIButton+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B114EE42C4ED0320E82BB61D6E55F0 /* UIButton+TCCustomFont.m */; };
-		2609EB0284437C506FDD7CCC4DCB97F6 /* UILabel+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D03C550BF2282C097B8FCAC23004E /* UILabel+TCCustomFont.m */; };
-		2E8C8E015793DAFE267B1A75A6638924 /* CSNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 137B11520D3DD436CB1729DFA9531A67 /* CSNavigationController.h */; };
-		307450B965A3CCD4F7DD944049525B71 /* BFPaperButton.h in Headers */ = {isa = PBXBuildFile; fileRef = B52EFE23E557636EC500D9B428D6C3F9 /* BFPaperButton.h */; };
-		3C485845D609844CDFED982B79E6847F /* UILabel+TCCustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC1628EC30D2081A62CF5E64095045A /* UILabel+TCCustomFont.h */; };
-		4AA94F8F77682CB5794F7FAD956C2306 /* UIButton+TCCustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = C5A32321DF85EC8246685686C69A09D0 /* UIButton+TCCustomFont.h */; };
-		563099D975F5CD32E78CCD9F280000CE /* Canvas.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D6604F30CBBA6F50B9803E80D44D20A /* Canvas.h */; };
-		5E1E12D8323DA6A3D1D12A18E3D86247 /* Canvas-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F400A45E4AAF5E284D9869F331266647 /* Canvas-dummy.m */; };
+		1A9C72BCE9DA0105D4174574C134FE73 /* CSBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = A53789B2DB65E4D514D3E0980741B191 /* CSBlurView.h */; };
+		1C78960B4E966F0B614F6D804B1FB90F /* UITextField+PlaceholderColor.h in Headers */ = {isa = PBXBuildFile; fileRef = FB3BC7839E16E20C9C79B9B9695A19CD /* UITextField+PlaceholderColor.h */; };
+		1D18E350169D1808E311909CCE763187 /* CSNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = F4F95CDA0E8A1ECBB8F5C0031BBD320D /* CSNavigationController.h */; };
+		20D83484A8EA91372556A447E751E869 /* UITextField+PlaceholderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 085F97D7C30ADFDAB6499B9921CF8BDA /* UITextField+PlaceholderColor.m */; };
+		275D7CCEABA3A5F3B0E01BBB6AA3B4D9 /* UIButton+TCCustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 649C081971EFBD2B3C7A2838AE96CD3D /* UIButton+TCCustomFont.h */; };
+		2B3526E53621AFBB0F2D8161A4EEDF93 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A92660C725D373BDDE89B95B1433758 /* Empty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		45BBB9E3E77D030E5CEB7EF7B52C6809 /* UITextView+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1F73A69D79A1345C2C4D0BEEF0B477 /* UITextView+TCCustomFont.m */; };
+		54E5F845EADDEBBEF896AE39CA8430B6 /* CSAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 99DC69DB1F973FB185C56ED5D4A1D0D8 /* CSAnimation.h */; };
+		57EC646DA5EB417B287D4EFADE619853 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4283CA0D399F2A6C6CB7A7CCE8526C15 /* Foundation.framework */; };
+		5B45CF256E765CDDD4186D8D34322B11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4283CA0D399F2A6C6CB7A7CCE8526C15 /* Foundation.framework */; };
+		5B76FE852565E4B8E913BA1C33CAE4AD /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5698EBB5ACDE035F1710A06963C02420 /* BFPaperButton.m */; };
+		5E28A7E3AC83A680A4FE618789FB2415 /* UITextField+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4DDEFAF6DEA3FDF8DDC4615F02EBED /* UITextField+TCCustomFont.m */; };
+		638BA38A3AF89BF2237F18F1C1E2130C /* UINavigationBar+TCCustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = FEF3E2E9C09A7AAC064CDBE6C073357A /* UINavigationBar+TCCustomFont.h */; };
+		64DD252D27CA5FF9BB8B31327BCF4007 /* CSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF1F35D5C648E46E7E69C2D57131670 /* CSBlurView.m */; };
+		6BCD77BDF3FDC42B72D51846C2EAA050 /* UINavigationBar+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = D21FA3DFFC03133F07AECC71CCA52286 /* UINavigationBar+TCCustomFont.m */; };
+		6D1DDA4C39FC114BBDC35A9FDE8BD400 /* UIButton+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB0651FF140B35E262EF4E533BC0DE1 /* UIButton+TCCustomFont.m */; };
 		6E03EDBD6B2582CF213C0F1472960AC5 /* UIColor+BFPaperColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D95B1810F81CC48789415060DA687CC /* UIColor+BFPaperColors.h */; };
-		7BE9ACE7EDA57AD840CBB9941DCAD212 /* CSAnimationView.h in Headers */ = {isa = PBXBuildFile; fileRef = ACA714AE3042AEA822BBFB82A7630639 /* CSAnimationView.h */; };
-		8582379871E3C39248DDC39FF4381B66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4283CA0D399F2A6C6CB7A7CCE8526C15 /* Foundation.framework */; };
+		70F2BDB65D1612608DA2DC32962BD6D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7378B533CA8F54BAFCC889DD356C9D65 /* UIKit.framework */; };
+		7233E28EFCB163B42FAC0CF5CEA61ACA /* UILabel+TCCustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = C80AAA3BC152F38FADE82D7687F1A681 /* UILabel+TCCustomFont.h */; };
+		81C2BFDA5B9E2BD5717B8181B20D1BBF /* Canvas-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F273B26F9BB702C50736CF19E011CB5 /* Canvas-dummy.m */; };
 		8847962A8A774E4DF6EE579DBB1E20A8 /* UIColor+BFPaperColors.m in Sources */ = {isa = PBXBuildFile; fileRef = E9778394A6C4C280F81EC67FE1B270B6 /* UIColor+BFPaperColors.m */; };
-		9AAAFB57AF4EBAF7BFE4B256C21CE3CA /* UITextField+PlaceholderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BCC4E8084E2767C55C1A795DE0C3C4 /* UITextField+PlaceholderColor.m */; };
-		9C13BDC8C18C4FCE00057C4ADAC90534 /* BFPaperButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A9ABB94EFCA778BA9C3EF42F0DF0EBE8 /* BFPaperButton-dummy.m */; };
-		9C160CA188CDE4A4AB41620858572C4C /* CSBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = ADCF933EF21A043CE04182FEF12CB03A /* CSBlurView.h */; };
-		A6C49CBD6C5F6FB210B4ED57584BB7B9 /* CSAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FA37B313AF7F55C95B554AE5D28043 /* CSAnimation.m */; };
-		A9C3E53CCC507A20B847F25EBFE5F3D4 /* CSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 056DBB4539A54380C4CDF4481861174D /* CSNavigationController.m */; };
-		B2140C8265E6D1E5DD3A8A3B9E37DD54 /* UINavigationBar+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9454D84B973D91C80C09BE38C12C80 /* UINavigationBar+TCCustomFont.m */; };
-		B769DDF9066566CFD3DCFC67DB74389E /* UITextField+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D23CE68655CB259340481CEE9E4707C /* UITextField+TCCustomFont.m */; };
-		BB0D3CCA7EB98BE6AC43EFFDFBF9A54D /* UITextView+TCCustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = A4E7D54CF7C6D60B4E52B7C2716BFD8E /* UITextView+TCCustomFont.h */; };
-		BB3A8270313A2212D6A496D60FA4ED73 /* CSAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 921868C487DCAB4F416EE17D525C44E2 /* CSAnimation.h */; };
+		8D59A59843BD6DBD25BA472A3359227F /* CSAnimationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 817BAF6423D822B6481F2B7578ACE046 /* CSAnimationView.h */; };
+		95BFB2B377269669FBF0A36D0D3A2591 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ADE64CABC65D75320E74CB45307469 /* Security.framework */; };
+		A6770723D32EF7728182899F6CDD9131 /* CSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227A751645C6B7EDB0527B4641CEA053 /* CSNavigationController.m */; };
+		B5CFBC672AE0616029CF2F70D2737D08 /* BFPaperButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E09B377200B00EF0ECFD605352CF2132 /* BFPaperButton.h */; };
+		BA4AFD11AFE7826EE0FF1CE2A487280D /* UILabel+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D73CF0B1DDD90256868E7E4009E8FC7 /* UILabel+TCCustomFont.m */; };
+		BB2F15A750EE22EEF87A7AACE67760F7 /* Flurry.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DDAB97BCEAABD63FE7B0E6B234011C8 /* Flurry.h */; };
+		BDD9C5E981CE0DE46C601C25A2EF2ECC /* CSAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C16E2FBE55862649E8CA333E391469A /* CSAnimation.m */; };
 		BE7AADE26AC681E19FC8C36C0D306EDB /* UIColor+BFPaperColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 581D3DB5C367DB9FCB35180A4B4B2389 /* UIColor+BFPaperColors-dummy.m */; };
-		C2F79969F420F56D92EE3E579091000B /* UINavigationBar+TCCustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 923877A47426CF7CBE4BAF799BFFD9ED /* UINavigationBar+TCCustomFont.h */; };
-		D44DF4CFC977170939722D76390A231F /* UITextView+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 85544EF1285C847A0A8813A1C154C13E /* UITextView+TCCustomFont.m */; };
-		D75B51304F6B7223A3D1A4F8EEE7A807 /* UITextField+PlaceholderColor.h in Headers */ = {isa = PBXBuildFile; fileRef = B27BFA3C22A27A8C7F6C301B66A5D010 /* UITextField+PlaceholderColor.h */; };
-		E11946E3E433841B7E7DE88AE5C3BA95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4283CA0D399F2A6C6CB7A7CCE8526C15 /* Foundation.framework */; };
-		EA49E8FF01E20FAC1FAAA1504F735575 /* CSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = B588BFCB9B5F58CD04D27844FDB76C19 /* CSBlurView.m */; };
-		F044C95AA2DDD8B1179023924F6645E7 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B690EDC3470ADD6A33972AC8DF17E2 /* Pods-dummy.m */; };
-		F51C023D42FB5E36E2447D461E183188 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4283CA0D399F2A6C6CB7A7CCE8526C15 /* Foundation.framework */; };
-		FDD2AF08798896A0A56CD290BF1D60DE /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D39F79F2B56EB0AF32DB6F0278092B /* BFPaperButton.m */; };
+		C3F72C5D59546C3389202AA7F5E55CC3 /* CSAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 876082D056E9D3E385A6AF0A1E7DF066 /* CSAnimationView.m */; };
+		CA4EA47D36CE907A3CB2E5B0612B5AE8 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A601D90EE961D91192B12944430C8B /* Pods-dummy.m */; };
+		CD9CB03B8C6BFEA81A7176AF05D1F096 /* Flurry-iOS-SDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0D7F27E8BC5751AB0EB1CE8BD4099E /* Flurry-iOS-SDK-dummy.m */; };
+		CEA153295CD97BF9DDBBEDC6023337D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4283CA0D399F2A6C6CB7A7CCE8526C15 /* Foundation.framework */; };
+		DCA9484C6DA3CA1295C599E755F088E1 /* UITextView+TCCustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = F33BA524C7CB4D4D37C85C6C93F09370 /* UITextView+TCCustomFont.h */; };
+		DE62FB868403A1411A5ADC46A8DE751F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4283CA0D399F2A6C6CB7A7CCE8526C15 /* Foundation.framework */; };
+		E73497A2F001FADD65769FB079EB8562 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252F523705841259C06A26B42A98BCC2 /* SystemConfiguration.framework */; };
+		E74BB800D5F952EA8EEF9B9AB3B9BCB0 /* Canvas.h in Headers */ = {isa = PBXBuildFile; fileRef = EAFE229AD298620C5DFCD466B4C62F50 /* Canvas.h */; };
+		E9C65384B831685F8D3588C8FFEE6813 /* BFPaperButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C40B64101A6AC7647E7DA3E5ACBB2ADC /* BFPaperButton-dummy.m */; };
+		F9AED87C4F46D1FB2F771742825EC7A2 /* UITextField+TCCustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 378A70441A9CBBE865EAB5DF5E99EBA0 /* UITextField+TCCustomFont.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0349442875714C971711A376080400C9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9CB655C17778D1A4132A5D2665A82981;
-			remoteInfo = BFPaperButton;
-		};
-		3B3489B755CA2AD834B04E2C8866BAE6 /* PBXContainerItemProxy */ = {
+		05917DC9F81AB0BFC3788619941B6901 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F43885B233F4B9CCC43E1736A5087DD7;
 			remoteInfo = "UIColor+BFPaperColors";
 		};
-		88388D372E6B4B65273A32367D732138 /* PBXContainerItemProxy */ = {
+		517076A06A2A6D75575411CCB577910B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F43885B233F4B9CCC43E1736A5087DD7;
-			remoteInfo = "UIColor+BFPaperColors";
-		};
-		9266F204C9ABFC24C39EB4345483C529 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BA4C271D6BF855A9E545C850A657E59C;
+			remoteGlobalIDString = 4E361590FBDE5D53A34E86A0C8B706BA;
 			remoteInfo = Canvas;
+		};
+		90C06B2235321B3CCEF2301FBB5EDE40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F43885B233F4B9CCC43E1736A5087DD7;
+			remoteInfo = "UIColor+BFPaperColors";
+		};
+		9DACB9E39E01C6BB17598E1042158837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2D1E6890757313A64C46DA7C514E1BB;
+			remoteInfo = "Flurry-iOS-SDK";
+		};
+		E21F42EE866C4032AB9251F25B3B2DFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE7FCA5AD3B74502AD191C8C6D97CA2A;
+			remoteInfo = BFPaperButton;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		056DBB4539A54380C4CDF4481861174D /* CSNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSNavigationController.m; path = CanvasLibrary/CSNavigationController.m; sourceTree = "<group>"; };
-		0A184088665AB6BFF5970BFF461D048C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		137B11520D3DD436CB1729DFA9531A67 /* CSNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSNavigationController.h; path = CanvasLibrary/CSNavigationController.h; sourceTree = "<group>"; };
+		0009C6967452FF23F5682CF7FE3263E6 /* Flurry-iOS-SDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Flurry-iOS-SDK-prefix.pch"; sourceTree = "<group>"; };
+		085F97D7C30ADFDAB6499B9921CF8BDA /* UITextField+PlaceholderColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+PlaceholderColor.m"; path = "CanvasLibrary/UITextField+PlaceholderColor.m"; sourceTree = "<group>"; };
+		0A4FB9F42D10881530892E42BC12E2CA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
 		15A529C27057E4A57D259CBC6E6CE49C /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2B01985C75D30D29FEC744527BC03C9F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		2B9454D84B973D91C80C09BE38C12C80 /* UINavigationBar+TCCustomFont.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+TCCustomFont.m"; path = "CanvasLibrary/UINavigationBar+TCCustomFont.m"; sourceTree = "<group>"; };
-		3350E88671A8DAD321918A2EBE94D8C0 /* BFPaperButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BFPaperButton-prefix.pch"; sourceTree = "<group>"; };
-		35D39F79F2B56EB0AF32DB6F0278092B /* BFPaperButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFPaperButton.m; path = Classes/BFPaperButton.m; sourceTree = "<group>"; };
-		3D6604F30CBBA6F50B9803E80D44D20A /* Canvas.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Canvas.h; path = CanvasLibrary/Canvas.h; sourceTree = "<group>"; };
+		187A98A2AC6073CD92BD833E1BE87E04 /* Canvas.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Canvas.xcconfig; sourceTree = "<group>"; };
+		1C1CF7FEC6BA51AE0EB3B1B3D7F614AD /* libFlurry_7.2.1.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libFlurry_7.2.1.a; path = Flurry/libFlurry_7.2.1.a; sourceTree = "<group>"; };
+		1D73CF0B1DDD90256868E7E4009E8FC7 /* UILabel+TCCustomFont.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+TCCustomFont.m"; path = "CanvasLibrary/UILabel+TCCustomFont.m"; sourceTree = "<group>"; };
+		219B457CDD1D70213EB4E8440AD3D8A4 /* libCanvas.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCanvas.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		21D42C1F7200084E5030DDC5FC31D859 /* UIColor+BFPaperColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+BFPaperColors-prefix.pch"; sourceTree = "<group>"; };
+		227A751645C6B7EDB0527B4641CEA053 /* CSNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSNavigationController.m; path = CanvasLibrary/CSNavigationController.m; sourceTree = "<group>"; };
+		252F523705841259C06A26B42A98BCC2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		33ADE64CABC65D75320E74CB45307469 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		378A70441A9CBBE865EAB5DF5E99EBA0 /* UITextField+TCCustomFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+TCCustomFont.h"; path = "CanvasLibrary/UITextField+TCCustomFont.h"; sourceTree = "<group>"; };
+		3C16E2FBE55862649E8CA333E391469A /* CSAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSAnimation.m; path = CanvasLibrary/CSAnimation.m; sourceTree = "<group>"; };
+		3F273B26F9BB702C50736CF19E011CB5 /* Canvas-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Canvas-dummy.m"; sourceTree = "<group>"; };
+		41A601D90EE961D91192B12944430C8B /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
 		4283CA0D399F2A6C6CB7A7CCE8526C15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		43E099F548278C39AB9883B48068C70C /* CSAnimationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSAnimationView.m; path = CanvasLibrary/CSAnimationView.m; sourceTree = "<group>"; };
-		4B846B669F26C2BA06FB88953B5BB70C /* libCanvas.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCanvas.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CC1628EC30D2081A62CF5E64095045A /* UILabel+TCCustomFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+TCCustomFont.h"; path = "CanvasLibrary/UILabel+TCCustomFont.h"; sourceTree = "<group>"; };
-		56B690EDC3470ADD6A33972AC8DF17E2 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		52A998EB3300084C56885CA831C6B0C2 /* BFPaperButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BFPaperButton.xcconfig; sourceTree = "<group>"; };
+		5698EBB5ACDE035F1710A06963C02420 /* BFPaperButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFPaperButton.m; path = Classes/BFPaperButton.m; sourceTree = "<group>"; };
 		581D3DB5C367DB9FCB35180A4B4B2389 /* UIColor+BFPaperColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BFPaperColors-dummy.m"; sourceTree = "<group>"; };
-		5CB548E58C50E9B48B70B2E6D2044414 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FF763DFD64CBF1FD0222CE7A5670517 /* Canvas.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Canvas.xcconfig; sourceTree = "<group>"; };
+		58E321C52321A8044ED529FC9B3D1310 /* libFlurry-iOS-SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libFlurry-iOS-SDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CCFBD60D1AA665F3E9F83E0CDADEE45 /* Canvas-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Canvas-prefix.pch"; sourceTree = "<group>"; };
+		63F5207533F1F5741B46B95A45289370 /* BFPaperButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BFPaperButton-prefix.pch"; sourceTree = "<group>"; };
 		641AE05DD55E5E6AC1590CD7B4A18F97 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		6566BCE6A798D33865335A68917EE00C /* BFPaperButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BFPaperButton.xcconfig; sourceTree = "<group>"; };
-		68FA37B313AF7F55C95B554AE5D28043 /* CSAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSAnimation.m; path = CanvasLibrary/CSAnimation.m; sourceTree = "<group>"; };
-		6D23CE68655CB259340481CEE9E4707C /* UITextField+TCCustomFont.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+TCCustomFont.m"; path = "CanvasLibrary/UITextField+TCCustomFont.m"; sourceTree = "<group>"; };
-		720C31EC565F9D4CB2825E5548668476 /* Canvas-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Canvas-prefix.pch"; sourceTree = "<group>"; };
-		85544EF1285C847A0A8813A1C154C13E /* UITextView+TCCustomFont.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextView+TCCustomFont.m"; path = "CanvasLibrary/UITextView+TCCustomFont.m"; sourceTree = "<group>"; };
-		859E0F5D02508379BD34CC4BC8B52853 /* libBFPaperButton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBFPaperButton.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		921868C487DCAB4F416EE17D525C44E2 /* CSAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSAnimation.h; path = CanvasLibrary/CSAnimation.h; sourceTree = "<group>"; };
-		923877A47426CF7CBE4BAF799BFFD9ED /* UINavigationBar+TCCustomFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+TCCustomFont.h"; path = "CanvasLibrary/UINavigationBar+TCCustomFont.h"; sourceTree = "<group>"; };
+		649C081971EFBD2B3C7A2838AE96CD3D /* UIButton+TCCustomFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+TCCustomFont.h"; path = "CanvasLibrary/UIButton+TCCustomFont.h"; sourceTree = "<group>"; };
+		6C30F521EFC1038E464C3EEAA2D1778A /* Flurry-iOS-SDK-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Flurry-iOS-SDK-Private.xcconfig"; sourceTree = "<group>"; };
+		7378B533CA8F54BAFCC889DD356C9D65 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7D088C35304F30AC65417EEF9E420AE6 /* libBFPaperButton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBFPaperButton.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		817BAF6423D822B6481F2B7578ACE046 /* CSAnimationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSAnimationView.h; path = CanvasLibrary/CSAnimationView.h; sourceTree = "<group>"; };
+		8629821324B1B342C1C3EDBF0CF82DCE /* UIColor+BFPaperColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIColor+BFPaperColors.xcconfig"; sourceTree = "<group>"; };
+		876082D056E9D3E385A6AF0A1E7DF066 /* CSAnimationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSAnimationView.m; path = CanvasLibrary/CSAnimationView.m; sourceTree = "<group>"; };
+		88B05DDD7252B364B6D216A7EE9C4019 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DDAB97BCEAABD63FE7B0E6B234011C8 /* Flurry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Flurry.h; path = Flurry/Flurry.h; sourceTree = "<group>"; };
+		99DC69DB1F973FB185C56ED5D4A1D0D8 /* CSAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSAnimation.h; path = CanvasLibrary/CSAnimation.h; sourceTree = "<group>"; };
+		9A92660C725D373BDDE89B95B1433758 /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Empty.m; path = Flurry/Empty.m; sourceTree = "<group>"; };
+		9BF1F35D5C648E46E7E69C2D57131670 /* CSBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSBlurView.m; path = CanvasLibrary/CSBlurView.m; sourceTree = "<group>"; };
 		9D95B1810F81CC48789415060DA687CC /* UIColor+BFPaperColors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+BFPaperColors.h"; path = "UIColor+BFPaperColors/UIColor+BFPaperColors.h"; sourceTree = "<group>"; };
-		A07B9AF38D0BE934146921C8297B1EB3 /* UITextField+TCCustomFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+TCCustomFont.h"; path = "CanvasLibrary/UITextField+TCCustomFont.h"; sourceTree = "<group>"; };
-		A33D03C550BF2282C097B8FCAC23004E /* UILabel+TCCustomFont.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+TCCustomFont.m"; path = "CanvasLibrary/UILabel+TCCustomFont.m"; sourceTree = "<group>"; };
-		A4E7D54CF7C6D60B4E52B7C2716BFD8E /* UITextView+TCCustomFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextView+TCCustomFont.h"; path = "CanvasLibrary/UITextView+TCCustomFont.h"; sourceTree = "<group>"; };
-		A4ED7009374D83DB2E2B899C994A3821 /* BFPaperButton-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "BFPaperButton-Private.xcconfig"; sourceTree = "<group>"; };
-		A9ABB94EFCA778BA9C3EF42F0DF0EBE8 /* BFPaperButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BFPaperButton-dummy.m"; sourceTree = "<group>"; };
-		ACA714AE3042AEA822BBFB82A7630639 /* CSAnimationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSAnimationView.h; path = CanvasLibrary/CSAnimationView.h; sourceTree = "<group>"; };
-		ADCF933EF21A043CE04182FEF12CB03A /* CSBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSBlurView.h; path = CanvasLibrary/CSBlurView.h; sourceTree = "<group>"; };
+		A53789B2DB65E4D514D3E0980741B191 /* CSBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSBlurView.h; path = CanvasLibrary/CSBlurView.h; sourceTree = "<group>"; };
+		AEF66CDE9555D10EE5BD6003EDB0EC63 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
 		B0F755FD98B717977E4405EE95A9721D /* libUIColor+BFPaperColors.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUIColor+BFPaperColors.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B27BFA3C22A27A8C7F6C301B66A5D010 /* UITextField+PlaceholderColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+PlaceholderColor.h"; path = "CanvasLibrary/UITextField+PlaceholderColor.h"; sourceTree = "<group>"; };
-		B3F95A75FE5FA5F10875364B8E143EE8 /* UIColor+BFPaperColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIColor+BFPaperColors.xcconfig"; sourceTree = "<group>"; };
-		B52EFE23E557636EC500D9B428D6C3F9 /* BFPaperButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFPaperButton.h; path = Classes/BFPaperButton.h; sourceTree = "<group>"; };
-		B588BFCB9B5F58CD04D27844FDB76C19 /* CSBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSBlurView.m; path = CanvasLibrary/CSBlurView.m; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BAC3E593F906470153F314DDC1D4C614 /* Flurry-iOS-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Flurry-iOS-SDK.xcconfig"; sourceTree = "<group>"; };
+		BEB0651FF140B35E262EF4E533BC0DE1 /* UIButton+TCCustomFont.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+TCCustomFont.m"; path = "CanvasLibrary/UIButton+TCCustomFont.m"; sourceTree = "<group>"; };
 		BF59BC15D23E1E1912C8F334E7236813 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		C5A32321DF85EC8246685686C69A09D0 /* UIButton+TCCustomFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+TCCustomFont.h"; path = "CanvasLibrary/UIButton+TCCustomFont.h"; sourceTree = "<group>"; };
+		C40B64101A6AC7647E7DA3E5ACBB2ADC /* BFPaperButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BFPaperButton-dummy.m"; sourceTree = "<group>"; };
+		C6F3F7C2F1800063992A5B5A97490D71 /* Canvas-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Canvas-Private.xcconfig"; sourceTree = "<group>"; };
+		C80AAA3BC152F38FADE82D7687F1A681 /* UILabel+TCCustomFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+TCCustomFont.h"; path = "CanvasLibrary/UILabel+TCCustomFont.h"; sourceTree = "<group>"; };
 		CC2328C2FC7B709F6A02DD5CCFD63D7F /* UIColor+BFPaperColors-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIColor+BFPaperColors-Private.xcconfig"; sourceTree = "<group>"; };
-		DFE0F8E39938B87C095DE6D46D821338 /* Canvas-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Canvas-Private.xcconfig"; sourceTree = "<group>"; };
-		E1BCC4E8084E2767C55C1A795DE0C3C4 /* UITextField+PlaceholderColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+PlaceholderColor.m"; path = "CanvasLibrary/UITextField+PlaceholderColor.m"; sourceTree = "<group>"; };
-		E487C201C362989662A831C92915E445 /* UIColor+BFPaperColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+BFPaperColors-prefix.pch"; sourceTree = "<group>"; };
-		E5B114EE42C4ED0320E82BB61D6E55F0 /* UIButton+TCCustomFont.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+TCCustomFont.m"; path = "CanvasLibrary/UIButton+TCCustomFont.m"; sourceTree = "<group>"; };
+		D21FA3DFFC03133F07AECC71CCA52286 /* UINavigationBar+TCCustomFont.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+TCCustomFont.m"; path = "CanvasLibrary/UINavigationBar+TCCustomFont.m"; sourceTree = "<group>"; };
+		DBFFF2066F3A1044A34E3DD03DB7062F /* BFPaperButton-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "BFPaperButton-Private.xcconfig"; sourceTree = "<group>"; };
+		DC1F73A69D79A1345C2C4D0BEEF0B477 /* UITextView+TCCustomFont.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextView+TCCustomFont.m"; path = "CanvasLibrary/UITextView+TCCustomFont.m"; sourceTree = "<group>"; };
+		E09B377200B00EF0ECFD605352CF2132 /* BFPaperButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFPaperButton.h; path = Classes/BFPaperButton.h; sourceTree = "<group>"; };
 		E9778394A6C4C280F81EC67FE1B270B6 /* UIColor+BFPaperColors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+BFPaperColors.m"; path = "UIColor+BFPaperColors/UIColor+BFPaperColors.m"; sourceTree = "<group>"; };
-		F400A45E4AAF5E284D9869F331266647 /* Canvas-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Canvas-dummy.m"; sourceTree = "<group>"; };
+		EAFE229AD298620C5DFCD466B4C62F50 /* Canvas.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Canvas.h; path = CanvasLibrary/Canvas.h; sourceTree = "<group>"; };
+		EE4DDEFAF6DEA3FDF8DDC4615F02EBED /* UITextField+TCCustomFont.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+TCCustomFont.m"; path = "CanvasLibrary/UITextField+TCCustomFont.m"; sourceTree = "<group>"; };
+		F33BA524C7CB4D4D37C85C6C93F09370 /* UITextView+TCCustomFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextView+TCCustomFont.h"; path = "CanvasLibrary/UITextView+TCCustomFont.h"; sourceTree = "<group>"; };
+		F4F95CDA0E8A1ECBB8F5C0031BBD320D /* CSNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSNavigationController.h; path = CanvasLibrary/CSNavigationController.h; sourceTree = "<group>"; };
+		FB0D7F27E8BC5751AB0EB1CE8BD4099E /* Flurry-iOS-SDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Flurry-iOS-SDK-dummy.m"; sourceTree = "<group>"; };
+		FB3BC7839E16E20C9C79B9B9695A19CD /* UITextField+PlaceholderColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+PlaceholderColor.h"; path = "CanvasLibrary/UITextField+PlaceholderColor.h"; sourceTree = "<group>"; };
+		FEF3E2E9C09A7AAC064CDBE6C073357A /* UINavigationBar+TCCustomFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+TCCustomFont.h"; path = "CanvasLibrary/UINavigationBar+TCCustomFont.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4414654618E46C167DE579CEE7C8BE9B /* Frameworks */ = {
+		7128158094A040D0455ACD53314B1932 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8582379871E3C39248DDC39FF4381B66 /* Foundation.framework in Frameworks */,
+				5B45CF256E765CDDD4186D8D34322B11 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB33B75B638A739C56488A2E402100EC /* Frameworks */ = {
+		7ED454D6448C7B1C74025D6AD4742BB1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F51C023D42FB5E36E2447D461E183188 /* Foundation.framework in Frameworks */,
+				CEA153295CD97BF9DDBBEDC6023337D2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EEDA432D5662862F11B5C1E15F142C83 /* Frameworks */ = {
+		C0422EBCE8497294EF467302C22EE9DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E11946E3E433841B7E7DE88AE5C3BA95 /* Foundation.framework in Frameworks */,
+				DE62FB868403A1411A5ADC46A8DE751F /* Foundation.framework in Frameworks */,
+				95BFB2B377269669FBF0A36D0D3A2591 /* Security.framework in Frameworks */,
+				E73497A2F001FADD65769FB079EB8562 /* SystemConfiguration.framework in Frameworks */,
+				70F2BDB65D1612608DA2DC32962BD6D1 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D35FD2AEE354C505F08CB851BD0F6A56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57EC646DA5EB417B287D4EFADE619853 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,96 +197,110 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		062CACA755D978B3B7428834B9C121D7 /* Pods */ = {
+		0DBFCA5F476D6A47B00453246ABB278D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B5BFF8A4D2A97E96A9D05EF0B4A6F5EE /* BFPaperButton */,
-				5AF1E82A01C78CC269C0D6ADEACE9C84 /* Canvas */,
-				28F19D4A7BF7A38EB89730904A0903AA /* UIColor+BFPaperColors */,
+				187A98A2AC6073CD92BD833E1BE87E04 /* Canvas.xcconfig */,
+				C6F3F7C2F1800063992A5B5A97490D71 /* Canvas-Private.xcconfig */,
+				3F273B26F9BB702C50736CF19E011CB5 /* Canvas-dummy.m */,
+				5CCFBD60D1AA665F3E9F83E0CDADEE45 /* Canvas-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Canvas";
+			sourceTree = "<group>";
+		};
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E4A3EADA7AC75164CE59DEADBBF82B3 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		154016AA468B26CB7D9C335F02CA9658 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF75BF88CBBE3E490BF22392EB3A52DE /* BFPaperButton */,
+				A118E614C93A0434C7A00828781A489A /* Canvas */,
+				219457250C7FC5AE7A0D3320888178CE /* Flurry-iOS-SDK */,
+				E0DA2C09BFF231D95669DC8A15FE7394 /* UIColor+BFPaperColors */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		09788A42B0B36887BEC2A2CD3511367B /* Support Files */ = {
+		17FF20665A4904DD383CCD8E2F446217 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6566BCE6A798D33865335A68917EE00C /* BFPaperButton.xcconfig */,
-				A4ED7009374D83DB2E2B899C994A3821 /* BFPaperButton-Private.xcconfig */,
-				A9ABB94EFCA778BA9C3EF42F0DF0EBE8 /* BFPaperButton-dummy.m */,
-				3350E88671A8DAD321918A2EBE94D8C0 /* BFPaperButton-prefix.pch */,
+				52A998EB3300084C56885CA831C6B0C2 /* BFPaperButton.xcconfig */,
+				DBFFF2066F3A1044A34E3DD03DB7062F /* BFPaperButton-Private.xcconfig */,
+				C40B64101A6AC7647E7DA3E5ACBB2ADC /* BFPaperButton-dummy.m */,
+				63F5207533F1F5741B46B95A45289370 /* BFPaperButton-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/BFPaperButton";
 			sourceTree = "<group>";
 		};
-		28F19D4A7BF7A38EB89730904A0903AA /* UIColor+BFPaperColors */ = {
+		219457250C7FC5AE7A0D3320888178CE /* Flurry-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				9D95B1810F81CC48789415060DA687CC /* UIColor+BFPaperColors.h */,
-				E9778394A6C4C280F81EC67FE1B270B6 /* UIColor+BFPaperColors.m */,
-				58DDCF2161B6A9AF5561D70074585F91 /* Support Files */,
+				F763835495E6C197C3D071AEE03C912C /* FlurrySDK */,
+				230F6E98A3EC353515D4ED392F851943 /* Support Files */,
 			);
-			path = "UIColor+BFPaperColors";
+			path = "Flurry-iOS-SDK";
 			sourceTree = "<group>";
 		};
-		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+		230F6E98A3EC353515D4ED392F851943 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4283CA0D399F2A6C6CB7A7CCE8526C15 /* Foundation.framework */,
+				BAC3E593F906470153F314DDC1D4C614 /* Flurry-iOS-SDK.xcconfig */,
+				6C30F521EFC1038E464C3EEAA2D1778A /* Flurry-iOS-SDK-Private.xcconfig */,
+				FB0D7F27E8BC5751AB0EB1CE8BD4099E /* Flurry-iOS-SDK-dummy.m */,
+				0009C6967452FF23F5682CF7FE3263E6 /* Flurry-iOS-SDK-prefix.pch */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/Flurry-iOS-SDK";
 			sourceTree = "<group>";
 		};
-		58DDCF2161B6A9AF5561D70074585F91 /* Support Files */ = {
+		3624009627346940D799726C89D7DACA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B3F95A75FE5FA5F10875364B8E143EE8 /* UIColor+BFPaperColors.xcconfig */,
+				1C1CF7FEC6BA51AE0EB3B1B3D7F614AD /* libFlurry_7.2.1.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E094AE72A45A669AED0B33529290ABB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8629821324B1B342C1C3EDBF0CF82DCE /* UIColor+BFPaperColors.xcconfig */,
 				CC2328C2FC7B709F6A02DD5CCFD63D7F /* UIColor+BFPaperColors-Private.xcconfig */,
 				581D3DB5C367DB9FCB35180A4B4B2389 /* UIColor+BFPaperColors-dummy.m */,
-				E487C201C362989662A831C92915E445 /* UIColor+BFPaperColors-prefix.pch */,
+				21D42C1F7200084E5030DDC5FC31D859 /* UIColor+BFPaperColors-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/UIColor+BFPaperColors";
-			sourceTree = "<group>";
-		};
-		5AF1E82A01C78CC269C0D6ADEACE9C84 /* Canvas */ = {
-			isa = PBXGroup;
-			children = (
-				921868C487DCAB4F416EE17D525C44E2 /* CSAnimation.h */,
-				68FA37B313AF7F55C95B554AE5D28043 /* CSAnimation.m */,
-				ACA714AE3042AEA822BBFB82A7630639 /* CSAnimationView.h */,
-				43E099F548278C39AB9883B48068C70C /* CSAnimationView.m */,
-				ADCF933EF21A043CE04182FEF12CB03A /* CSBlurView.h */,
-				B588BFCB9B5F58CD04D27844FDB76C19 /* CSBlurView.m */,
-				137B11520D3DD436CB1729DFA9531A67 /* CSNavigationController.h */,
-				056DBB4539A54380C4CDF4481861174D /* CSNavigationController.m */,
-				3D6604F30CBBA6F50B9803E80D44D20A /* Canvas.h */,
-				C5A32321DF85EC8246685686C69A09D0 /* UIButton+TCCustomFont.h */,
-				E5B114EE42C4ED0320E82BB61D6E55F0 /* UIButton+TCCustomFont.m */,
-				4CC1628EC30D2081A62CF5E64095045A /* UILabel+TCCustomFont.h */,
-				A33D03C550BF2282C097B8FCAC23004E /* UILabel+TCCustomFont.m */,
-				923877A47426CF7CBE4BAF799BFFD9ED /* UINavigationBar+TCCustomFont.h */,
-				2B9454D84B973D91C80C09BE38C12C80 /* UINavigationBar+TCCustomFont.m */,
-				B27BFA3C22A27A8C7F6C301B66A5D010 /* UITextField+PlaceholderColor.h */,
-				E1BCC4E8084E2767C55C1A795DE0C3C4 /* UITextField+PlaceholderColor.m */,
-				A07B9AF38D0BE934146921C8297B1EB3 /* UITextField+TCCustomFont.h */,
-				6D23CE68655CB259340481CEE9E4707C /* UITextField+TCCustomFont.m */,
-				A4E7D54CF7C6D60B4E52B7C2716BFD8E /* UITextView+TCCustomFont.h */,
-				85544EF1285C847A0A8813A1C154C13E /* UITextView+TCCustomFont.m */,
-				9E1216BCE5C73845BDB3423042F4F5F1 /* Support Files */,
-			);
-			path = Canvas;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				062CACA755D978B3B7428834B9C121D7 /* Pods */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				154016AA468B26CB7D9C335F02CA9658 /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
 				D2411A5FE7F7A004607BED49990C37F4 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8E4A3EADA7AC75164CE59DEADBBF82B3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4283CA0D399F2A6C6CB7A7CCE8526C15 /* Foundation.framework */,
+				33ADE64CABC65D75320E74CB45307469 /* Security.framework */,
+				252F523705841259C06A26B42A98BCC2 /* SystemConfiguration.framework */,
+				7378B533CA8F54BAFCC889DD356C9D65 /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		952EEBFAF8F7E620423C9F156F25A506 /* Pods */ = {
@@ -258,51 +308,61 @@
 			children = (
 				15A529C27057E4A57D259CBC6E6CE49C /* Pods-acknowledgements.markdown */,
 				BF59BC15D23E1E1912C8F334E7236813 /* Pods-acknowledgements.plist */,
-				56B690EDC3470ADD6A33972AC8DF17E2 /* Pods-dummy.m */,
+				41A601D90EE961D91192B12944430C8B /* Pods-dummy.m */,
 				641AE05DD55E5E6AC1590CD7B4A18F97 /* Pods-resources.sh */,
-				0A184088665AB6BFF5970BFF461D048C /* Pods.debug.xcconfig */,
-				2B01985C75D30D29FEC744527BC03C9F /* Pods.release.xcconfig */,
+				AEF66CDE9555D10EE5BD6003EDB0EC63 /* Pods.debug.xcconfig */,
+				0A4FB9F42D10881530892E42BC12E2CA /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		9E1216BCE5C73845BDB3423042F4F5F1 /* Support Files */ = {
+		A118E614C93A0434C7A00828781A489A /* Canvas */ = {
 			isa = PBXGroup;
 			children = (
-				5FF763DFD64CBF1FD0222CE7A5670517 /* Canvas.xcconfig */,
-				DFE0F8E39938B87C095DE6D46D821338 /* Canvas-Private.xcconfig */,
-				F400A45E4AAF5E284D9869F331266647 /* Canvas-dummy.m */,
-				720C31EC565F9D4CB2825E5548668476 /* Canvas-prefix.pch */,
+				99DC69DB1F973FB185C56ED5D4A1D0D8 /* CSAnimation.h */,
+				3C16E2FBE55862649E8CA333E391469A /* CSAnimation.m */,
+				817BAF6423D822B6481F2B7578ACE046 /* CSAnimationView.h */,
+				876082D056E9D3E385A6AF0A1E7DF066 /* CSAnimationView.m */,
+				A53789B2DB65E4D514D3E0980741B191 /* CSBlurView.h */,
+				9BF1F35D5C648E46E7E69C2D57131670 /* CSBlurView.m */,
+				F4F95CDA0E8A1ECBB8F5C0031BBD320D /* CSNavigationController.h */,
+				227A751645C6B7EDB0527B4641CEA053 /* CSNavigationController.m */,
+				EAFE229AD298620C5DFCD466B4C62F50 /* Canvas.h */,
+				649C081971EFBD2B3C7A2838AE96CD3D /* UIButton+TCCustomFont.h */,
+				BEB0651FF140B35E262EF4E533BC0DE1 /* UIButton+TCCustomFont.m */,
+				C80AAA3BC152F38FADE82D7687F1A681 /* UILabel+TCCustomFont.h */,
+				1D73CF0B1DDD90256868E7E4009E8FC7 /* UILabel+TCCustomFont.m */,
+				FEF3E2E9C09A7AAC064CDBE6C073357A /* UINavigationBar+TCCustomFont.h */,
+				D21FA3DFFC03133F07AECC71CCA52286 /* UINavigationBar+TCCustomFont.m */,
+				FB3BC7839E16E20C9C79B9B9695A19CD /* UITextField+PlaceholderColor.h */,
+				085F97D7C30ADFDAB6499B9921CF8BDA /* UITextField+PlaceholderColor.m */,
+				378A70441A9CBBE865EAB5DF5E99EBA0 /* UITextField+TCCustomFont.h */,
+				EE4DDEFAF6DEA3FDF8DDC4615F02EBED /* UITextField+TCCustomFont.m */,
+				F33BA524C7CB4D4D37C85C6C93F09370 /* UITextView+TCCustomFont.h */,
+				DC1F73A69D79A1345C2C4D0BEEF0B477 /* UITextView+TCCustomFont.m */,
+				0DBFCA5F476D6A47B00453246ABB278D /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Canvas";
+			path = Canvas;
 			sourceTree = "<group>";
 		};
-		B5BFF8A4D2A97E96A9D05EF0B4A6F5EE /* BFPaperButton */ = {
+		BF75BF88CBBE3E490BF22392EB3A52DE /* BFPaperButton */ = {
 			isa = PBXGroup;
 			children = (
-				B52EFE23E557636EC500D9B428D6C3F9 /* BFPaperButton.h */,
-				35D39F79F2B56EB0AF32DB6F0278092B /* BFPaperButton.m */,
-				09788A42B0B36887BEC2A2CD3511367B /* Support Files */,
+				E09B377200B00EF0ECFD605352CF2132 /* BFPaperButton.h */,
+				5698EBB5ACDE035F1710A06963C02420 /* BFPaperButton.m */,
+				17FF20665A4904DD383CCD8E2F446217 /* Support Files */,
 			);
 			path = BFPaperButton;
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				859E0F5D02508379BD34CC4BC8B52853 /* libBFPaperButton.a */,
-				4B846B669F26C2BA06FB88953B5BB70C /* libCanvas.a */,
-				5CB548E58C50E9B48B70B2E6D2044414 /* libPods.a */,
+				7D088C35304F30AC65417EEF9E420AE6 /* libBFPaperButton.a */,
+				219B457CDD1D70213EB4E8440AD3D8A4 /* libCanvas.a */,
+				58E321C52321A8044ED529FC9B3D1310 /* libFlurry-iOS-SDK.a */,
+				88B05DDD7252B364B6D216A7EE9C4019 /* libPods.a */,
 				B0F755FD98B717977E4405EE95A9721D /* libUIColor+BFPaperColors.a */,
 			);
 			name = Products;
@@ -316,6 +376,26 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		E0DA2C09BFF231D95669DC8A15FE7394 /* UIColor+BFPaperColors */ = {
+			isa = PBXGroup;
+			children = (
+				9D95B1810F81CC48789415060DA687CC /* UIColor+BFPaperColors.h */,
+				E9778394A6C4C280F81EC67FE1B270B6 /* UIColor+BFPaperColors.m */,
+				4E094AE72A45A669AED0B33529290ABB /* Support Files */,
+			);
+			path = "UIColor+BFPaperColors";
+			sourceTree = "<group>";
+		};
+		F763835495E6C197C3D071AEE03C912C /* FlurrySDK */ = {
+			isa = PBXGroup;
+			children = (
+				9A92660C725D373BDDE89B95B1433758 /* Empty.m */,
+				8DDAB97BCEAABD63FE7B0E6B234011C8 /* Flurry.h */,
+				3624009627346940D799726C89D7DACA /* Frameworks */,
+			);
+			name = FlurrySDK;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -327,60 +407,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52B5D1C8B69A505551CC365E5726D432 /* Headers */ = {
+		525CE017ECF4DD553E6A01F555A49D48 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB3A8270313A2212D6A496D60FA4ED73 /* CSAnimation.h in Headers */,
-				7BE9ACE7EDA57AD840CBB9941DCAD212 /* CSAnimationView.h in Headers */,
-				9C160CA188CDE4A4AB41620858572C4C /* CSBlurView.h in Headers */,
-				2E8C8E015793DAFE267B1A75A6638924 /* CSNavigationController.h in Headers */,
-				563099D975F5CD32E78CCD9F280000CE /* Canvas.h in Headers */,
-				4AA94F8F77682CB5794F7FAD956C2306 /* UIButton+TCCustomFont.h in Headers */,
-				3C485845D609844CDFED982B79E6847F /* UILabel+TCCustomFont.h in Headers */,
-				C2F79969F420F56D92EE3E579091000B /* UINavigationBar+TCCustomFont.h in Headers */,
-				D75B51304F6B7223A3D1A4F8EEE7A807 /* UITextField+PlaceholderColor.h in Headers */,
-				0E32FDC7D4D503175E6EE77FC023FAB9 /* UITextField+TCCustomFont.h in Headers */,
-				BB0D3CCA7EB98BE6AC43EFFDFBF9A54D /* UITextView+TCCustomFont.h in Headers */,
+				BB2F15A750EE22EEF87A7AACE67760F7 /* Flurry.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A581D2D7982D9B6DC090C8E07A49BAB3 /* Headers */ = {
+		587A45A89EDB6AAF381BF9D2D03FEB1C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				307450B965A3CCD4F7DD944049525B71 /* BFPaperButton.h in Headers */,
+				B5CFBC672AE0616029CF2F70D2737D08 /* BFPaperButton.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB6741711ECBCB41C8639C86FCFA01C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54E5F845EADDEBBEF896AE39CA8430B6 /* CSAnimation.h in Headers */,
+				8D59A59843BD6DBD25BA472A3359227F /* CSAnimationView.h in Headers */,
+				1A9C72BCE9DA0105D4174574C134FE73 /* CSBlurView.h in Headers */,
+				1D18E350169D1808E311909CCE763187 /* CSNavigationController.h in Headers */,
+				E74BB800D5F952EA8EEF9B9AB3B9BCB0 /* Canvas.h in Headers */,
+				275D7CCEABA3A5F3B0E01BBB6AA3B4D9 /* UIButton+TCCustomFont.h in Headers */,
+				7233E28EFCB163B42FAC0CF5CEA61ACA /* UILabel+TCCustomFont.h in Headers */,
+				638BA38A3AF89BF2237F18F1C1E2130C /* UINavigationBar+TCCustomFont.h in Headers */,
+				1C78960B4E966F0B614F6D804B1FB90F /* UITextField+PlaceholderColor.h in Headers */,
+				F9AED87C4F46D1FB2F771742825EC7A2 /* UITextField+TCCustomFont.h in Headers */,
+				DCA9484C6DA3CA1295C599E755F088E1 /* UITextView+TCCustomFont.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9CB655C17778D1A4132A5D2665A82981 /* BFPaperButton */ = {
+		4E361590FBDE5D53A34E86A0C8B706BA /* Canvas */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92B9E07F16356DDC6B91B841F973AFC1 /* Build configuration list for PBXNativeTarget "BFPaperButton" */;
+			buildConfigurationList = F0C3243CD35EED321483633781D79421 /* Build configuration list for PBXNativeTarget "Canvas" */;
 			buildPhases = (
-				97421B98450C941AA0FD7A1269C870AF /* Sources */,
-				EEDA432D5662862F11B5C1E15F142C83 /* Frameworks */,
-				A581D2D7982D9B6DC090C8E07A49BAB3 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				692B7580A32FCA1AB34701CE4076F07E /* PBXTargetDependency */,
-			);
-			name = BFPaperButton;
-			productName = BFPaperButton;
-			productReference = 859E0F5D02508379BD34CC4BC8B52853 /* libBFPaperButton.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		BA4C271D6BF855A9E545C850A657E59C /* Canvas */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3E50854985F954C55C6134FAF5A2D62B /* Build configuration list for PBXNativeTarget "Canvas" */;
-			buildPhases = (
-				35DCC3BEC52841A1BF8C4E90DBA42A85 /* Sources */,
-				BB33B75B638A739C56488A2E402100EC /* Frameworks */,
-				52B5D1C8B69A505551CC365E5726D432 /* Headers */,
+				5FA880727312321FEF3B719B4DE58DDE /* Sources */,
+				7128158094A040D0455ACD53314B1932 /* Frameworks */,
+				AB6741711ECBCB41C8639C86FCFA01C3 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -388,26 +458,62 @@
 			);
 			name = Canvas;
 			productName = Canvas;
-			productReference = 4B846B669F26C2BA06FB88953B5BB70C /* libCanvas.a */;
+			productReference = 219B457CDD1D70213EB4E8440AD3D8A4 /* libCanvas.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		E14074BF805499AB3BDCEEB56D6A5C52 /* Pods */ = {
+		A2ADB6F5BC57E0DD0411C85FEFD19B2F /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2FEF750B950929B97869956F5457AEFF /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 98D5E7C1B95D352A63F361A038DDFB14 /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				50BCD05854C6E8CDCF51BE8237BABBEB /* Sources */,
-				4414654618E46C167DE579CEE7C8BE9B /* Frameworks */,
+				9AA809A32941B841E3404105BAA8FB42 /* Sources */,
+				7ED454D6448C7B1C74025D6AD4742BB1 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				21095D6035EB05F3E27532FAE975A94A /* PBXTargetDependency */,
-				E203A65E0A57F27356DA2FCB75076374 /* PBXTargetDependency */,
-				DB5C78C2CF2963ACA5CE9659BDE6E34A /* PBXTargetDependency */,
+				80BF028A131BB14030C893F958840A56 /* PBXTargetDependency */,
+				B669EAED68E4DA247440E603D2058966 /* PBXTargetDependency */,
+				4E6DB64A2A094C67EA4C988AFD342479 /* PBXTargetDependency */,
+				712DED217BE6E1857B2A3BC6070AC276 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = 5CB548E58C50E9B48B70B2E6D2044414 /* libPods.a */;
+			productReference = 88B05DDD7252B364B6D216A7EE9C4019 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A2D1E6890757313A64C46DA7C514E1BB /* Flurry-iOS-SDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8649F8F9777C7D77E33FB81B9A1293D /* Build configuration list for PBXNativeTarget "Flurry-iOS-SDK" */;
+			buildPhases = (
+				57121B2C35FACADC04BEDE601A3A0E68 /* Sources */,
+				C0422EBCE8497294EF467302C22EE9DF /* Frameworks */,
+				525CE017ECF4DD553E6A01F555A49D48 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Flurry-iOS-SDK";
+			productName = "Flurry-iOS-SDK";
+			productReference = 58E321C52321A8044ED529FC9B3D1310 /* libFlurry-iOS-SDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CE7FCA5AD3B74502AD191C8C6D97CA2A /* BFPaperButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DA9B4F2F57942DAE0687EFB23BA7885 /* Build configuration list for PBXNativeTarget "BFPaperButton" */;
+			buildPhases = (
+				67BFBF41CC9CF07AD9E2F5ED47FA4D99 /* Sources */,
+				D35FD2AEE354C505F08CB851BD0F6A56 /* Frameworks */,
+				587A45A89EDB6AAF381BF9D2D03FEB1C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40EFFD05B51E9AE4898BC556094994E0 /* PBXTargetDependency */,
+			);
+			name = BFPaperButton;
+			productName = BFPaperButton;
+			productReference = 7D088C35304F30AC65417EEF9E420AE6 /* libBFPaperButton.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		F43885B233F4B9CCC43E1736A5087DD7 /* UIColor+BFPaperColors */ = {
@@ -448,33 +554,16 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9CB655C17778D1A4132A5D2665A82981 /* BFPaperButton */,
-				BA4C271D6BF855A9E545C850A657E59C /* Canvas */,
-				E14074BF805499AB3BDCEEB56D6A5C52 /* Pods */,
+				CE7FCA5AD3B74502AD191C8C6D97CA2A /* BFPaperButton */,
+				4E361590FBDE5D53A34E86A0C8B706BA /* Canvas */,
+				A2D1E6890757313A64C46DA7C514E1BB /* Flurry-iOS-SDK */,
+				A2ADB6F5BC57E0DD0411C85FEFD19B2F /* Pods */,
 				F43885B233F4B9CCC43E1736A5087DD7 /* UIColor+BFPaperColors */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		35DCC3BEC52841A1BF8C4E90DBA42A85 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A6C49CBD6C5F6FB210B4ED57584BB7B9 /* CSAnimation.m in Sources */,
-				1A465134870C1C12EB9F1B68ECC9F200 /* CSAnimationView.m in Sources */,
-				EA49E8FF01E20FAC1FAAA1504F735575 /* CSBlurView.m in Sources */,
-				A9C3E53CCC507A20B847F25EBFE5F3D4 /* CSNavigationController.m in Sources */,
-				5E1E12D8323DA6A3D1D12A18E3D86247 /* Canvas-dummy.m in Sources */,
-				1C1BCAA6F13E99ACA934A88D64849BDA /* UIButton+TCCustomFont.m in Sources */,
-				2609EB0284437C506FDD7CCC4DCB97F6 /* UILabel+TCCustomFont.m in Sources */,
-				B2140C8265E6D1E5DD3A8A3B9E37DD54 /* UINavigationBar+TCCustomFont.m in Sources */,
-				9AAAFB57AF4EBAF7BFE4B256C21CE3CA /* UITextField+PlaceholderColor.m in Sources */,
-				B769DDF9066566CFD3DCFC67DB74389E /* UITextField+TCCustomFont.m in Sources */,
-				D44DF4CFC977170939722D76390A231F /* UITextView+TCCustomFont.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		36553632CDC2C782A1B4ECF63800AD31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -484,56 +573,89 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		50BCD05854C6E8CDCF51BE8237BABBEB /* Sources */ = {
+		57121B2C35FACADC04BEDE601A3A0E68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F044C95AA2DDD8B1179023924F6645E7 /* Pods-dummy.m in Sources */,
+				2B3526E53621AFBB0F2D8161A4EEDF93 /* Empty.m in Sources */,
+				CD9CB03B8C6BFEA81A7176AF05D1F096 /* Flurry-iOS-SDK-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		97421B98450C941AA0FD7A1269C870AF /* Sources */ = {
+		5FA880727312321FEF3B719B4DE58DDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C13BDC8C18C4FCE00057C4ADAC90534 /* BFPaperButton-dummy.m in Sources */,
-				FDD2AF08798896A0A56CD290BF1D60DE /* BFPaperButton.m in Sources */,
+				BDD9C5E981CE0DE46C601C25A2EF2ECC /* CSAnimation.m in Sources */,
+				C3F72C5D59546C3389202AA7F5E55CC3 /* CSAnimationView.m in Sources */,
+				64DD252D27CA5FF9BB8B31327BCF4007 /* CSBlurView.m in Sources */,
+				A6770723D32EF7728182899F6CDD9131 /* CSNavigationController.m in Sources */,
+				81C2BFDA5B9E2BD5717B8181B20D1BBF /* Canvas-dummy.m in Sources */,
+				6D1DDA4C39FC114BBDC35A9FDE8BD400 /* UIButton+TCCustomFont.m in Sources */,
+				BA4AFD11AFE7826EE0FF1CE2A487280D /* UILabel+TCCustomFont.m in Sources */,
+				6BCD77BDF3FDC42B72D51846C2EAA050 /* UINavigationBar+TCCustomFont.m in Sources */,
+				20D83484A8EA91372556A447E751E869 /* UITextField+PlaceholderColor.m in Sources */,
+				5E28A7E3AC83A680A4FE618789FB2415 /* UITextField+TCCustomFont.m in Sources */,
+				45BBB9E3E77D030E5CEB7EF7B52C6809 /* UITextView+TCCustomFont.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67BFBF41CC9CF07AD9E2F5ED47FA4D99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9C65384B831685F8D3588C8FFEE6813 /* BFPaperButton-dummy.m in Sources */,
+				5B76FE852565E4B8E913BA1C33CAE4AD /* BFPaperButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AA809A32941B841E3404105BAA8FB42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA4EA47D36CE907A3CB2E5B0612B5AE8 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		21095D6035EB05F3E27532FAE975A94A /* PBXTargetDependency */ = {
+		40EFFD05B51E9AE4898BC556094994E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIColor+BFPaperColors";
+			target = F43885B233F4B9CCC43E1736A5087DD7 /* UIColor+BFPaperColors */;
+			targetProxy = 90C06B2235321B3CCEF2301FBB5EDE40 /* PBXContainerItemProxy */;
+		};
+		4E6DB64A2A094C67EA4C988AFD342479 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Flurry-iOS-SDK";
+			target = A2D1E6890757313A64C46DA7C514E1BB /* Flurry-iOS-SDK */;
+			targetProxy = 9DACB9E39E01C6BB17598E1042158837 /* PBXContainerItemProxy */;
+		};
+		712DED217BE6E1857B2A3BC6070AC276 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIColor+BFPaperColors";
+			target = F43885B233F4B9CCC43E1736A5087DD7 /* UIColor+BFPaperColors */;
+			targetProxy = 05917DC9F81AB0BFC3788619941B6901 /* PBXContainerItemProxy */;
+		};
+		80BF028A131BB14030C893F958840A56 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BFPaperButton;
-			target = 9CB655C17778D1A4132A5D2665A82981 /* BFPaperButton */;
-			targetProxy = 0349442875714C971711A376080400C9 /* PBXContainerItemProxy */;
+			target = CE7FCA5AD3B74502AD191C8C6D97CA2A /* BFPaperButton */;
+			targetProxy = E21F42EE866C4032AB9251F25B3B2DFE /* PBXContainerItemProxy */;
 		};
-		692B7580A32FCA1AB34701CE4076F07E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "UIColor+BFPaperColors";
-			target = F43885B233F4B9CCC43E1736A5087DD7 /* UIColor+BFPaperColors */;
-			targetProxy = 3B3489B755CA2AD834B04E2C8866BAE6 /* PBXContainerItemProxy */;
-		};
-		DB5C78C2CF2963ACA5CE9659BDE6E34A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "UIColor+BFPaperColors";
-			target = F43885B233F4B9CCC43E1736A5087DD7 /* UIColor+BFPaperColors */;
-			targetProxy = 88388D372E6B4B65273A32367D732138 /* PBXContainerItemProxy */;
-		};
-		E203A65E0A57F27356DA2FCB75076374 /* PBXTargetDependency */ = {
+		B669EAED68E4DA247440E603D2058966 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Canvas;
-			target = BA4C271D6BF855A9E545C850A657E59C /* Canvas */;
-			targetProxy = 9266F204C9ABFC24C39EB4345483C529 /* PBXContainerItemProxy */;
+			target = 4E361590FBDE5D53A34E86A0C8B706BA /* Canvas */;
+			targetProxy = 517076A06A2A6D75575411CCB577910B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		5BABF93E4D5CED104542660CE58E0179 /* Debug */ = {
+		42766734D2287EED8096E9C83B210C57 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A184088665AB6BFF5970BFF461D048C /* Pods.debug.xcconfig */;
+			baseConfigurationReference = AEF66CDE9555D10EE5BD6003EDB0EC63 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -546,6 +668,38 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		484C74DE1EC36574A8B535A8E3DE4C13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBFFF2066F3A1044A34E3DD03DB7062F /* BFPaperButton-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BFPaperButton/BFPaperButton-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		55052F1DB79B5148E75F0A5618F59BF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A4FB9F42D10881530892E42BC12E2CA /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -586,9 +740,25 @@
 			};
 			name = Debug;
 		};
-		67EF3BC71D010B1AAE9F8096D0E95084 /* Debug */ = {
+		65CEA836C84AF17EA3C289DC6654EB0B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFE0F8E39938B87C095DE6D46D821338 /* Canvas-Private.xcconfig */;
+			baseConfigurationReference = 6C30F521EFC1038E464C3EEAA2D1778A /* Flurry-iOS-SDK-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Flurry-iOS-SDK/Flurry-iOS-SDK-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		691CE872F3A43AB455C8FAFBE84DDA90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6F3F7C2F1800063992A5B5A97490D71 /* Canvas-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Canvas/Canvas-prefix.pch";
@@ -636,21 +806,21 @@
 			};
 			name = Release;
 		};
-		942C040D3D7A67C9E443F2C6387D066F /* Release */ = {
+		7542B7D5E07BE9A87F41335AB2B1EDD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFE0F8E39938B87C095DE6D46D821338 /* Canvas-Private.xcconfig */;
+			baseConfigurationReference = DBFFF2066F3A1044A34E3DD03DB7062F /* BFPaperButton-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Canvas/Canvas-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/BFPaperButton/BFPaperButton-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		A0BDD2F8D1258474D180F191A69C1E41 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -684,12 +854,28 @@
 			};
 			name = Release;
 		};
-		A94EECA4D221F3B72EE98BAA5176A60F /* Debug */ = {
+		E2258F1F7C11E240879AD9E453A76741 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4ED7009374D83DB2E2B899C994A3821 /* BFPaperButton-Private.xcconfig */;
+			baseConfigurationReference = C6F3F7C2F1800063992A5B5A97490D71 /* Canvas-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/BFPaperButton/BFPaperButton-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Canvas/Canvas-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F316BDC39A9970BE603E5E7CE4B9CA53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C30F521EFC1038E464C3EEAA2D1778A /* Flurry-iOS-SDK-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Flurry-iOS-SDK/Flurry-iOS-SDK-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -700,55 +886,23 @@
 			};
 			name = Debug;
 		};
-		E95B34447D1EE87CB33F7F37B0B60766 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4ED7009374D83DB2E2B899C994A3821 /* BFPaperButton-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/BFPaperButton/BFPaperButton-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		F33B6977B6D380850A7E9524BB1234AF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B01985C75D30D29FEC744527BC03C9F /* Pods.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0DA9B4F2F57942DAE0687EFB23BA7885 /* Build configuration list for PBXNativeTarget "BFPaperButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7542B7D5E07BE9A87F41335AB2B1EDD7 /* Debug */,
+				484C74DE1EC36574A8B535A8E3DE4C13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
 				74857149DC1E0D599B8A01A78349A926 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2FEF750B950929B97869956F5457AEFF /* Build configuration list for PBXNativeTarget "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5BABF93E4D5CED104542660CE58E0179 /* Debug */,
-				F33B6977B6D380850A7E9524BB1234AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -762,20 +916,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E50854985F954C55C6134FAF5A2D62B /* Build configuration list for PBXNativeTarget "Canvas" */ = {
+		98D5E7C1B95D352A63F361A038DDFB14 /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				67EF3BC71D010B1AAE9F8096D0E95084 /* Debug */,
-				942C040D3D7A67C9E443F2C6387D066F /* Release */,
+				42766734D2287EED8096E9C83B210C57 /* Debug */,
+				55052F1DB79B5148E75F0A5618F59BF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92B9E07F16356DDC6B91B841F973AFC1 /* Build configuration list for PBXNativeTarget "BFPaperButton" */ = {
+		A8649F8F9777C7D77E33FB81B9A1293D /* Build configuration list for PBXNativeTarget "Flurry-iOS-SDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A94EECA4D221F3B72EE98BAA5176A60F /* Debug */,
-				E95B34447D1EE87CB33F7F37B0B60766 /* Release */,
+				F316BDC39A9970BE603E5E7CE4B9CA53 /* Debug */,
+				65CEA836C84AF17EA3C289DC6654EB0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0C3243CD35EED321483633781D79421 /* Build configuration list for PBXNativeTarget "Canvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				691CE872F3A43AB455C8FAFBE84DDA90 /* Debug */,
+				E2258F1F7C11E240879AD9E453A76741 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Flurry-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,17 +32,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9CB655C17778D1A4132A5D2665A82981</key>
+		<key>4E361590FBDE5D53A34E86A0C8B706BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BA4C271D6BF855A9E545C850A657E59C</key>
+		<key>A2ADB6F5BC57E0DD0411C85FEFD19B2F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E14074BF805499AB3BDCEEB56D6A5C52</key>
+		<key>A2D1E6890757313A64C46DA7C514E1BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CE7FCA5AD3B74502AD191C8C6D97CA2A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
