@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Jhana.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>JhanaWatchKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>Notification - JhanaWatchKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>A50359FE1BD8129F000E929C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6AA36C31BC5B9E0007F4F26</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6AA36DF1BC5B9E0007F4F26</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6AA36EA1BC5B9E0007F4F26</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
