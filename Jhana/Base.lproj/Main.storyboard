@@ -30,13 +30,7 @@
                             <outlet property="delegate" destination="hVq-0C-PXS" id="TtX-bK-vJW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="GNQ-wm-R2G">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6ZV-s5-Xl1">
-                            <connections>
-                                <action selector="addButtonClicked:" destination="hVq-0C-PXS" id="UEJ-oE-OeL"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="GNQ-wm-R2G"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wED-T9-SiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

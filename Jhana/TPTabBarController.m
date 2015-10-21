@@ -10,6 +10,7 @@
 #import <BFPaperButton.h>
 #import <Canvas.h>
 #import "UIColor+BFPaperColors.h"
+#import "Flurry.h"  
 
 @interface TPTabBarController ()
 
@@ -65,7 +66,7 @@
 
 - (void)buttonPressed:(id)sender
 { 
-    
+  [Flurry logEvent:@"New Event Creation Started"];
 }
 
 
