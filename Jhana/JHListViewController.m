@@ -8,12 +8,16 @@
 
 #import "JHListViewController.h"
 #import "AppDelegate.h"
+#import <WatchConnectivity/WatchConnectivity.h>
+#import "Flurry.h"
 
 #import <CoreData/CoreData.h>
 
-@interface JHListViewController () <NSFetchedResultsControllerDelegate>
+@interface JHListViewController () <NSFetchedResultsControllerDelegate, WCSessionDelegate>
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *editButton;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property BOOL editing;
 
 @end
 
@@ -21,6 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.editing = false;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -53,6 +58,12 @@
         NSLog(@"%@, %@", error, error.localizedDescription);
     }
     
+    if ([WCSession isSupported]) {
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,28 +71,68 @@
     // Dispose of any resources that can be recreated.
 }
 
-//- (IBAction)addButtonClicked:(id)sender {
-//    // Create Entity
-//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"JHReport" inManagedObjectContext:self.managedObjectContext];
-//    
-//    // Initialize Record
-//    NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
-//    
-//    // Populate Record
-//    [record setValue:@"running" forKey:@"activity"];
-//    [record setValue:@"Foo Bar" forKey:@"annotation"];
-//    [record setValue:[NSNumber numberWithInt:10] forKey:@"attention"];
-//    [record setValue:[NSDate date] forKey:@"createdAt"];
-//    [record setValue:[NSDate date] forKey:@"timeStamp"];
-//    
-//    // Save Record
-//    NSError *error = nil;
-//    
-//     if ([self.managedObjectContext save:&error]) {
-//         [self.tableView reloadData]; 
-//     }
-//}
-//
+- (IBAction)addButtonClicked:(id)sender {
+    // Create Entity
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"JHReport" inManagedObjectContext:self.managedObjectContext];
+    
+    // Initialize Record
+    NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
+    
+    // Populate Record
+    [record setValue:@"running" forKey:@"activity"];
+    [record setValue:@"Foo Bar" forKey:@"annotation"];
+    [record setValue:[NSNumber numberWithInt:10] forKey:@"attention"];
+    [record setValue:[NSDate date] forKey:@"createdAt"];
+    [record setValue:[NSDate date] forKey:@"timeStamp"];
+    
+    // Save Record
+    NSError *error = nil;
+    
+     if ([self.managedObjectContext save:&error]) {
+         [self.tableView reloadData]; 
+     }
+}
+- (void)session:(nonnull WCSession *)session didReceiveMessage:(nonnull NSDictionary<NSString *,id> *)message replyHandler:(nonnull void (^)(NSDictionary<NSString *,id> * _Nonnull))replyHandler {
+    // Create Entity
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"JHReport" inManagedObjectContext:self.managedObjectContext];
+    
+    // Initialize Record
+    NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
+    
+    // Populate Record
+    [record setValue:message[@"actionValue"] forKey:@"activity"];
+    [record setValue:@"Foo Bar" forKey:@"annotation"];
+    [record setValue:[NSNumber numberWithInt:10] forKey:@"attention"];
+    [record setValue:[NSDate date] forKey:@"createdAt"];
+    [record setValue:[NSDate date] forKey:@"timeStamp"];
+    
+    // Save Record
+    NSError *error = nil;
+    if ([self.managedObjectContext save:&error]) {
+        //Use this to update the UI instantaneously (otherwise, takes a little while)
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    }
+}
+
+- (IBAction)editButtonClicked:(id)sender {
+    if (self.editing == true)
+    {
+        [self.tableView setEditing:NO animated:YES];
+        self.editing = false;
+        [self.editButton setTitle:NSLocalizedString(@"Cancel", @"Cancel")];
+        NSLog(@"Cancel");
+    }
+    else
+    {
+        [self.tableView setEditing:YES animated:YES];
+        [self.editButton setTitle:NSLocalizedString(@"Edit", @"Edit")];
+        self.editing = true;
+        NSLog(@"Add");
+
+    }
+}
 
 
 #pragma mark -
@@ -142,8 +193,6 @@
     
     return cell;
 }
-
-
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -159,8 +208,9 @@
         NSManagedObject *record = [self.fetchedResultsController objectAtIndexPath:indexPath];
         
         if (record) {
+            [Flurry logEvent:@"Deleted Report"];
             [self.fetchedResultsController.managedObjectContext deleteObject:record];
-            NSError *error = nil; 
+            NSError *error = nil;
             if (![self.managedObjectContext save:&error]) {
                 NSLog(@"Couldn't save: %@", error);
             }
@@ -203,5 +253,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

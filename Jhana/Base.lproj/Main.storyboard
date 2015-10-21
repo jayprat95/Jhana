@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Surveys-->
         <scene sceneID="vmS-bY-AzU">
             <objects>
                 <tableViewController id="hVq-0C-PXS" customClass="JHListViewController" sceneMemberID="viewController">
@@ -30,7 +30,16 @@
                             <outlet property="delegate" destination="hVq-0C-PXS" id="TtX-bK-vJW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="GNQ-wm-R2G"/>
+                    <navigationItem key="navigationItem" title="Surveys" id="GNQ-wm-R2G">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="yPj-h3-byL">
+                            <connections>
+                                <action selector="editButtonClicked:" destination="hVq-0C-PXS" id="Xic-SD-g73"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editButton" destination="yPj-h3-byL" id="23d-el-bUB"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wED-T9-SiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

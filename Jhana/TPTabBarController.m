@@ -10,6 +10,7 @@
 #import <BFPaperButton.h>
 #import <Canvas.h>
 #import "UIColor+BFPaperColors.h"
+#import "JHAddViewController.h"
 #import "Flurry.h"  
 
 @interface TPTabBarController ()
@@ -66,7 +67,15 @@
 
 - (void)buttonPressed:(id)sender
 { 
-  [Flurry logEvent:@"New Event Creation Started"];
+    [Flurry logEvent:@"New Event Creation Started"];
+    
+    // Get the storyboard named secondStoryBoard from the main bundle:
+    UIStoryboard *secondStoryBoard = [UIStoryboard storyboardWithName:@"journalEntry" bundle:nil];
+    // Load the initial view controller from the storyboard.
+    // Set this by selecting 'Is Initial View Controller' on the appropriate view controller in the storyboard.
+    //
+    JHAddViewController * detail = [secondStoryBoard instantiateViewControllerWithIdentifier: @"JHAddViewController"];
+    [self.navigationController pushViewController:detail animated:YES];
 }
 
 

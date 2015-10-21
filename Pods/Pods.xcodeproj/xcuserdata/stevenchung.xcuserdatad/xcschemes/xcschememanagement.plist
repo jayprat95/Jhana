@@ -9,45 +9,40 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Canvas.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<key>Flurry-iOS-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>3</integer>
 		</dict>
 		<key>UIColor+BFPaperColors.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1016F499C81C87CEF0E4A34A07E9CAFF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4E361590FBDE5D53A34E86A0C8B706BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,27 +57,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A2ADB6F5BC57E0DD0411C85FEFD19B2F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A2D1E6890757313A64C46DA7C514E1BB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CE7FCA5AD3B74502AD191C8C6D97CA2A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>D079C0B8D193CBDF60F39822F384E43F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F43885B233F4B9CCC43E1736A5087DD7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
