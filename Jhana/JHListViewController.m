@@ -60,6 +60,7 @@
         [session activateSession];
     }
     
+    [self createLocalNotifications];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -112,6 +113,25 @@
     }
 }
 
+- (void)createLocalNotifications {
+    NSDate *itemDate = [NSDate date];
+    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+    if (localNotif == nil)
+        return;
+    localNotif.fireDate = [itemDate dateByAddingTimeInterval:60];
+    localNotif.timeZone = [NSTimeZone defaultTimeZone];
+    
+    localNotif.alertBody = @"Are you focused? Check how attentive you are!";
+    localNotif.alertAction = @"Log an Entry";
+    localNotif.alertTitle = @"Jhana";
+    
+    localNotif.soundName = UILocalNotificationDefaultSoundName;
+    localNotif.applicationIconBadgeNumber = 1;
+    
+//    localNotif.userInfo = @{@"UDID" : };
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+}
 
 
 #pragma mark -
