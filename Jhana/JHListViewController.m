@@ -26,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.editing = false;
+    [self.editButton setTitle:@"Edit"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -123,13 +124,13 @@
     {
         [self.tableView setEditing:NO animated:YES];
         self.editing = false;
-        [self.editButton setTitle:NSLocalizedString(@"Cancel", @"Cancel")];
+        [self.editButton setTitle:NSLocalizedString(@"Edit", @"Edit")];
         NSLog(@"Cancel");
     }
     else
     {
         [self.tableView setEditing:YES animated:YES];
-        [self.editButton setTitle:NSLocalizedString(@"Edit", @"Edit")];
+        [self.editButton setTitle:NSLocalizedString(@"Cancel", @"Cancel")];
         self.editing = true;
         NSLog(@"Add");
 

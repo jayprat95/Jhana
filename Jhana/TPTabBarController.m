@@ -12,6 +12,8 @@
 #import "UIColor+BFPaperColors.h"
 #import "JHAddViewController.h"
 #import "Flurry.h"  
+#import "AppDelegate.h"
+
 
 @interface TPTabBarController ()
 
@@ -26,6 +28,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = delegate.managedObjectContext;
     
     [self addCenterButtonWithImage:[UIImage imageNamed:@"hood.png"] highlightImage:[UIImage imageNamed:@"hood-selected.png"] target:self action:@selector(buttonPressed:)];
     [[UITabBar appearance] setTintColor:[UIColor paperColorRed]];
@@ -70,12 +74,12 @@
     [Flurry logEvent:@"New Event Creation Started"];
     
     // Get the storyboard named secondStoryBoard from the main bundle:
-    UIStoryboard *secondStoryBoard = [UIStoryboard storyboardWithName:@"journalEntry" bundle:nil];
     // Load the initial view controller from the storyboard.
     // Set this by selecting 'Is Initial View Controller' on the appropriate view controller in the storyboard.
     //
-    JHAddViewController * detail = [secondStoryBoard instantiateViewControllerWithIdentifier: @"JHAddViewController"];
-    [self.navigationController pushViewController:detail animated:YES];
+    
+    JHAddViewController *vc = [[JHAddViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 

@@ -11,6 +11,7 @@
 @interface TPTabBarController : UITabBarController
 @property(nonatomic, weak) IBOutlet UIViewController *plusController;
 @property(nonatomic, weak) IBOutlet UIButton *centerButton;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property(nonatomic, assign) BOOL tabBarHidden;
 

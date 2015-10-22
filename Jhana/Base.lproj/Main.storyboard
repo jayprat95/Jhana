@@ -31,7 +31,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Surveys" id="GNQ-wm-R2G">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="yPj-h3-byL">
+                        <barButtonItem key="leftBarButtonItem" id="yPj-h3-byL">
                             <connections>
                                 <action selector="editButtonClicked:" destination="hVq-0C-PXS" id="Xic-SD-g73"/>
                             </connections>
@@ -45,11 +45,11 @@
             </objects>
             <point key="canvasLocation" x="2176" y="514"/>
         </scene>
-        <!--Item-->
+        <!--Library-->
         <scene sceneID="fZu-Pv-r0x">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8nf-P1-Qxl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="8fM-b7-gVi"/>
+                    <tabBarItem key="tabBarItem" title="Library" image="list_icon" id="8fM-b7-gVi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y8l-Kp-dSe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -65,6 +65,26 @@
             </objects>
             <point key="canvasLocation" x="1364" y="514"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="wb2-iI-5mw">
+            <objects>
+                <viewController id="TXp-rO-qeD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p8T-Ty-pBB"/>
+                        <viewControllerLayoutGuide type="bottom" id="dit-fh-cNV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="El1-Y1-Vwe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j9V-R3-rfO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ed-aZ-dsI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2176" y="1317"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="BQt-p4-xoz">
             <objects>
@@ -77,11 +97,55 @@
                     </tabBar>
                     <connections>
                         <segue destination="8nf-P1-Qxl" kind="relationship" relationship="viewControllers" id="eDF-mn-Jsd"/>
+                        <segue destination="O4S-Oe-acT" kind="relationship" relationship="viewControllers" id="0BO-GY-eQn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22o-F7-XVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="552" y="514"/>
         </scene>
+        <!--Graph-->
+        <scene sceneID="QJA-kb-9ut">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O4S-Oe-acT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Graph" image="graph_icon" id="9bP-gl-nF7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x8b-OQ-0uE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TXp-rO-qeD" kind="relationship" relationship="rootViewController" id="3B8-vb-jgc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhi-0k-RWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1364" y="1317"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="0Sa-CH-ZKI">
+            <objects>
+                <viewController id="Uoc-vc-Rho" customClass="JHAddViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dTC-GI-bvh"/>
+                        <viewControllerLayoutGuide type="bottom" id="yrC-in-jFg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gXm-Rz-Onr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80A-q6-kZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1336" y="2377"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="graph_icon" width="30" height="30"/>
+        <image name="list_icon" width="30" height="30"/>
+    </resources>
 </document>
