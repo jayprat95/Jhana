@@ -17,8 +17,6 @@
 		A5035A201BD8129F000E929C /* JhanaWatchKit.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A50359FF1BD8129F000E929C /* JhanaWatchKit.app */; };
 		A5035A2B1BD8130F000E929C /* SurveyInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5035A2A1BD8130F000E929C /* SurveyInterfaceController.m */; settings = {ASSET_TAGS = (); }; };
 		F64A033A1BD7E70C0082761C /* TPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F64A03391BD7E70C0082761C /* TPTabBarController.m */; };
-		F6824FCB1BD881270082D864 /* JHAddViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = F65084831BD82AFE003F4F79 /* JHAddViewController.h */; };
-		F6824FCC1BD881270082D864 /* JHAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F65084841BD82AFE003F4F79 /* JHAddViewController.m */; };
 		F6AA36C91BC5B9E0007F4F26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36C81BC5B9E0007F4F26 /* main.m */; };
 		F6AA36CC1BC5B9E0007F4F26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36CB1BC5B9E0007F4F26 /* AppDelegate.m */; };
 		F6AA36D21BC5B9E0007F4F26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6AA36D01BC5B9E0007F4F26 /* Main.storyboard */; };
@@ -28,6 +26,7 @@
 		F6AA36E51BC5B9E0007F4F26 /* JhanaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36E41BC5B9E0007F4F26 /* JhanaTests.m */; };
 		F6AA36F01BC5B9E0007F4F26 /* JhanaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36EF1BC5B9E0007F4F26 /* JhanaUITests.m */; };
 		F6AA36FF1BC5BA69007F4F26 /* JHListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36FE1BC5BA69007F4F26 /* JHListViewController.m */; };
+		F6FF25921BD911C600B82467 /* JHAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FF25911BD911C600B82467 /* JHAddViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,8 +107,6 @@
 		F650847C1BD82947003F4F79 /* JHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableViewCell.h; sourceTree = "<group>"; };
 		F650847D1BD82947003F4F79 /* JHTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTableViewCell.m; sourceTree = "<group>"; };
 		F650847E1BD82947003F4F79 /* JHTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHTableViewCell.xib; sourceTree = "<group>"; };
-		F65084831BD82AFE003F4F79 /* JHAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHAddViewController.h; sourceTree = "<group>"; };
-		F65084841BD82AFE003F4F79 /* JHAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHAddViewController.m; sourceTree = "<group>"; };
 		F6AA36C41BC5B9E0007F4F26 /* Jhana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jhana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6AA36C81BC5B9E0007F4F26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F6AA36CA1BC5B9E0007F4F26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -127,6 +124,8 @@
 		F6AA36F11BC5B9E0007F4F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6AA36FD1BC5BA69007F4F26 /* JHListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHListViewController.h; sourceTree = "<group>"; };
 		F6AA36FE1BC5BA69007F4F26 /* JHListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHListViewController.m; sourceTree = "<group>"; };
+		F6FF25901BD911C600B82467 /* JHAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHAddViewController.h; sourceTree = "<group>"; };
+		F6FF25911BD911C600B82467 /* JHAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHAddViewController.m; sourceTree = "<group>"; };
 		FE1C545184401C4CB8C2B289 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -258,8 +257,8 @@
 				F650847C1BD82947003F4F79 /* JHTableViewCell.h */,
 				F650847D1BD82947003F4F79 /* JHTableViewCell.m */,
 				F650847E1BD82947003F4F79 /* JHTableViewCell.xib */,
-				F65084831BD82AFE003F4F79 /* JHAddViewController.h */,
-				F65084841BD82AFE003F4F79 /* JHAddViewController.m */,
+				F6FF25901BD911C600B82467 /* JHAddViewController.h */,
+				F6FF25911BD911C600B82467 /* JHAddViewController.m */,
 			);
 			path = Jhana;
 			sourceTree = "<group>";
@@ -542,8 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6824FCB1BD881270082D864 /* JHAddViewController.h in Sources */,
-				F6824FCC1BD881270082D864 /* JHAddViewController.m in Sources */,
+				F6FF25921BD911C600B82467 /* JHAddViewController.m in Sources */,
 				F6AA36D51BC5B9E0007F4F26 /* Jhana.xcdatamodeld in Sources */,
 				F6AA36CC1BC5B9E0007F4F26 /* AppDelegate.m in Sources */,
 				F64A033A1BD7E70C0082761C /* TPTabBarController.m in Sources */,

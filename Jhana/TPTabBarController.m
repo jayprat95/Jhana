@@ -77,9 +77,12 @@
     // Load the initial view controller from the storyboard.
     // Set this by selecting 'Is Initial View Controller' on the appropriate view controller in the storyboard.
     //
-    
-    JHAddViewController *vc = [[JHAddViewController alloc] init];
-    [self presentViewController:vc animated:YES completion:nil];
+
+    JHAddViewController *addVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"JHAddViewController"];
+    addVC.managedObjectContext = self.managedObjectContext;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:addVC];
+    // Presuming a view controller is asking for the modal transition in the first place.
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 

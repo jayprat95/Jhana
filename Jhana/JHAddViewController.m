@@ -2,7 +2,7 @@
 //  JHAddViewController.m
 //  Jhana
 //
-//  Created by Jayanth Prathipati on 10/21/15.
+//  Created by Jayanth Prathipati on 10/22/15.
 //  Copyright © 2015 TouchTap. All rights reserved.
 //
 
@@ -17,13 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    [self dismissViewControllerAnimated:YES completion:nil]; 
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)cancelButtonClicked:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 /*
 #pragma mark - Navigation

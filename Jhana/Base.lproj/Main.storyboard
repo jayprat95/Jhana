@@ -18,7 +18,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K16-4U-Z5c" id="4vw-0b-b7a">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -125,23 +125,49 @@
             <point key="canvasLocation" x="1364" y="1317"/>
         </scene>
         <!--Add View Controller-->
-        <scene sceneID="0Sa-CH-ZKI">
+        <scene sceneID="Sy6-1N-gAx">
             <objects>
-                <viewController id="Uoc-vc-Rho" customClass="JHAddViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JHAddViewController" id="hy9-3l-m6g" customClass="JHAddViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dTC-GI-bvh"/>
-                        <viewControllerLayoutGuide type="bottom" id="yrC-in-jFg"/>
+                        <viewControllerLayoutGuide type="top" id="02N-Kc-4Eh"/>
+                        <viewControllerLayoutGuide type="bottom" id="01e-uF-C2z"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gXm-Rz-Onr">
+                    <view key="view" contentMode="scaleToFill" id="eTn-RR-2nX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kGG-KK-nQy">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3UE-xB-rFn">
+                            <connections>
+                                <action selector="cancelButtonClicked:" destination="hy9-3l-m6g" id="Eg7-SL-6FT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="80A-q6-kZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n1r-l4-77r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1336" y="2377"/>
+            <point key="canvasLocation" x="2176" y="2044"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SeZ-c4-dHX">
+            <objects>
+                <navigationController storyboardIdentifier="navBar" automaticallyAdjustsScrollViewInsets="NO" id="Kas-vD-O9h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wKG-gh-abf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hy9-3l-m6g" kind="relationship" relationship="rootViewController" id="HKP-Sl-xIs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVE-em-Jih" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1364" y="2044"/>
         </scene>
     </scenes>
     <resources>
