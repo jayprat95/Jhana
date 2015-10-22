@@ -141,7 +141,7 @@
     UILocalNotification *localNotif = [[UILocalNotification alloc] init];
     if (localNotif == nil)
         return;
-    localNotif.fireDate = [itemDate dateByAddingTimeInterval:60];
+    localNotif.fireDate = [itemDate dateByAddingTimeInterval:10];
     localNotif.timeZone = [NSTimeZone defaultTimeZone];
     
     localNotif.alertBody = @"Are you focused? Check how attentive you are!";

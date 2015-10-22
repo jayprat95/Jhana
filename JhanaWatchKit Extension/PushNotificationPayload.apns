@@ -1,15 +1,15 @@
 {
     "aps": {
         "alert": {
-            "body": "Test message",
-            "title": "Optional title"
+            "body": "Are you focused? Check how attentive you are!",
+            "title": "Log an Entry"
         },
         "category": "myCategory"
     },
     
     "WatchKit Simulator Actions": [
         {
-            "title": "First Button",
+            "title": "Create Entry",
             "identifier": "firstButtonAction"
         }
     ],

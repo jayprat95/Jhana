@@ -31,8 +31,8 @@
                                       @"attentionValue" : self.attentionValues[self.selectedAttentionValue],
                                       @"locationValue" : self.locationValues[self.selectedLocationValue],
                                       @"actionValue" : self.actionValues[self.selectedActionValue]
-  };
-    
+                                      };
+
     [[WCSession defaultSession] sendMessage:applicationData
                                replyHandler:^(NSDictionary *reply) {
                                    //handle reply from iPhone app here
@@ -41,7 +41,11 @@
                                    //catch any errors here
                                }
      ];
-}
+    WKAlertAction *action = [WKAlertAction actionWithTitle:@"OK" style:WKAlertActionStyleCancel handler:^{
+        [self popToRootController];
+    }];
+    [self presentAlertControllerWithTitle:@"Hooray!" message:@"Thanks for filling out this survey." preferredStyle:WKAlertControllerStyleAlert actions:@[action]];
+    }
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
@@ -89,12 +93,18 @@
     }
     [self.actionPicker setItems:pickerItems];
     self.selectedActionValue = 0;
+    
+    [self setTitle:nil];
 }
 
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
 }
+
+//- (id)contextForSegueWithIdentifier:(NSString *)segueIdentifier {
+//    if ([segueIdentifier isEqualToString:@"])
+//}
 
 @end
 

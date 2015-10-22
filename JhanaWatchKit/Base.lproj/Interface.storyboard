@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="faa-rH-mxA">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
     </dependencies>
     <scenes>
-        <!--Survey Interface Controller-->
+        <!--Survey-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="SurveyInterfaceController">
+                <controller identifier="Survey" id="AgC-eL-Hgc" customClass="SurveyInterfaceController">
                     <items>
                         <label alignment="left" text="How Attentive Are You?" minimumScaleFactor="0.0" id="hWd-WT-IVN"/>
                         <picker width="1" height="100" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="nsh-z6-OJ3">
@@ -32,7 +32,7 @@
                         </picker>
                         <button width="1" alignment="left" title="Submit" id="VPy-yA-rCU">
                             <connections>
-                                <action selector="submitButtonClicked" destination="AgC-eL-Hgc" id="76h-qe-tCw"/>
+                                <action selector="submitButtonClicked" destination="AgC-eL-Hgc" id="VZU-JG-BpJ"/>
                             </connections>
                         </button>
                     </items>
@@ -50,11 +50,16 @@
             <objects>
                 <controller hidesWhenLoading="NO" id="faa-rH-mxA">
                     <items>
-                        <label width="136" alignment="left" text="Thank you for filling out a survey!" numberOfLines="0" id="6KE-Tr-wiW"/>
+                        <label width="136" alignment="left" text="Start by filling out a survey!" textAlignment="left" numberOfLines="0" id="6KE-Tr-wiW"/>
+                        <button width="1" alignment="left" title="Create Entry" id="bde-Ha-I9W">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="Z5y-yT-hMT"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="456" y="345"/>
+            <point key="canvasLocation" x="9" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -66,18 +71,18 @@
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="rjZ-9Z-xyy" kind="relationship" relationship="dynamicNotificationInterface" id="czQ-hd-veB"/>
                     </connections>
                 </notificationController>
             </objects>
             <point key="canvasLocation" x="220" y="769"/>
         </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
+        <!--Dynamic Notification Interface Controller-->
+        <scene sceneID="tK1-B9-zwe">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController"/>
+                <controller hidesWhenLoading="NO" id="rjZ-9Z-xyy"/>
             </objects>
-            <point key="canvasLocation" x="449" y="769"/>
+            <point key="canvasLocation" x="520" y="769"/>
         </scene>
     </scenes>
 </document>
