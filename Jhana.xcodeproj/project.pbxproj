@@ -15,7 +15,9 @@
 		A5035A1A1BD8129F000E929C /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5035A191BD8129F000E929C /* NotificationController.m */; };
 		A5035A1C1BD8129F000E929C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5035A1B1BD8129F000E929C /* Assets.xcassets */; };
 		A5035A201BD8129F000E929C /* JhanaWatchKit.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A50359FF1BD8129F000E929C /* JhanaWatchKit.app */; };
-		A5035A2B1BD8130F000E929C /* SurveyInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5035A2A1BD8130F000E929C /* SurveyInterfaceController.m */; settings = {ASSET_TAGS = (); }; };
+		A566FA951BD9429700FEDB38 /* AttentionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA941BD9429700FEDB38 /* AttentionInterfaceController.m */; settings = {ASSET_TAGS = (); }; };
+		A566FA981BD942AB00FEDB38 /* LocationInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA971BD942AB00FEDB38 /* LocationInterfaceController.m */; settings = {ASSET_TAGS = (); }; };
+		A566FA9B1BD942B700FEDB38 /* ActionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA9A1BD942B700FEDB38 /* ActionInterfaceController.m */; settings = {ASSET_TAGS = (); }; };
 		F64A033A1BD7E70C0082761C /* TPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F64A03391BD7E70C0082761C /* TPTabBarController.m */; };
 		F6AA36C91BC5B9E0007F4F26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36C81BC5B9E0007F4F26 /* main.m */; };
 		F6AA36CC1BC5B9E0007F4F26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36CB1BC5B9E0007F4F26 /* AppDelegate.m */; };
@@ -100,8 +102,12 @@
 		A5035A191BD8129F000E929C /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		A5035A1B1BD8129F000E929C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5035A1D1BD8129F000E929C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5035A291BD8130F000E929C /* SurveyInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurveyInterfaceController.h; sourceTree = "<group>"; };
-		A5035A2A1BD8130F000E929C /* SurveyInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurveyInterfaceController.m; sourceTree = "<group>"; };
+		A566FA931BD9429700FEDB38 /* AttentionInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttentionInterfaceController.h; sourceTree = "<group>"; };
+		A566FA941BD9429700FEDB38 /* AttentionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttentionInterfaceController.m; sourceTree = "<group>"; };
+		A566FA961BD942AB00FEDB38 /* LocationInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationInterfaceController.h; sourceTree = "<group>"; };
+		A566FA971BD942AB00FEDB38 /* LocationInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationInterfaceController.m; sourceTree = "<group>"; };
+		A566FA991BD942B700FEDB38 /* ActionInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionInterfaceController.h; sourceTree = "<group>"; };
+		A566FA9A1BD942B700FEDB38 /* ActionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionInterfaceController.m; sourceTree = "<group>"; };
 		F64A03381BD7E70C0082761C /* TPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTabBarController.h; sourceTree = "<group>"; };
 		F64A03391BD7E70C0082761C /* TPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTabBarController.m; sourceTree = "<group>"; };
 		F650847C1BD82947003F4F79 /* JHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableViewCell.h; sourceTree = "<group>"; };
@@ -182,8 +188,12 @@
 				A5035A1B1BD8129F000E929C /* Assets.xcassets */,
 				A5035A1D1BD8129F000E929C /* Info.plist */,
 				A5035A101BD8129F000E929C /* Supporting Files */,
-				A5035A291BD8130F000E929C /* SurveyInterfaceController.h */,
-				A5035A2A1BD8130F000E929C /* SurveyInterfaceController.m */,
+				A566FA931BD9429700FEDB38 /* AttentionInterfaceController.h */,
+				A566FA941BD9429700FEDB38 /* AttentionInterfaceController.m */,
+				A566FA961BD942AB00FEDB38 /* LocationInterfaceController.h */,
+				A566FA971BD942AB00FEDB38 /* LocationInterfaceController.m */,
+				A566FA991BD942B700FEDB38 /* ActionInterfaceController.h */,
+				A566FA9A1BD942B700FEDB38 /* ActionInterfaceController.m */,
 			);
 			path = "JhanaWatchKit Extension";
 			sourceTree = "<group>";
@@ -531,9 +541,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A566FA951BD9429700FEDB38 /* AttentionInterfaceController.m in Sources */,
 				A5035A171BD8129F000E929C /* ExtensionDelegate.m in Sources */,
-				A5035A2B1BD8130F000E929C /* SurveyInterfaceController.m in Sources */,
 				A5035A1A1BD8129F000E929C /* NotificationController.m in Sources */,
+				A566FA981BD942AB00FEDB38 /* LocationInterfaceController.m in Sources */,
+				A566FA9B1BD942B700FEDB38 /* ActionInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

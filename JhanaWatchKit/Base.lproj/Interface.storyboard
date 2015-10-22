@@ -5,45 +5,92 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
     </dependencies>
     <scenes>
-        <!--Survey-->
+        <!--Attention Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="Survey" id="AgC-eL-Hgc" customClass="SurveyInterfaceController">
+                <controller id="AgC-eL-Hgc" customClass="AttentionInterfaceController">
                     <items>
                         <label alignment="left" text="How Attentive Are You?" minimumScaleFactor="0.0" id="hWd-WT-IVN"/>
                         <picker width="1" height="100" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="nsh-z6-OJ3">
                             <connections>
-                                <action selector="attentionValueSelected:" destination="AgC-eL-Hgc" id="Kw5-jj-wUb"/>
+                                <action selector="attentionValueSelected:" destination="AgC-eL-Hgc" id="tyn-qa-heg"/>
                             </connections>
                         </picker>
-                        <separator alignment="left" id="zjA-YW-8Zx"/>
-                        <label alignment="left" text="Where Are You Right Now?" minimumScaleFactor="0.0" id="7FS-n1-ZNk"/>
-                        <picker width="1" height="100" alignment="left" focusStyle="stack" id="XZA-Ym-aXv">
+                        <button width="1" alignment="left" title="Continue" id="VPy-yA-rCU">
                             <connections>
-                                <action selector="locationValueSelected:" destination="AgC-eL-Hgc" id="olN-qK-cCa"/>
+                                <segue destination="AZE-SU-m8H" kind="push" identifier="attention" id="I9T-ch-Won"/>
                             </connections>
-                        </picker>
-                        <separator alignment="left" id="XUK-gd-d0h"/>
-                        <label alignment="left" text="What Are You Currently Doing?" minimumScaleFactor="0.0" id="Bqz-NX-EQ3"/>
-                        <picker width="1" height="100" alignment="left" focusStyle="stack" id="bZy-0B-ALp">
+                        </button>
+                        <button width="1" alignment="left" title="Cancel" id="91y-Gk-PjR">
                             <connections>
-                                <action selector="actionValueSelected:" destination="AgC-eL-Hgc" id="7jp-bw-5wN"/>
-                            </connections>
-                        </picker>
-                        <button width="1" alignment="left" title="Submit" id="VPy-yA-rCU">
-                            <connections>
-                                <action selector="submitButtonClicked" destination="AgC-eL-Hgc" id="VZU-JG-BpJ"/>
+                                <action selector="cancelButtonPressed" destination="AgC-eL-Hgc" id="0B5-gB-vTp"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
-                        <outlet property="actionPicker" destination="bZy-0B-ALp" id="HrA-Wy-cKa"/>
-                        <outlet property="attentionPicker" destination="nsh-z6-OJ3" id="F97-w9-kT0"/>
-                        <outlet property="locationPicker" destination="XZA-Ym-aXv" id="Lgm-bw-P7H"/>
+                        <outlet property="attentionPicker" destination="nsh-z6-OJ3" id="5QD-cS-mHT"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="208" y="352.5"/>
+        </scene>
+        <!--Location Interface Controller-->
+        <scene sceneID="lls-UL-JXn">
+            <objects>
+                <controller hidesWhenLoading="NO" id="AZE-SU-m8H" customClass="LocationInterfaceController">
+                    <items>
+                        <label alignment="left" text="Where Are You Right Now?" minimumScaleFactor="0.0" id="qJU-Qd-yz7"/>
+                        <picker width="1" height="100" alignment="left" focusStyle="stack" id="uN8-uB-QcS">
+                            <connections>
+                                <action selector="locationValueSelected:" destination="AZE-SU-m8H" id="2fg-H5-ma6"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Continue" id="fvq-is-0l9">
+                            <connections>
+                                <segue destination="MBj-yx-5p9" kind="push" identifier="location" id="NZi-BW-DhH"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Cancel" id="lg9-jG-dwJ">
+                            <connections>
+                                <action selector="cancelButtonClicked" destination="AZE-SU-m8H" id="BKQ-fB-TRD"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="locationPicker" destination="uN8-uB-QcS" id="MF2-hc-dKe"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="427" y="352.5"/>
+        </scene>
+        <!--Action Interface Controller-->
+        <scene sceneID="Ldb-pV-9Yo">
+            <objects>
+                <controller hidesWhenLoading="NO" id="MBj-yx-5p9" customClass="ActionInterfaceController">
+                    <items>
+                        <label alignment="left" text="What Are You Currently Doing?" minimumScaleFactor="0.0" id="fQ1-t7-PSZ"/>
+                        <picker width="1" height="100" alignment="left" focusStyle="stack" id="f52-qL-Rzd">
+                            <connections>
+                                <action selector="actionValueSelected:" destination="MBj-yx-5p9" id="bnF-gt-x9I"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Submit" id="ebe-H4-VzV">
+                            <connections>
+                                <action selector="submitButtonClicked" destination="MBj-yx-5p9" id="6nl-5n-ATm"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Cancel" id="ch5-uJ-3Dh">
+                            <connections>
+                                <action selector="cancelButtonClicked" destination="MBj-yx-5p9" id="qrz-hN-DtC"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="actionPicker" destination="f52-qL-Rzd" id="E7q-Xg-FbQ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="645" y="352.5"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="R9D-tT-leb">
@@ -59,7 +106,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="9" y="345"/>
+            <point key="canvasLocation" x="-16" y="353"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
