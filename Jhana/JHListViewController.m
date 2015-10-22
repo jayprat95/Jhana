@@ -64,6 +64,7 @@
         [session activateSession];
     }
     
+    [self createLocalNotifications];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -116,6 +117,7 @@
     }
 }
 
+
 - (IBAction)editButtonClicked:(id)sender {
     if (self.editing == true)
     {
@@ -133,9 +135,26 @@
 
     }
 }
+- (void)createLocalNotifications {
+    NSDate *itemDate = [NSDate date];
+    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+    if (localNotif == nil)
+        return;
+    localNotif.fireDate = [itemDate dateByAddingTimeInterval:60];
+    localNotif.timeZone = [NSTimeZone defaultTimeZone];
+    
+    localNotif.alertBody = @"Are you focused? Check how attentive you are!";
+    localNotif.alertAction = @"Log an Entry";
+    localNotif.alertTitle = @"Jhana";
+    
+    localNotif.soundName = UILocalNotificationDefaultSoundName;
+    localNotif.applicationIconBadgeNumber = 1;
+    
+//    localNotif.userInfo = @{@"UDID" : };
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+}
 
 
-#pragma mark -
 #pragma mark Fetched Results Controller Delegate Methods
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView beginUpdates];
