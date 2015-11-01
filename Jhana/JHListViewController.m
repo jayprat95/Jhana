@@ -7,6 +7,7 @@
 //
 
 #import "JHListViewController.h"
+#import "JHTableViewCell.h"
 #import "AppDelegate.h"
 #import <WatchConnectivity/WatchConnectivity.h>
 #import "Flurry.h"
@@ -33,6 +34,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"JHTableViewCell" bundle:nil] forCellReuseIdentifier:@"JHCell"];
     
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     self.managedObjectContext = delegate.managedObjectContext;
@@ -213,13 +216,26 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JHCell" forIndexPath:indexPath];
+    JHTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JHCell" forIndexPath:indexPath];
+    
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"JHTableViewCell" owner:self options:nil]objectAtIndex:0];
+    }
     
     NSManagedObject *record = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [cell.textLabel setText:[record valueForKey:@"activity"]]; 
+
+    
+    NSLog(@"%@", [record valueForKey:@"activity"]);
+    [cell.activityLabel setText:[record valueForKey:@"activity"]];
+    [cell.locationLabel setText:[record valueForKey:@"location"]];
     
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 116;
 }
 /*
 // Override to support conditional editing of the table view.

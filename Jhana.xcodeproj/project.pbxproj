@@ -15,16 +15,18 @@
 		A5035A1A1BD8129F000E929C /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5035A191BD8129F000E929C /* NotificationController.m */; };
 		A5035A1C1BD8129F000E929C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5035A1B1BD8129F000E929C /* Assets.xcassets */; };
 		A5035A201BD8129F000E929C /* JhanaWatchKit.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A50359FF1BD8129F000E929C /* JhanaWatchKit.app */; };
-		A516671B1BE154A200592FC6 /* JHAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A516671A1BE154A200592FC6 /* JHAttentionViewController.m */; settings = {ASSET_TAGS = (); }; };
-		A51667291BE1700000592FC6 /* unfocused.png in Resources */ = {isa = PBXBuildFile; fileRef = A51667271BE1700000592FC6 /* unfocused.png */; settings = {ASSET_TAGS = (); }; };
-		A516672B1BE1709700592FC6 /* veryUnfocued.png in Resources */ = {isa = PBXBuildFile; fileRef = A516672A1BE1709700592FC6 /* veryUnfocued.png */; settings = {ASSET_TAGS = (); }; };
-		A566FA951BD9429700FEDB38 /* AttentionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA941BD9429700FEDB38 /* AttentionInterfaceController.m */; settings = {ASSET_TAGS = (); }; };
-		A566FA981BD942AB00FEDB38 /* LocationInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA971BD942AB00FEDB38 /* LocationInterfaceController.m */; settings = {ASSET_TAGS = (); }; };
-		A566FA9B1BD942B700FEDB38 /* ActionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA9A1BD942B700FEDB38 /* ActionInterfaceController.m */; settings = {ASSET_TAGS = (); }; };
-		A5F3AE621BE554AA00FBDF8B /* JHLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE611BE554AA00FBDF8B /* JHLocationViewController.m */; settings = {ASSET_TAGS = (); }; };
-		A5F3AE651BE5745300FBDF8B /* JHActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE641BE5745300FBDF8B /* JHActivityViewController.m */; settings = {ASSET_TAGS = (); }; };
-		A5F3AE681BE5749700FBDF8B /* JHAloneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE671BE5749700FBDF8B /* JHAloneViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A516671B1BE154A200592FC6 /* JHAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A516671A1BE154A200592FC6 /* JHAttentionViewController.m */; };
+		A51667291BE1700000592FC6 /* unfocused.png in Resources */ = {isa = PBXBuildFile; fileRef = A51667271BE1700000592FC6 /* unfocused.png */; };
+		A516672B1BE1709700592FC6 /* veryUnfocued.png in Resources */ = {isa = PBXBuildFile; fileRef = A516672A1BE1709700592FC6 /* veryUnfocued.png */; };
+		A566FA951BD9429700FEDB38 /* AttentionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA941BD9429700FEDB38 /* AttentionInterfaceController.m */; };
+		A566FA981BD942AB00FEDB38 /* LocationInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA971BD942AB00FEDB38 /* LocationInterfaceController.m */; };
+		A566FA9B1BD942B700FEDB38 /* ActionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA9A1BD942B700FEDB38 /* ActionInterfaceController.m */; };
+		A5F3AE621BE554AA00FBDF8B /* JHLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE611BE554AA00FBDF8B /* JHLocationViewController.m */; };
+		A5F3AE651BE5745300FBDF8B /* JHActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE641BE5745300FBDF8B /* JHActivityViewController.m */; };
+		A5F3AE681BE5749700FBDF8B /* JHAloneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE671BE5749700FBDF8B /* JHAloneViewController.m */; };
 		F64A033A1BD7E70C0082761C /* TPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F64A03391BD7E70C0082761C /* TPTabBarController.m */; };
+		F681D0F01BE69E8D006AD833 /* JHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681D0EE1BE69E8D006AD833 /* JHTableViewCell.m */; };
+		F681D0F11BE69E8D006AD833 /* JHTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F681D0EF1BE69E8D006AD833 /* JHTableViewCell.xib */; };
 		F6AA36C91BC5B9E0007F4F26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36C81BC5B9E0007F4F26 /* main.m */; };
 		F6AA36CC1BC5B9E0007F4F26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36CB1BC5B9E0007F4F26 /* AppDelegate.m */; };
 		F6AA36D21BC5B9E0007F4F26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6AA36D01BC5B9E0007F4F26 /* Main.storyboard */; };
@@ -125,9 +127,9 @@
 		A5F3AE671BE5749700FBDF8B /* JHAloneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHAloneViewController.m; sourceTree = "<group>"; };
 		F64A03381BD7E70C0082761C /* TPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTabBarController.h; sourceTree = "<group>"; };
 		F64A03391BD7E70C0082761C /* TPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTabBarController.m; sourceTree = "<group>"; };
-		F650847C1BD82947003F4F79 /* JHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableViewCell.h; sourceTree = "<group>"; };
-		F650847D1BD82947003F4F79 /* JHTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTableViewCell.m; sourceTree = "<group>"; };
-		F650847E1BD82947003F4F79 /* JHTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHTableViewCell.xib; sourceTree = "<group>"; };
+		F681D0ED1BE69E8D006AD833 /* JHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableViewCell.h; sourceTree = "<group>"; };
+		F681D0EE1BE69E8D006AD833 /* JHTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTableViewCell.m; sourceTree = "<group>"; };
+		F681D0EF1BE69E8D006AD833 /* JHTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHTableViewCell.xib; sourceTree = "<group>"; };
 		F6AA36C41BC5B9E0007F4F26 /* Jhana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jhana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6AA36C81BC5B9E0007F4F26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F6AA36CA1BC5B9E0007F4F26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -287,9 +289,6 @@
 				F6AA36C71BC5B9E0007F4F26 /* Supporting Files */,
 				F6AA36FD1BC5BA69007F4F26 /* JHListViewController.h */,
 				F6AA36FE1BC5BA69007F4F26 /* JHListViewController.m */,
-				F650847C1BD82947003F4F79 /* JHTableViewCell.h */,
-				F650847D1BD82947003F4F79 /* JHTableViewCell.m */,
-				F650847E1BD82947003F4F79 /* JHTableViewCell.xib */,
 				A51667191BE154A200592FC6 /* JHAttentionViewController.h */,
 				A516671A1BE154A200592FC6 /* JHAttentionViewController.m */,
 				A5F3AE601BE554AA00FBDF8B /* JHLocationViewController.h */,
@@ -298,6 +297,9 @@
 				A5F3AE641BE5745300FBDF8B /* JHActivityViewController.m */,
 				A5F3AE661BE5749700FBDF8B /* JHAloneViewController.h */,
 				A5F3AE671BE5749700FBDF8B /* JHAloneViewController.m */,
+				F681D0ED1BE69E8D006AD833 /* JHTableViewCell.h */,
+				F681D0EE1BE69E8D006AD833 /* JHTableViewCell.m */,
+				F681D0EF1BE69E8D006AD833 /* JHTableViewCell.xib */,
 			);
 			path = Jhana;
 			sourceTree = "<group>";
@@ -498,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6AA36DA1BC5B9E0007F4F26 /* LaunchScreen.storyboard in Resources */,
+				F681D0F11BE69E8D006AD833 /* JHTableViewCell.xib in Resources */,
 				F6AA36D71BC5B9E0007F4F26 /* Assets.xcassets in Resources */,
 				F6AA36D21BC5B9E0007F4F26 /* Main.storyboard in Resources */,
 			);
@@ -591,6 +594,7 @@
 				A5F3AE651BE5745300FBDF8B /* JHActivityViewController.m in Sources */,
 				F64A033A1BD7E70C0082761C /* TPTabBarController.m in Sources */,
 				F6AA36FF1BC5BA69007F4F26 /* JHListViewController.m in Sources */,
+				F681D0F01BE69E8D006AD833 /* JHTableViewCell.m in Sources */,
 				F6AA36C91BC5B9E0007F4F26 /* main.m in Sources */,
 				A5F3AE621BE554AA00FBDF8B /* JHLocationViewController.m in Sources */,
 			);
