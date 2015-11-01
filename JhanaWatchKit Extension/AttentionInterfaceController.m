@@ -43,6 +43,7 @@
     }
     [self.attentionPicker setItems:pickerItems];
     [self.attentionPicker setSelectedItemIndex:self.selectedAttentionValue];
+    [self.attentionPicker focus]; 
 }
 
 - (IBAction)attentionValueSelected:(NSInteger)value {
