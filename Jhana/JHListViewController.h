@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JHDetailViewController.h"
 
 @interface JHListViewController : UITableViewController
 

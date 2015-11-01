@@ -223,13 +223,25 @@
     }
     
     NSManagedObject *record = [self.fetchedResultsController objectAtIndexPath:indexPath];
-
-    
-    NSLog(@"%@", [record valueForKey:@"activity"]);
     [cell.activityLabel setText:[record valueForKey:@"activity"]];
     [cell.locationLabel setText:[record valueForKey:@"location"]];
-    
-    
+    NSDate *timeStamp = [record valueForKey:@"timeStamp"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MM-dd HH:mm"];
+    [cell.timeLabel setText:[dateFormatter stringFromDate:timeStamp]];
+    NSNumber *attention = [record valueForKey:@"attention"];
+    if ([attention isEqualToNumber:@0]) {
+        [cell.attentionLabel setText:@"Very Distracted"];
+    } else if ([attention isEqualToNumber:@1]) {
+        [cell.attentionLabel setText:@"Somewhat Distracted"];
+    } else if ([attention isEqualToNumber:@2]) {
+        [cell.attentionLabel setText:@"Neutral"];
+    } else if ([attention isEqualToNumber:@3]) {
+        [cell.attentionLabel setText:@"Somewhat Attentive"];
+    } else {
+        [cell.attentionLabel setText:@"Very Attentive"];
+    }
+
     return cell;
 }
 
@@ -262,41 +274,19 @@
     }
 }
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"detailSegue" sender:self];
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"detailSegue"]) {
+        JHDetailViewController *detailViewController = (JHDetailViewController *)segue.destinationViewController;
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        NSManagedObjectModel *record = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        detailViewController.detailContext = record;
+    }
 }
-*/
-
 
 @end

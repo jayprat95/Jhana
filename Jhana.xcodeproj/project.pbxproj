@@ -24,6 +24,7 @@
 		A5F3AE621BE554AA00FBDF8B /* JHLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE611BE554AA00FBDF8B /* JHLocationViewController.m */; };
 		A5F3AE651BE5745300FBDF8B /* JHActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE641BE5745300FBDF8B /* JHActivityViewController.m */; };
 		A5F3AE681BE5749700FBDF8B /* JHAloneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE671BE5749700FBDF8B /* JHAloneViewController.m */; };
+		A5F3AE6E1BE6C90E00FBDF8B /* JHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE6D1BE6C90E00FBDF8B /* JHDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F64A033A1BD7E70C0082761C /* TPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F64A03391BD7E70C0082761C /* TPTabBarController.m */; };
 		F681D0F01BE69E8D006AD833 /* JHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681D0EE1BE69E8D006AD833 /* JHTableViewCell.m */; };
 		F681D0F11BE69E8D006AD833 /* JHTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F681D0EF1BE69E8D006AD833 /* JHTableViewCell.xib */; };
@@ -125,6 +126,8 @@
 		A5F3AE641BE5745300FBDF8B /* JHActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHActivityViewController.m; sourceTree = "<group>"; };
 		A5F3AE661BE5749700FBDF8B /* JHAloneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHAloneViewController.h; sourceTree = "<group>"; };
 		A5F3AE671BE5749700FBDF8B /* JHAloneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHAloneViewController.m; sourceTree = "<group>"; };
+		A5F3AE6C1BE6C90E00FBDF8B /* JHDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHDetailViewController.h; sourceTree = "<group>"; };
+		A5F3AE6D1BE6C90E00FBDF8B /* JHDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHDetailViewController.m; sourceTree = "<group>"; };
 		F64A03381BD7E70C0082761C /* TPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTabBarController.h; sourceTree = "<group>"; };
 		F64A03391BD7E70C0082761C /* TPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTabBarController.m; sourceTree = "<group>"; };
 		F681D0ED1BE69E8D006AD833 /* JHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableViewCell.h; sourceTree = "<group>"; };
@@ -300,6 +303,8 @@
 				F681D0ED1BE69E8D006AD833 /* JHTableViewCell.h */,
 				F681D0EE1BE69E8D006AD833 /* JHTableViewCell.m */,
 				F681D0EF1BE69E8D006AD833 /* JHTableViewCell.xib */,
+				A5F3AE6C1BE6C90E00FBDF8B /* JHDetailViewController.h */,
+				A5F3AE6D1BE6C90E00FBDF8B /* JHDetailViewController.m */,
 			);
 			path = Jhana;
 			sourceTree = "<group>";
@@ -592,6 +597,7 @@
 				F6AA36CC1BC5B9E0007F4F26 /* AppDelegate.m in Sources */,
 				A5F3AE681BE5749700FBDF8B /* JHAloneViewController.m in Sources */,
 				A5F3AE651BE5745300FBDF8B /* JHActivityViewController.m in Sources */,
+				A5F3AE6E1BE6C90E00FBDF8B /* JHDetailViewController.m in Sources */,
 				F64A033A1BD7E70C0082761C /* TPTabBarController.m in Sources */,
 				F6AA36FF1BC5BA69007F4F26 /* JHListViewController.m in Sources */,
 				F681D0F01BE69E8D006AD833 /* JHTableViewCell.m in Sources */,

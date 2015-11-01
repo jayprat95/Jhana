@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="co5-QC-mmY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="co5-QC-mmY">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -15,11 +15,11 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="JHCell" id="K16-4U-Z5c" customClass="JHTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="K16-4U-Z5c" customClass="JHTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K16-4U-Z5c" id="4vw-0b-b7a">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -40,11 +40,81 @@
                     </navigationItem>
                     <connections>
                         <outlet property="editButton" destination="yPj-h3-byL" id="23d-el-bUB"/>
+                        <segue destination="FsC-6Z-jeQ" kind="show" identifier="detailSegue" id="Fry-5f-Ho8"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wED-T9-SiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2176" y="514"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="lWV-hE-PtU">
+            <objects>
+                <viewController id="FsC-6Z-jeQ" customClass="JHDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cb7-7L-9Qy"/>
+                        <viewControllerLayoutGuide type="bottom" id="CAK-k2-sLA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Fc-ZU-j6E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xD1-eh-i8D">
+                                <rect key="frame" x="20" y="72" width="374" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attention: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRj-U2-Gw2">
+                                <rect key="frame" x="20" y="101" width="374" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEb-c1-bQj">
+                                <rect key="frame" x="20" y="130" width="374" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6he-rd-v9q">
+                                <rect key="frame" x="20" y="159" width="374" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zEb-c1-bQj" firstAttribute="trailing" secondItem="gRj-U2-Gw2" secondAttribute="trailing" id="2lL-kM-FwM"/>
+                            <constraint firstItem="6he-rd-v9q" firstAttribute="top" secondItem="zEb-c1-bQj" secondAttribute="bottom" constant="8" symbolic="YES" id="9uR-WY-AoO"/>
+                            <constraint firstItem="gRj-U2-Gw2" firstAttribute="top" secondItem="xD1-eh-i8D" secondAttribute="bottom" constant="8" symbolic="YES" id="B5t-0P-G9d"/>
+                            <constraint firstItem="gRj-U2-Gw2" firstAttribute="trailing" secondItem="xD1-eh-i8D" secondAttribute="trailing" id="EIP-LO-V36"/>
+                            <constraint firstItem="gRj-U2-Gw2" firstAttribute="leading" secondItem="zEb-c1-bQj" secondAttribute="leading" id="Hni-zh-4af"/>
+                            <constraint firstItem="zEb-c1-bQj" firstAttribute="top" secondItem="gRj-U2-Gw2" secondAttribute="bottom" constant="8" symbolic="YES" id="PLb-yO-hwe"/>
+                            <constraint firstItem="xD1-eh-i8D" firstAttribute="trailing" secondItem="8Fc-ZU-j6E" secondAttribute="trailingMargin" id="Rh5-4c-CbF"/>
+                            <constraint firstItem="zEb-c1-bQj" firstAttribute="leading" secondItem="8Fc-ZU-j6E" secondAttribute="leadingMargin" id="TIi-Ai-5Pq"/>
+                            <constraint firstItem="gRj-U2-Gw2" firstAttribute="leading" secondItem="xD1-eh-i8D" secondAttribute="leading" id="hGH-VS-ed0"/>
+                            <constraint firstItem="6he-rd-v9q" firstAttribute="trailing" secondItem="zEb-c1-bQj" secondAttribute="trailing" id="qdB-NU-v1X"/>
+                            <constraint firstItem="6he-rd-v9q" firstAttribute="leading" secondItem="zEb-c1-bQj" secondAttribute="leading" id="s7q-a4-7ic"/>
+                            <constraint firstItem="xD1-eh-i8D" firstAttribute="top" secondItem="cb7-7L-9Qy" secondAttribute="bottom" constant="8" symbolic="YES" id="wwa-Cs-h89"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityLabel" destination="xD1-eh-i8D" id="KO9-tu-9HU"/>
+                        <outlet property="attentionLabel" destination="gRj-U2-Gw2" id="c0c-e6-Cwd"/>
+                        <outlet property="locationLabel" destination="zEb-c1-bQj" id="Lzz-v2-use"/>
+                        <outlet property="personLabel" destination="6he-rd-v9q" id="4UA-ie-XOH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i7N-8M-rWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2957" y="514"/>
         </scene>
         <!--Library-->
         <scene sceneID="fZu-Pv-r0x">
@@ -159,7 +229,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGa-xu-4Wj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGa-xu-4Wj">
                                 <rect key="frame" x="176" y="321" width="62" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Continue"/>
@@ -227,7 +297,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dPg-uU-quU" id="ULx-yd-ZZg">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -286,7 +356,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sWz-qm-rGP" id="q8P-MC-5L7">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -350,7 +420,7 @@
                                     <action selector="aloneSegmentedControlValueSelected:" destination="cZE-TS-Zsa" eventType="valueChanged" id="bCL-mJ-RIJ"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter person name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3w-Bv-OkE">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter person name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3w-Bv-OkE">
                                 <rect key="frame" x="20" y="255" width="374" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -366,7 +436,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfg-VG-Uv4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfg-VG-Uv4">
                                 <rect key="frame" x="183" y="321" width="49" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit"/>
