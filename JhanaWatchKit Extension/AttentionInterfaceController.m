@@ -32,11 +32,13 @@
 }
 
 - (void)setUpPicker {
-    self.attentionValues = @[@"Very Attentive", @"Somewhat Attentive", @"Neutral", @"Somewhat Distracted", @"Very Distracted"];
+    self.attentionValues = @[@"veryUnfocused", @"unfocused"];
     NSMutableArray *pickerItems = [NSMutableArray array];
     for (int i=0; i<self.attentionValues.count; i++) {
         WKPickerItem *pickerItem = [[WKPickerItem alloc] init];
-        pickerItem.title = self.attentionValues[i];
+//        pickerItem.title = self.attentionValues[i];
+        WKImage *image = [WKImage imageWithImageName:self.attentionValues[i]];
+        pickerItem.contentImage = image;
         pickerItems[i] = pickerItem;
     }
     [self.attentionPicker setItems:pickerItems];
@@ -54,7 +56,7 @@
 - (id)contextForSegueWithIdentifier:(NSString *)segueIdentifier {
     if ([segueIdentifier isEqualToString:@"attention"]) {
         NSMutableDictionary *applicationData = [NSMutableDictionary dictionary];
-        applicationData[@"attentionValue"] = self.attentionValues[self.selectedAttentionValue];
+        applicationData[@"attentionValue"] = [NSNumber numberWithInt:self.selectedAttentionValue];
         return applicationData;
     }
     return nil;

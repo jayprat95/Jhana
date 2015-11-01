@@ -65,6 +65,8 @@
         [session activateSession];
     }
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveEntry:) name:@"SaveData" object:nil];
+    
     [self createLocalNotifications];
 }
 
@@ -73,17 +75,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)addButtonClicked:(id)sender {
+- (void)saveEntry:(NSNotification *) notification {
     // Create Entity
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"JHReport" inManagedObjectContext:self.managedObjectContext];
     
     // Initialize Record
     NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
     
+    NSMutableDictionary *applicationData = notification.object;
+    
     // Populate Record
-    [record setValue:@"running" forKey:@"activity"];
-    [record setValue:@"Foo Bar" forKey:@"annotation"];
-    [record setValue:[NSNumber numberWithInt:10] forKey:@"attention"];
+    [record setValue:applicationData[@"activity"] forKey:@"activity"];
+    [record setValue:applicationData[@"attention"] forKey:@"attention"];
+    [record setValue:applicationData[@"location"] forKey:@"location"];
+    [record setValue:applicationData[@"isAlone"] forKey:@"isAlone"];
+    [record setValue:applicationData[@"person"] forKey:@"person"];
     [record setValue:[NSDate date] forKey:@"createdAt"];
     [record setValue:[NSDate date] forKey:@"timeStamp"];
     

@@ -11,7 +11,7 @@
                 <controller id="AgC-eL-Hgc" customClass="AttentionInterfaceController">
                     <items>
                         <label alignment="left" text="How Attentive Are You?" minimumScaleFactor="0.0" id="hWd-WT-IVN"/>
-                        <picker width="1" height="100" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="nsh-z6-OJ3">
+                        <picker width="1" height="100" alignment="left" style="stack" indicatorMode="shownWhileFocused" id="nsh-z6-OJ3">
                             <connections>
                                 <action selector="attentionValueSelected:" destination="AgC-eL-Hgc" id="tyn-qa-heg"/>
                             </connections>

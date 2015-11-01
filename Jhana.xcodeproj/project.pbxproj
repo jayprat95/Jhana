@@ -15,9 +15,15 @@
 		A5035A1A1BD8129F000E929C /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5035A191BD8129F000E929C /* NotificationController.m */; };
 		A5035A1C1BD8129F000E929C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5035A1B1BD8129F000E929C /* Assets.xcassets */; };
 		A5035A201BD8129F000E929C /* JhanaWatchKit.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A50359FF1BD8129F000E929C /* JhanaWatchKit.app */; };
+		A516671B1BE154A200592FC6 /* JHAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A516671A1BE154A200592FC6 /* JHAttentionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A51667291BE1700000592FC6 /* unfocused.png in Resources */ = {isa = PBXBuildFile; fileRef = A51667271BE1700000592FC6 /* unfocused.png */; settings = {ASSET_TAGS = (); }; };
+		A516672B1BE1709700592FC6 /* veryUnfocued.png in Resources */ = {isa = PBXBuildFile; fileRef = A516672A1BE1709700592FC6 /* veryUnfocued.png */; settings = {ASSET_TAGS = (); }; };
 		A566FA951BD9429700FEDB38 /* AttentionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA941BD9429700FEDB38 /* AttentionInterfaceController.m */; settings = {ASSET_TAGS = (); }; };
 		A566FA981BD942AB00FEDB38 /* LocationInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA971BD942AB00FEDB38 /* LocationInterfaceController.m */; settings = {ASSET_TAGS = (); }; };
 		A566FA9B1BD942B700FEDB38 /* ActionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA9A1BD942B700FEDB38 /* ActionInterfaceController.m */; settings = {ASSET_TAGS = (); }; };
+		A5F3AE621BE554AA00FBDF8B /* JHLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE611BE554AA00FBDF8B /* JHLocationViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A5F3AE651BE5745300FBDF8B /* JHActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE641BE5745300FBDF8B /* JHActivityViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A5F3AE681BE5749700FBDF8B /* JHAloneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE671BE5749700FBDF8B /* JHAloneViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F64A033A1BD7E70C0082761C /* TPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F64A03391BD7E70C0082761C /* TPTabBarController.m */; };
 		F6AA36C91BC5B9E0007F4F26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36C81BC5B9E0007F4F26 /* main.m */; };
 		F6AA36CC1BC5B9E0007F4F26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36CB1BC5B9E0007F4F26 /* AppDelegate.m */; };
@@ -28,7 +34,6 @@
 		F6AA36E51BC5B9E0007F4F26 /* JhanaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36E41BC5B9E0007F4F26 /* JhanaTests.m */; };
 		F6AA36F01BC5B9E0007F4F26 /* JhanaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36EF1BC5B9E0007F4F26 /* JhanaUITests.m */; };
 		F6AA36FF1BC5BA69007F4F26 /* JHListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36FE1BC5BA69007F4F26 /* JHListViewController.m */; };
-		F6FF25921BD911C600B82467 /* JHAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FF25911BD911C600B82467 /* JHAddViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,12 +107,22 @@
 		A5035A191BD8129F000E929C /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		A5035A1B1BD8129F000E929C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5035A1D1BD8129F000E929C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A51667191BE154A200592FC6 /* JHAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHAttentionViewController.h; sourceTree = "<group>"; };
+		A516671A1BE154A200592FC6 /* JHAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHAttentionViewController.m; sourceTree = "<group>"; };
+		A51667271BE1700000592FC6 /* unfocused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unfocused.png; sourceTree = "<group>"; };
+		A516672A1BE1709700592FC6 /* veryUnfocued.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = veryUnfocued.png; sourceTree = "<group>"; };
 		A566FA931BD9429700FEDB38 /* AttentionInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttentionInterfaceController.h; sourceTree = "<group>"; };
 		A566FA941BD9429700FEDB38 /* AttentionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttentionInterfaceController.m; sourceTree = "<group>"; };
 		A566FA961BD942AB00FEDB38 /* LocationInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationInterfaceController.h; sourceTree = "<group>"; };
 		A566FA971BD942AB00FEDB38 /* LocationInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationInterfaceController.m; sourceTree = "<group>"; };
 		A566FA991BD942B700FEDB38 /* ActionInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionInterfaceController.h; sourceTree = "<group>"; };
 		A566FA9A1BD942B700FEDB38 /* ActionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionInterfaceController.m; sourceTree = "<group>"; };
+		A5F3AE601BE554AA00FBDF8B /* JHLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHLocationViewController.h; sourceTree = "<group>"; };
+		A5F3AE611BE554AA00FBDF8B /* JHLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHLocationViewController.m; sourceTree = "<group>"; };
+		A5F3AE631BE5745300FBDF8B /* JHActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHActivityViewController.h; sourceTree = "<group>"; };
+		A5F3AE641BE5745300FBDF8B /* JHActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHActivityViewController.m; sourceTree = "<group>"; };
+		A5F3AE661BE5749700FBDF8B /* JHAloneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHAloneViewController.h; sourceTree = "<group>"; };
+		A5F3AE671BE5749700FBDF8B /* JHAloneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHAloneViewController.m; sourceTree = "<group>"; };
 		F64A03381BD7E70C0082761C /* TPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTabBarController.h; sourceTree = "<group>"; };
 		F64A03391BD7E70C0082761C /* TPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTabBarController.m; sourceTree = "<group>"; };
 		F650847C1BD82947003F4F79 /* JHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableViewCell.h; sourceTree = "<group>"; };
@@ -130,8 +145,6 @@
 		F6AA36F11BC5B9E0007F4F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6AA36FD1BC5BA69007F4F26 /* JHListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHListViewController.h; sourceTree = "<group>"; };
 		F6AA36FE1BC5BA69007F4F26 /* JHListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHListViewController.m; sourceTree = "<group>"; };
-		F6FF25901BD911C600B82467 /* JHAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHAddViewController.h; sourceTree = "<group>"; };
-		F6FF25911BD911C600B82467 /* JHAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHAddViewController.m; sourceTree = "<group>"; };
 		FE1C545184401C4CB8C2B289 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -171,6 +184,7 @@
 		A5035A001BD8129F000E929C /* JhanaWatchKit */ = {
 			isa = PBXGroup;
 			children = (
+				A516671D1BE16BC600592FC6 /* Images */,
 				A5035A011BD8129F000E929C /* Interface.storyboard */,
 				A5035A041BD8129F000E929C /* Assets.xcassets */,
 				A5035A061BD8129F000E929C /* Info.plist */,
@@ -204,6 +218,15 @@
 				A5035A111BD8129F000E929C /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A516671D1BE16BC600592FC6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A516672A1BE1709700592FC6 /* veryUnfocued.png */,
+				A51667271BE1700000592FC6 /* unfocused.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		C05A1752B810ACD679593C54 /* Pods */ = {
@@ -267,8 +290,14 @@
 				F650847C1BD82947003F4F79 /* JHTableViewCell.h */,
 				F650847D1BD82947003F4F79 /* JHTableViewCell.m */,
 				F650847E1BD82947003F4F79 /* JHTableViewCell.xib */,
-				F6FF25901BD911C600B82467 /* JHAddViewController.h */,
-				F6FF25911BD911C600B82467 /* JHAddViewController.m */,
+				A51667191BE154A200592FC6 /* JHAttentionViewController.h */,
+				A516671A1BE154A200592FC6 /* JHAttentionViewController.m */,
+				A5F3AE601BE554AA00FBDF8B /* JHLocationViewController.h */,
+				A5F3AE611BE554AA00FBDF8B /* JHLocationViewController.m */,
+				A5F3AE631BE5745300FBDF8B /* JHActivityViewController.h */,
+				A5F3AE641BE5745300FBDF8B /* JHActivityViewController.m */,
+				A5F3AE661BE5749700FBDF8B /* JHAloneViewController.h */,
+				A5F3AE671BE5749700FBDF8B /* JHAloneViewController.m */,
 			);
 			path = Jhana;
 			sourceTree = "<group>";
@@ -449,7 +478,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A51667291BE1700000592FC6 /* unfocused.png in Resources */,
 				A5035A051BD8129F000E929C /* Assets.xcassets in Resources */,
+				A516672B1BE1709700592FC6 /* veryUnfocued.png in Resources */,
 				A5035A031BD8129F000E929C /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,12 +584,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6FF25921BD911C600B82467 /* JHAddViewController.m in Sources */,
+				A516671B1BE154A200592FC6 /* JHAttentionViewController.m in Sources */,
 				F6AA36D51BC5B9E0007F4F26 /* Jhana.xcdatamodeld in Sources */,
 				F6AA36CC1BC5B9E0007F4F26 /* AppDelegate.m in Sources */,
+				A5F3AE681BE5749700FBDF8B /* JHAloneViewController.m in Sources */,
+				A5F3AE651BE5745300FBDF8B /* JHActivityViewController.m in Sources */,
 				F64A033A1BD7E70C0082761C /* TPTabBarController.m in Sources */,
 				F6AA36FF1BC5BA69007F4F26 /* JHListViewController.m in Sources */,
 				F6AA36C91BC5B9E0007F4F26 /* main.m in Sources */,
+				A5F3AE621BE554AA00FBDF8B /* JHLocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
