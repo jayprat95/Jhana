@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import <WatchConnectivity/WatchConnectivity.h>
 #import "Flurry.h"
+#import "UIColor+BFPaperColors.h"
 
 #import <CoreData/CoreData.h>
 
@@ -229,19 +230,92 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MM-dd HH:mm"];
     [cell.timeLabel setText:[dateFormatter stringFromDate:timeStamp]];
-    NSNumber *attention = [record valueForKey:@"attention"];
-    if ([attention isEqualToNumber:@0]) {
-        [cell.attentionLabel setText:@"Very Distracted"];
-    } else if ([attention isEqualToNumber:@1]) {
-        [cell.attentionLabel setText:@"Somewhat Distracted"];
-    } else if ([attention isEqualToNumber:@2]) {
-        [cell.attentionLabel setText:@"Neutral"];
-    } else if ([attention isEqualToNumber:@3]) {
-        [cell.attentionLabel setText:@"Somewhat Attentive"];
-    } else {
-        [cell.attentionLabel setText:@"Very Attentive"];
-    }
 
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"h:mm\na"];
+    
+    NSString *startTimeString = [formatter stringFromDate:[record valueForKey:@"timeStamp"]];
+    switch ([[record valueForKey:@"attention"] intValue])
+    {
+        case 0:
+            [cell.attentionLabel setText:@"very unattentive"];
+//            [cell.attentionLabel setTextColor: [UIColor paperColorPurple]];
+//            [cell.activityLabel setTextColor: [UIColor paperColorPurple]];
+//            [cell.timeLabel setTextColor: [UIColor paperColorPurple]];
+//            [cell.locationLabel setTextColor: [UIColor paperColorPurple]];
+            
+            [cell.attentionLabel setTextColor: [UIColor whiteColor]];
+            [cell.activityLabel setTextColor: [UIColor whiteColor]];
+            [cell.timeLabel setTextColor: [UIColor whiteColor]];
+            [cell.locationLabel setTextColor: [UIColor whiteColor]];
+            
+            [cell setBackgroundColor:[UIColor paperColorPurple]];
+            break;
+        case 1:
+            [cell.attentionLabel setText:@"Unattentive"];
+//            [cell.attentionLabel setTextColor: [UIColor paperColorIndigo]];
+//            [cell.activityLabel setTextColor: [UIColor paperColorIndigo]];
+//            [cell.locationLabel setTextColor: [UIColor paperColorIndigo]];
+//            [cell.timeLabel setTextColor: [UIColor paperColorIndigo]];
+            
+            [cell.attentionLabel setTextColor: [UIColor whiteColor]];
+            [cell.activityLabel setTextColor: [UIColor whiteColor]];
+            [cell.timeLabel setTextColor: [UIColor whiteColor]];
+            [cell.locationLabel setTextColor: [UIColor whiteColor]];
+            
+            [cell setBackgroundColor:[UIColor paperColorIndigo]];
+            break;
+        case 2:
+            [cell.attentionLabel setText:@"Neutral"];
+//            [cell.attentionLabel setTextColor: [UIColor paperColorTeal]];
+//            [cell.activityLabel setTextColor: [UIColor paperColorTeal]];
+//            [cell.locationLabel setTextColor: [UIColor paperColorTeal]];
+//            [cell.timeLabel setTextColor: [UIColor paperColorTeal]];
+            
+            [cell.attentionLabel setTextColor: [UIColor whiteColor]];
+            [cell.activityLabel setTextColor: [UIColor whiteColor]];
+            [cell.timeLabel setTextColor: [UIColor whiteColor]];
+            [cell.locationLabel setTextColor: [UIColor whiteColor]];
+            
+            [cell setBackgroundColor:[UIColor paperColorTeal]];
+            break;
+        case 3:
+            [cell.attentionLabel setText:@"attentive"];
+//            [cell.attentionLabel setTextColor: [UIColor paperColorLightGreen]];
+//            [cell.activityLabel setTextColor: [UIColor paperColorLightGreen]];
+//            [cell.locationLabel setTextColor: [UIColor paperColorLightGreen]];
+//            [cell.timeLabel setTextColor: [UIColor paperColorLightGreen]];
+            
+            [cell.attentionLabel setTextColor: [UIColor whiteColor]];
+            [cell.activityLabel setTextColor: [UIColor whiteColor]];
+            [cell.timeLabel setTextColor: [UIColor whiteColor]];
+            [cell.locationLabel setTextColor: [UIColor whiteColor]];
+            
+            [cell setBackgroundColor:[UIColor paperColorLightGreen]];
+            break;
+        case 4:
+            [cell.attentionLabel setText:@"very attentive"];
+//            [cell.attentionLabel setTextColor: [UIColor paperColorOrange]];
+//            [cell.activityLabel setTextColor: [UIColor paperColorOrange]];
+//            [cell.locationLabel setTextColor: [UIColor paperColorOrange]];
+//            [cell.timeLabel setTextColor: [UIColor paperColorOrange]];
+            
+            [cell.attentionLabel setTextColor: [UIColor whiteColor]];
+            [cell.activityLabel setTextColor: [UIColor whiteColor]];
+            [cell.timeLabel setTextColor: [UIColor whiteColor]];
+            [cell.locationLabel setTextColor: [UIColor whiteColor]];
+            
+            [cell setBackgroundColor:[UIColor paperColorOrange]];
+            break;
+            
+    }
+    
+    
+    [cell.activityLabel setText:[record valueForKey:@"activity"]];
+    [cell.locationLabel setText:[record valueForKey:@"location"]];
+    [cell.timeLabel setText:startTimeString]; 
+    
     return cell;
 }
 
