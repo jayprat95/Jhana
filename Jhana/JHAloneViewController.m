@@ -66,7 +66,7 @@
     }
     [[NSNotificationCenter defaultCenter] postNotificationName:@"SaveData" object:self.applicationData];
     UINavigationController *navController = (UINavigationController *)self.navigationController;
-    JHAttentionViewController *attentionViewController = (JHAttentionViewController *)navController.viewControllers[0];
+    JHAttentionGestureViewController *attentionViewController = (JHAttentionGestureViewController *)navController.viewControllers[0];
     [attentionViewController cancelButtonClicked:self];
 }
 

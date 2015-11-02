@@ -455,13 +455,14 @@
 				TargetAttributes = {
 					A50359FE1BD8129F000E929C = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = U3465V32BF;
+						DevelopmentTeam = 2L66TTQ7VK;
 					};
 					A5035A0A1BD8129F000E929C = {
 						CreatedOnToolsVersion = 7.0;
 					};
 					F6AA36C31BC5B9E0007F4F26 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 2L66TTQ7VK;
 					};
 					F6AA36DF1BC5B9E0007F4F26 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -699,10 +700,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				IBSC_MODULE = JhanaWatchKit_Extension;
 				INFOPLIST_FILE = JhanaWatchKit/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.TT.Jhana.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -715,10 +718,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				IBSC_MODULE = JhanaWatchKit_Extension;
 				INFOPLIST_FILE = JhanaWatchKit/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.TT.Jhana.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -839,6 +844,7 @@
 			baseConfigurationReference = 62C6D2DB4582586F7CA2F303 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Jhana/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TT.Jhana;
@@ -851,6 +857,7 @@
 			baseConfigurationReference = 454D21EE6CA1A989C893209D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Jhana/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TT.Jhana;

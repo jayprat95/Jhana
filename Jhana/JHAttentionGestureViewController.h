@@ -11,4 +11,5 @@
 
 @interface JHAttentionGestureViewController : UIViewController 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+- (IBAction)cancelButtonClicked:(id)sender;
 @end
