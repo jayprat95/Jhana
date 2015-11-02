@@ -25,6 +25,21 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>FrameAccessor.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>GraphKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>MKFoundationKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,12 +57,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0F7B1940DE10624DFABB6A65D0BE9B4A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1016F499C81C87CEF0E4A34A07E9CAFF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>4E361590FBDE5D53A34E86A0C8B706BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>57756854511CDF1B22BFD95EB2F154D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,12 +87,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>970176E4C248C9FFA9FFEE0933B897DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A2ADB6F5BC57E0DD0411C85FEFD19B2F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A2D1E6890757313A64C46DA7C514E1BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CC583880AD24A30C69B268B072649FE3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

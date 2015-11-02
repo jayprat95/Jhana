@@ -22,13 +22,14 @@
 		A5F3AE621BE554AA00FBDF8B /* JHLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE611BE554AA00FBDF8B /* JHLocationViewController.m */; };
 		A5F3AE651BE5745300FBDF8B /* JHActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE641BE5745300FBDF8B /* JHActivityViewController.m */; };
 		A5F3AE681BE5749700FBDF8B /* JHAloneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE671BE5749700FBDF8B /* JHAloneViewController.m */; };
-		A5F3AE6E1BE6C90E00FBDF8B /* JHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE6D1BE6C90E00FBDF8B /* JHDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
-		A5F3AE711BE7126300FBDF8B /* JHGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE701BE7126300FBDF8B /* JHGraphViewController.m */; settings = {ASSET_TAGS = (); }; };
-		A5F3AE771BE71C9000FBDF8B /* focused.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F3AE721BE71C9000FBDF8B /* focused.png */; settings = {ASSET_TAGS = (); }; };
-		A5F3AE781BE71C9000FBDF8B /* neutral.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F3AE731BE71C9000FBDF8B /* neutral.png */; settings = {ASSET_TAGS = (); }; };
-		A5F3AE791BE71C9000FBDF8B /* unfocused.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F3AE741BE71C9000FBDF8B /* unfocused.png */; settings = {ASSET_TAGS = (); }; };
-		A5F3AE7A1BE71C9000FBDF8B /* veryFocused.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F3AE751BE71C9000FBDF8B /* veryFocused.png */; settings = {ASSET_TAGS = (); }; };
-		A5F3AE7B1BE71C9000FBDF8B /* veryUnfocused.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F3AE761BE71C9000FBDF8B /* veryUnfocused.png */; settings = {ASSET_TAGS = (); }; };
+		A5F3AE6E1BE6C90E00FBDF8B /* JHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE6D1BE6C90E00FBDF8B /* JHDetailViewController.m */; };
+		A5F3AE711BE7126300FBDF8B /* JHGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE701BE7126300FBDF8B /* JHGraphViewController.m */; };
+		A5F3AE771BE71C9000FBDF8B /* focused.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F3AE721BE71C9000FBDF8B /* focused.png */; };
+		A5F3AE781BE71C9000FBDF8B /* neutral.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F3AE731BE71C9000FBDF8B /* neutral.png */; };
+		A5F3AE791BE71C9000FBDF8B /* unfocused.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F3AE741BE71C9000FBDF8B /* unfocused.png */; };
+		A5F3AE7A1BE71C9000FBDF8B /* veryFocused.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F3AE751BE71C9000FBDF8B /* veryFocused.png */; };
+		A5F3AE7B1BE71C9000FBDF8B /* veryUnfocused.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F3AE761BE71C9000FBDF8B /* veryUnfocused.png */; };
+		F63703EE1BE7BE3B008E4ECB /* JHAttentionGestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F63703ED1BE7BE3B008E4ECB /* JHAttentionGestureViewController.m */; };
 		F64A033A1BD7E70C0082761C /* TPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F64A03391BD7E70C0082761C /* TPTabBarController.m */; };
 		F681D0F01BE69E8D006AD833 /* JHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681D0EE1BE69E8D006AD833 /* JHTableViewCell.m */; };
 		F681D0F11BE69E8D006AD833 /* JHTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F681D0EF1BE69E8D006AD833 /* JHTableViewCell.xib */; };
@@ -137,6 +138,8 @@
 		A5F3AE741BE71C9000FBDF8B /* unfocused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unfocused.png; sourceTree = "<group>"; };
 		A5F3AE751BE71C9000FBDF8B /* veryFocused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = veryFocused.png; sourceTree = "<group>"; };
 		A5F3AE761BE71C9000FBDF8B /* veryUnfocused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = veryUnfocused.png; sourceTree = "<group>"; };
+		F63703EC1BE7BE3B008E4ECB /* JHAttentionGestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHAttentionGestureViewController.h; sourceTree = "<group>"; };
+		F63703ED1BE7BE3B008E4ECB /* JHAttentionGestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHAttentionGestureViewController.m; sourceTree = "<group>"; };
 		F64A03381BD7E70C0082761C /* TPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTabBarController.h; sourceTree = "<group>"; };
 		F64A03391BD7E70C0082761C /* TPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTabBarController.m; sourceTree = "<group>"; };
 		F681D0ED1BE69E8D006AD833 /* JHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableViewCell.h; sourceTree = "<group>"; };
@@ -319,6 +322,8 @@
 				F681D0EF1BE69E8D006AD833 /* JHTableViewCell.xib */,
 				A5F3AE6C1BE6C90E00FBDF8B /* JHDetailViewController.h */,
 				A5F3AE6D1BE6C90E00FBDF8B /* JHDetailViewController.m */,
+				F63703EC1BE7BE3B008E4ECB /* JHAttentionGestureViewController.h */,
+				F63703ED1BE7BE3B008E4ECB /* JHAttentionGestureViewController.m */,
 			);
 			path = Jhana;
 			sourceTree = "<group>";
@@ -609,6 +614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F63703EE1BE7BE3B008E4ECB /* JHAttentionGestureViewController.m in Sources */,
 				A516671B1BE154A200592FC6 /* JHAttentionViewController.m in Sources */,
 				F6AA36D51BC5B9E0007F4F26 /* Jhana.xcdatamodeld in Sources */,
 				F6AA36CC1BC5B9E0007F4F26 /* AppDelegate.m in Sources */,

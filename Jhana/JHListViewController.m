@@ -245,7 +245,7 @@
     {
         case 0:
             [cell.attentionLabel setText:@"Very Unattentive"];
-            [cell setBackgroundColor:[UIColor paperColorPurple]];
+            [cell setBackgroundColor:[UIColor paperColorPurple800]];
             break;
         case 1:
             [cell.attentionLabel setText:@"Unattentive"];
