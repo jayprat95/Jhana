@@ -53,7 +53,7 @@
 
 - (id)contextForSegueWithIdentifier:(NSString *)segueIdentifier {
     if ([segueIdentifier isEqualToString:@"location"]) {
-        self.applicationData[@"locationValue"] = self.locationValues[self.selectedLocationValue];
+        self.applicationData[@"location"] = self.locationValues[self.selectedLocationValue];
         return self.applicationData;
     }
     return nil;

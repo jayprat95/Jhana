@@ -105,7 +105,6 @@
      }
 }
 
-
 - (void)session:(nonnull WCSession *)session didReceiveMessage:(nonnull NSDictionary<NSString *,id> *)message replyHandler:(nonnull void (^)(NSDictionary<NSString *,id> * _Nonnull))replyHandler {
     // Create Entity
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"JHReport" inManagedObjectContext:self.managedObjectContext];
@@ -114,9 +113,11 @@
     NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
     
     // Populate Record
-    [record setValue:message[@"actionValue"] forKey:@"activity"];
-    [record setValue:@"Foo Bar" forKey:@"annotation"];
-    [record setValue:[NSNumber numberWithInt:10] forKey:@"attention"];
+    [record setValue:message[@"activity"] forKey:@"activity"];
+    [record setValue:message[@"attention"] forKey:@"attention"];
+    [record setValue:message[@"location"] forKey:@"location"];
+    [record setValue:message[@"isAlone"] forKey:@"isAlone"];
+    [record setValue:message[@"person"] forKey:@"person"];
     [record setValue:[NSDate date] forKey:@"createdAt"];
     [record setValue:[NSDate date] forKey:@"timeStamp"];
     
@@ -129,7 +130,6 @@
         });
     }
 }
-
 
 - (IBAction)editButtonClicked:(id)sender {
     if (self.editing == true)
@@ -178,29 +178,27 @@
 }
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
-        switch (type) {
-            case NSFetchedResultsChangeInsert: {
-                [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-                break;
-            }
-            case NSFetchedResultsChangeDelete: {
-                [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-                break;
-            }
-            case NSFetchedResultsChangeUpdate: {
-//                [self configureCell:(TSPToDoCell *)[self.tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
-                break;
-            }
-            case NSFetchedResultsChangeMove: {
-                [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-                [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-                break;
-            }
+    switch (type) {
+        case NSFetchedResultsChangeInsert: {
+            [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
         }
+        case NSFetchedResultsChangeDelete: {
+            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        }
+        case NSFetchedResultsChangeUpdate: {
+//                [self configureCell:(TSPToDoCell *)[self.tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            break;
+        }
+        case NSFetchedResultsChangeMove: {
+            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        }
+    }
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RefreshGraph" object:self];
 }
-
-
-
 
 #pragma mark - Table view data source
 
@@ -226,91 +224,40 @@
     NSManagedObject *record = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [cell.activityLabel setText:[record valueForKey:@"activity"]];
     [cell.locationLabel setText:[record valueForKey:@"location"]];
-    NSDate *timeStamp = [record valueForKey:@"timeStamp"];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MM-dd HH:mm"];
-    [cell.timeLabel setText:[dateFormatter stringFromDate:timeStamp]];
-
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"h:mm\na"];
-    
     NSString *startTimeString = [formatter stringFromDate:[record valueForKey:@"timeStamp"]];
+    
     switch ([[record valueForKey:@"attention"] intValue])
     {
         case 0:
-            [cell.attentionLabel setText:@"very unattentive"];
-//            [cell.attentionLabel setTextColor: [UIColor paperColorPurple]];
-//            [cell.activityLabel setTextColor: [UIColor paperColorPurple]];
-//            [cell.timeLabel setTextColor: [UIColor paperColorPurple]];
-//            [cell.locationLabel setTextColor: [UIColor paperColorPurple]];
-            
-            [cell.attentionLabel setTextColor: [UIColor whiteColor]];
-            [cell.activityLabel setTextColor: [UIColor whiteColor]];
-            [cell.timeLabel setTextColor: [UIColor whiteColor]];
-            [cell.locationLabel setTextColor: [UIColor whiteColor]];
-            
+            [cell.attentionLabel setText:@"Very Unattentive"];
             [cell setBackgroundColor:[UIColor paperColorPurple]];
             break;
         case 1:
             [cell.attentionLabel setText:@"Unattentive"];
-//            [cell.attentionLabel setTextColor: [UIColor paperColorIndigo]];
-//            [cell.activityLabel setTextColor: [UIColor paperColorIndigo]];
-//            [cell.locationLabel setTextColor: [UIColor paperColorIndigo]];
-//            [cell.timeLabel setTextColor: [UIColor paperColorIndigo]];
-            
-            [cell.attentionLabel setTextColor: [UIColor whiteColor]];
-            [cell.activityLabel setTextColor: [UIColor whiteColor]];
-            [cell.timeLabel setTextColor: [UIColor whiteColor]];
-            [cell.locationLabel setTextColor: [UIColor whiteColor]];
-            
             [cell setBackgroundColor:[UIColor paperColorIndigo]];
             break;
         case 2:
             [cell.attentionLabel setText:@"Neutral"];
-//            [cell.attentionLabel setTextColor: [UIColor paperColorTeal]];
-//            [cell.activityLabel setTextColor: [UIColor paperColorTeal]];
-//            [cell.locationLabel setTextColor: [UIColor paperColorTeal]];
-//            [cell.timeLabel setTextColor: [UIColor paperColorTeal]];
-            
-            [cell.attentionLabel setTextColor: [UIColor whiteColor]];
-            [cell.activityLabel setTextColor: [UIColor whiteColor]];
-            [cell.timeLabel setTextColor: [UIColor whiteColor]];
-            [cell.locationLabel setTextColor: [UIColor whiteColor]];
-            
             [cell setBackgroundColor:[UIColor paperColorTeal]];
             break;
         case 3:
-            [cell.attentionLabel setText:@"attentive"];
-//            [cell.attentionLabel setTextColor: [UIColor paperColorLightGreen]];
-//            [cell.activityLabel setTextColor: [UIColor paperColorLightGreen]];
-//            [cell.locationLabel setTextColor: [UIColor paperColorLightGreen]];
-//            [cell.timeLabel setTextColor: [UIColor paperColorLightGreen]];
-            
-            [cell.attentionLabel setTextColor: [UIColor whiteColor]];
-            [cell.activityLabel setTextColor: [UIColor whiteColor]];
-            [cell.timeLabel setTextColor: [UIColor whiteColor]];
-            [cell.locationLabel setTextColor: [UIColor whiteColor]];
-            
+            [cell.attentionLabel setText:@"Attentive"];
             [cell setBackgroundColor:[UIColor paperColorLightGreen]];
             break;
         case 4:
-            [cell.attentionLabel setText:@"very attentive"];
-//            [cell.attentionLabel setTextColor: [UIColor paperColorOrange]];
-//            [cell.activityLabel setTextColor: [UIColor paperColorOrange]];
-//            [cell.locationLabel setTextColor: [UIColor paperColorOrange]];
-//            [cell.timeLabel setTextColor: [UIColor paperColorOrange]];
-            
-            [cell.attentionLabel setTextColor: [UIColor whiteColor]];
-            [cell.activityLabel setTextColor: [UIColor whiteColor]];
-            [cell.timeLabel setTextColor: [UIColor whiteColor]];
-            [cell.locationLabel setTextColor: [UIColor whiteColor]];
-            
+            [cell.attentionLabel setText:@"Very Attentive"];
             [cell setBackgroundColor:[UIColor paperColorOrange]];
             break;
             
     }
     
+    [cell.attentionLabel setTextColor: [UIColor whiteColor]];
+    [cell.activityLabel setTextColor: [UIColor whiteColor]];
+    [cell.timeLabel setTextColor: [UIColor whiteColor]];
+    [cell.locationLabel setTextColor: [UIColor whiteColor]];
     
     [cell.activityLabel setText:[record valueForKey:@"activity"]];
     [cell.locationLabel setText:[record valueForKey:@"location"]];
@@ -323,15 +270,6 @@
 {
     return 116;
 }
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {

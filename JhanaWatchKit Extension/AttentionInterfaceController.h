@@ -13,5 +13,5 @@
 @property (strong, nonatomic) IBOutlet WKInterfacePicker *attentionPicker;
 @property (strong, nonatomic) NSArray *attentionValues;
 @property NSInteger selectedAttentionValue;
-
+@property BOOL hasPreviouslyLoaded;
 @end

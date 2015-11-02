@@ -39,7 +39,7 @@
 }
 
 - (void)setUpPicker {
-    self.actionValues = @[@"Cooking", @"Homework", @"Exercising"];
+    self.actionValues = @[@"Work", @"Leisure", @"Errands", @"Commuting"];
     NSMutableArray *pickerItems = [NSMutableArray array];
     for (int i=0; i<self.actionValues.count; i++) {
         WKPickerItem *pickerItem = [[WKPickerItem alloc] init];
@@ -50,7 +50,7 @@
 }
 
 - (IBAction)submitButtonClicked {
-    self.applicationData[@"actionValue"] = self.actionValues[self.selectedActionValue];
+    self.applicationData[@"activity"] = self.actionValues[self.selectedActionValue];
     [[WCSession defaultSession] sendMessage:self.applicationData
                                replyHandler:^(NSDictionary *reply) {
                                    //handle reply from iPhone app here

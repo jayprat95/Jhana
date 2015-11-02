@@ -16,8 +16,6 @@
 		A5035A1C1BD8129F000E929C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5035A1B1BD8129F000E929C /* Assets.xcassets */; };
 		A5035A201BD8129F000E929C /* JhanaWatchKit.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A50359FF1BD8129F000E929C /* JhanaWatchKit.app */; };
 		A516671B1BE154A200592FC6 /* JHAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A516671A1BE154A200592FC6 /* JHAttentionViewController.m */; };
-		A51667291BE1700000592FC6 /* unfocused.png in Resources */ = {isa = PBXBuildFile; fileRef = A51667271BE1700000592FC6 /* unfocused.png */; };
-		A516672B1BE1709700592FC6 /* veryUnfocued.png in Resources */ = {isa = PBXBuildFile; fileRef = A516672A1BE1709700592FC6 /* veryUnfocued.png */; };
 		A566FA951BD9429700FEDB38 /* AttentionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA941BD9429700FEDB38 /* AttentionInterfaceController.m */; };
 		A566FA981BD942AB00FEDB38 /* LocationInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA971BD942AB00FEDB38 /* LocationInterfaceController.m */; };
 		A566FA9B1BD942B700FEDB38 /* ActionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA9A1BD942B700FEDB38 /* ActionInterfaceController.m */; };
@@ -25,6 +23,12 @@
 		A5F3AE651BE5745300FBDF8B /* JHActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE641BE5745300FBDF8B /* JHActivityViewController.m */; };
 		A5F3AE681BE5749700FBDF8B /* JHAloneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE671BE5749700FBDF8B /* JHAloneViewController.m */; };
 		A5F3AE6E1BE6C90E00FBDF8B /* JHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE6D1BE6C90E00FBDF8B /* JHDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A5F3AE711BE7126300FBDF8B /* JHGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F3AE701BE7126300FBDF8B /* JHGraphViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A5F3AE771BE71C9000FBDF8B /* focused.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F3AE721BE71C9000FBDF8B /* focused.png */; settings = {ASSET_TAGS = (); }; };
+		A5F3AE781BE71C9000FBDF8B /* neutral.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F3AE731BE71C9000FBDF8B /* neutral.png */; settings = {ASSET_TAGS = (); }; };
+		A5F3AE791BE71C9000FBDF8B /* unfocused.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F3AE741BE71C9000FBDF8B /* unfocused.png */; settings = {ASSET_TAGS = (); }; };
+		A5F3AE7A1BE71C9000FBDF8B /* veryFocused.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F3AE751BE71C9000FBDF8B /* veryFocused.png */; settings = {ASSET_TAGS = (); }; };
+		A5F3AE7B1BE71C9000FBDF8B /* veryUnfocused.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F3AE761BE71C9000FBDF8B /* veryUnfocused.png */; settings = {ASSET_TAGS = (); }; };
 		F64A033A1BD7E70C0082761C /* TPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F64A03391BD7E70C0082761C /* TPTabBarController.m */; };
 		F681D0F01BE69E8D006AD833 /* JHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681D0EE1BE69E8D006AD833 /* JHTableViewCell.m */; };
 		F681D0F11BE69E8D006AD833 /* JHTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F681D0EF1BE69E8D006AD833 /* JHTableViewCell.xib */; };
@@ -112,8 +116,6 @@
 		A5035A1D1BD8129F000E929C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A51667191BE154A200592FC6 /* JHAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHAttentionViewController.h; sourceTree = "<group>"; };
 		A516671A1BE154A200592FC6 /* JHAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHAttentionViewController.m; sourceTree = "<group>"; };
-		A51667271BE1700000592FC6 /* unfocused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unfocused.png; sourceTree = "<group>"; };
-		A516672A1BE1709700592FC6 /* veryUnfocued.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = veryUnfocued.png; sourceTree = "<group>"; };
 		A566FA931BD9429700FEDB38 /* AttentionInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttentionInterfaceController.h; sourceTree = "<group>"; };
 		A566FA941BD9429700FEDB38 /* AttentionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttentionInterfaceController.m; sourceTree = "<group>"; };
 		A566FA961BD942AB00FEDB38 /* LocationInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationInterfaceController.h; sourceTree = "<group>"; };
@@ -128,6 +130,13 @@
 		A5F3AE671BE5749700FBDF8B /* JHAloneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHAloneViewController.m; sourceTree = "<group>"; };
 		A5F3AE6C1BE6C90E00FBDF8B /* JHDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHDetailViewController.h; sourceTree = "<group>"; };
 		A5F3AE6D1BE6C90E00FBDF8B /* JHDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHDetailViewController.m; sourceTree = "<group>"; };
+		A5F3AE6F1BE7126300FBDF8B /* JHGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHGraphViewController.h; sourceTree = "<group>"; };
+		A5F3AE701BE7126300FBDF8B /* JHGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHGraphViewController.m; sourceTree = "<group>"; };
+		A5F3AE721BE71C9000FBDF8B /* focused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = focused.png; sourceTree = "<group>"; };
+		A5F3AE731BE71C9000FBDF8B /* neutral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = neutral.png; sourceTree = "<group>"; };
+		A5F3AE741BE71C9000FBDF8B /* unfocused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unfocused.png; sourceTree = "<group>"; };
+		A5F3AE751BE71C9000FBDF8B /* veryFocused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = veryFocused.png; sourceTree = "<group>"; };
+		A5F3AE761BE71C9000FBDF8B /* veryUnfocused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = veryUnfocused.png; sourceTree = "<group>"; };
 		F64A03381BD7E70C0082761C /* TPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTabBarController.h; sourceTree = "<group>"; };
 		F64A03391BD7E70C0082761C /* TPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTabBarController.m; sourceTree = "<group>"; };
 		F681D0ED1BE69E8D006AD833 /* JHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableViewCell.h; sourceTree = "<group>"; };
@@ -228,8 +237,11 @@
 		A516671D1BE16BC600592FC6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				A516672A1BE1709700592FC6 /* veryUnfocued.png */,
-				A51667271BE1700000592FC6 /* unfocused.png */,
+				A5F3AE721BE71C9000FBDF8B /* focused.png */,
+				A5F3AE731BE71C9000FBDF8B /* neutral.png */,
+				A5F3AE741BE71C9000FBDF8B /* unfocused.png */,
+				A5F3AE751BE71C9000FBDF8B /* veryFocused.png */,
+				A5F3AE761BE71C9000FBDF8B /* veryUnfocused.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -292,6 +304,8 @@
 				F6AA36C71BC5B9E0007F4F26 /* Supporting Files */,
 				F6AA36FD1BC5BA69007F4F26 /* JHListViewController.h */,
 				F6AA36FE1BC5BA69007F4F26 /* JHListViewController.m */,
+				A5F3AE6F1BE7126300FBDF8B /* JHGraphViewController.h */,
+				A5F3AE701BE7126300FBDF8B /* JHGraphViewController.m */,
 				A51667191BE154A200592FC6 /* JHAttentionViewController.h */,
 				A516671A1BE154A200592FC6 /* JHAttentionViewController.m */,
 				A5F3AE601BE554AA00FBDF8B /* JHLocationViewController.h */,
@@ -485,10 +499,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A51667291BE1700000592FC6 /* unfocused.png in Resources */,
 				A5035A051BD8129F000E929C /* Assets.xcassets in Resources */,
-				A516672B1BE1709700592FC6 /* veryUnfocued.png in Resources */,
+				A5F3AE781BE71C9000FBDF8B /* neutral.png in Resources */,
+				A5F3AE791BE71C9000FBDF8B /* unfocused.png in Resources */,
+				A5F3AE7A1BE71C9000FBDF8B /* veryFocused.png in Resources */,
+				A5F3AE771BE71C9000FBDF8B /* focused.png in Resources */,
 				A5035A031BD8129F000E929C /* Interface.storyboard in Resources */,
+				A5F3AE7B1BE71C9000FBDF8B /* veryUnfocused.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +618,7 @@
 				F64A033A1BD7E70C0082761C /* TPTabBarController.m in Sources */,
 				F6AA36FF1BC5BA69007F4F26 /* JHListViewController.m in Sources */,
 				F681D0F01BE69E8D006AD833 /* JHTableViewCell.m in Sources */,
+				A5F3AE711BE7126300FBDF8B /* JHGraphViewController.m in Sources */,
 				F6AA36C91BC5B9E0007F4F26 /* main.m in Sources */,
 				A5F3AE621BE554AA00FBDF8B /* JHLocationViewController.m in Sources */,
 			);
