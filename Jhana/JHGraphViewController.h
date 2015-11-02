@@ -10,8 +10,9 @@
 #import "GraphKit.h"
 #import "AppDelegate.h"
 #import <CoreData/CoreData.h>
+#import "UIScrollView+EmptyDataSet.h"
 
-@interface JHGraphViewController : UIViewController <GKLineGraphDataSource>
+@interface JHGraphViewController : UIViewController <GKLineGraphDataSource, UIScrollViewDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 @property (nonatomic, strong) GKLineGraph *graph;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSArray *entryArray;

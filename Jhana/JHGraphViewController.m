@@ -26,8 +26,15 @@
     label.text = @"Your attention over time...";
     [self.view addSubview:label];
     
-    [self setupGraph];
+    self.scrollView = [[UIScrollView alloc] init];
+    CGRect scrollViewFrame = CGRectMake(0, 240, self.view.bounds.size.width, 250);
+    self.scrollView.frame = scrollViewFrame;
+    [self.view addSubview:self.scrollView];
+    self.scrollView.delegate = self;
+    self.scrollView.emptyDataSetSource = self;
+    self.scrollView.emptyDataSetDelegate = self;
     
+    [self setupGraph];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshEntries:) name:@"RefreshGraph" object:nil];
 }
 
@@ -62,10 +69,8 @@
 }
 
 - (void)setupGraph {
+    [self.scrollView reloadEmptyDataSet];
     if (self.entryArray.count > 0) {
-        CGRect scrollViewFrame = CGRectMake(0, 240, self.view.bounds.size.width, 250);
-        self.scrollView = [[UIScrollView alloc] initWithFrame:scrollViewFrame];
-        [self.view addSubview:self.scrollView];
         CGSize scrollViewContentSize = CGSizeMake(self.entryArray.count*100, 250);
         [self.scrollView setContentSize:scrollViewContentSize];
         
@@ -114,6 +119,78 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"h:mm\na"];
     return [dateFormatter stringFromDate:timeStamp];
+}
+
+#pragma mark - DZNEmptyDataSetSource Methods
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = @"No Prior Entries";
+    
+    NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
+    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:17.0],
+                                 NSForegroundColorAttributeName: [UIColor colorWithRed:170/255.0 green:171/255.0 blue:179/255.0 alpha:1.0],
+                                 NSParagraphStyleAttributeName: paragraphStyle};
+    
+    return [[NSMutableAttributedString alloc] initWithString:text attributes:attributes];
+}
+
+- (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = @"To get started, tap the red arrow button below.";
+    
+    NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
+    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:15.0],
+                                 NSForegroundColorAttributeName: [UIColor colorWithRed:170/255.0 green:171/255.0 blue:179/255.0 alpha:1.0],
+                                 NSParagraphStyleAttributeName: paragraphStyle};
+    
+    return [[NSMutableAttributedString alloc] initWithString:text attributes:attributes];
+}
+
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return [UIImage imageNamed:@"emptyGraph"];
+}
+
+- (UIColor *)backgroundColorForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return [UIColor whiteColor];
+}
+
+- (UIView *)customViewForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return nil;
+}
+
+- (CGFloat)spaceHeightForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return 0;
+}
+
+#pragma mark - DZNEmptyDataSetDelegate
+
+- (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView
+{
+    if (!self.entryArray || self.entryArray.count == 0) {
+        return YES;
+    }
+    return NO;
+}
+
+- (BOOL)emptyDataSetShouldAllowTouch:(UIScrollView *)scrollView
+{
+    return YES;
+}
+
+- (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView
+{
+    return NO;
 }
 
 @end

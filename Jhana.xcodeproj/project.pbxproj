@@ -306,6 +306,8 @@
 				F6AA36FE1BC5BA69007F4F26 /* JHListViewController.m */,
 				A5F3AE6F1BE7126300FBDF8B /* JHGraphViewController.h */,
 				A5F3AE701BE7126300FBDF8B /* JHGraphViewController.m */,
+				F63703EC1BE7BE3B008E4ECB /* JHAttentionGestureViewController.h */,
+				F63703ED1BE7BE3B008E4ECB /* JHAttentionGestureViewController.m */,
 				A5F3AE601BE554AA00FBDF8B /* JHLocationViewController.h */,
 				A5F3AE611BE554AA00FBDF8B /* JHLocationViewController.m */,
 				A5F3AE631BE5745300FBDF8B /* JHActivityViewController.h */,
@@ -317,8 +319,6 @@
 				F681D0EF1BE69E8D006AD833 /* JHTableViewCell.xib */,
 				A5F3AE6C1BE6C90E00FBDF8B /* JHDetailViewController.h */,
 				A5F3AE6D1BE6C90E00FBDF8B /* JHDetailViewController.m */,
-				F63703EC1BE7BE3B008E4ECB /* JHAttentionGestureViewController.h */,
-				F63703ED1BE7BE3B008E4ECB /* JHAttentionGestureViewController.m */,
 			);
 			path = Jhana;
 			sourceTree = "<group>";

@@ -11,7 +11,6 @@
 
 @interface JHListViewController : UITableViewController
 
-
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
