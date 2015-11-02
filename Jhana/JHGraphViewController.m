@@ -17,12 +17,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"Graph";
+    
     [self refreshEntries:nil];
     
     CGRect labelFrame = CGRectMake(50, 100, 200, 40);
     UILabel *label = [[UILabel alloc] initWithFrame:labelFrame];
     label.text = @"Your attention over time...";
     [self.view addSubview:label];
+    
+    CGRect scrollViewFrame = CGRectMake(0, 240, self.view.bounds.size.width, 250);
+    self.scrollView = [[UIScrollView alloc] initWithFrame:scrollViewFrame];
+    [self.view addSubview:self.scrollView];
+    CGSize scrollViewContentSize = CGSizeMake(640, 250);
+    [self.scrollView setContentSize:scrollViewContentSize];
     
     [self setupGraph];
     
@@ -60,13 +68,13 @@
 }
 
 - (void)setupGraph {
-    CGRect graphFrame = CGRectMake(0, 240, self.view.bounds.size.width, 200);
+    CGRect graphFrame = CGRectMake(0, 0, 640, 250);
     self.graph = [[GKLineGraph alloc] initWithFrame:graphFrame];
     self.graph.dataSource = self;
     self.graph.lineWidth = 3.0;
     self.graph.startFromZero = YES;
     [self.graph draw];
-    [self.view addSubview:self.graph];
+    [self.scrollView addSubview:self.graph];
 }
 
 #pragma mark - GKLineGraphDataSource

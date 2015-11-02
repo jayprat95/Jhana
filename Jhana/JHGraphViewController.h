@@ -12,7 +12,8 @@
 #import <CoreData/CoreData.h>
 
 @interface JHGraphViewController : UIViewController <GKLineGraphDataSource>
-@property (nonatomic, strong) IBOutlet GKLineGraph *graph;
+@property (nonatomic, strong) GKLineGraph *graph;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSArray *entryArray;
+@property (nonatomic, strong) UIScrollView *scrollView;
 @end

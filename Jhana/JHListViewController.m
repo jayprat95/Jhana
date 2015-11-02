@@ -149,22 +149,34 @@
     }
 }
 - (void)createLocalNotifications {
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
     NSDate *itemDate = [NSDate date];
-    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
-    if (localNotif == nil)
-        return;
-    localNotif.fireDate = [itemDate dateByAddingTimeInterval:10];
-    localNotif.timeZone = [NSTimeZone defaultTimeZone];
     
-    localNotif.alertBody = @"Are you focused? Check how attentive you are!";
-    localNotif.alertAction = @"Log an Entry";
-    localNotif.alertTitle = @"Jhana";
-    
-    localNotif.soundName = UILocalNotificationDefaultSoundName;
-    localNotif.applicationIconBadgeNumber = 1;
-    
-//    localNotif.userInfo = @{@"UDID" : };
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+    // The local notification queue has a maximum capacity of 64
+    for (int i=0; i<64; i++) {
+        UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+        if (localNotif == nil)
+            return;
+        localNotif.fireDate = [itemDate dateByAddingTimeInterval:1800*i];
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        NSDateComponents *components = [calendar components:NSCalendarUnitHour fromDate:localNotif.fireDate];
+        NSInteger hour = [components hour];
+        if (hour < 8 || hour > 22) {
+            // Don't schedule notifications between 10 PM to 8 AM
+            continue;
+        }
+        localNotif.timeZone = [NSTimeZone defaultTimeZone];
+        
+        localNotif.alertBody = @"Are you focused? Check how attentive you are!";
+        localNotif.alertAction = @"Log an Entry";
+        localNotif.alertTitle = @"Jhana";
+        
+        localNotif.soundName = UILocalNotificationDefaultSoundName;
+        localNotif.applicationIconBadgeNumber = 1;
+        
+        [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+    }
 }
 
 
