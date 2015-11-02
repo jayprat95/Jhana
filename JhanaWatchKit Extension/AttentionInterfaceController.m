@@ -51,6 +51,11 @@
 }
 
 - (IBAction)attentionValueSelected:(NSInteger)value {
+    if (value > self.selectedAttentionValue) {
+        [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeDirectionUp];
+    } else {
+        [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeDirectionDown];
+    }
     self.selectedAttentionValue = value;
 }
 

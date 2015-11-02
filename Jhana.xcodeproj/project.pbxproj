@@ -460,6 +460,7 @@
 				TargetAttributes = {
 					A50359FE1BD8129F000E929C = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = U3465V32BF;
 					};
 					A5035A0A1BD8129F000E929C = {
 						CreatedOnToolsVersion = 7.0;
@@ -703,6 +704,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IBSC_MODULE = JhanaWatchKit_Extension;
 				INFOPLIST_FILE = JhanaWatchKit/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.TT.Jhana.watchkitapp;
@@ -718,6 +720,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IBSC_MODULE = JhanaWatchKit_Extension;
 				INFOPLIST_FILE = JhanaWatchKit/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.TT.Jhana.watchkitapp;

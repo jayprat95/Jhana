@@ -64,10 +64,12 @@
         [self popToRootController];
     }];
     [self presentAlertControllerWithTitle:@"Hooray!" message:@"Thanks for filling out this survey." preferredStyle:WKAlertControllerStyleAlert actions:@[action]];
+    [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeSuccess];
 }
 
 - (IBAction)actionValueSelected:(NSInteger)value {
     self.selectedActionValue = value;
+    [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeClick];
 }
 
 

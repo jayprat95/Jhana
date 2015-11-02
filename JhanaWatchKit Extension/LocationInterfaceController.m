@@ -46,6 +46,7 @@
 
 - (IBAction)locationValueSelected:(NSInteger)value {
     self.selectedLocationValue = value;
+    [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeClick];
 }
 
 - (IBAction)cancelButtonClicked {
