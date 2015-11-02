@@ -47,6 +47,7 @@
         pickerItems[i] = pickerItem;
     }
     [self.actionPicker setItems:pickerItems];
+    [self.actionPicker focus]; 
 }
 
 - (IBAction)submitButtonClicked {

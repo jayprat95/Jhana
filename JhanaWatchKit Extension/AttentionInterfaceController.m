@@ -47,6 +47,7 @@
         [self.attentionPicker setSelectedItemIndex:2];
         self.hasPreviouslyLoaded = YES;
     }
+    [self.attentionPicker focus];
 }
 
 - (IBAction)attentionValueSelected:(NSInteger)value {

@@ -41,6 +41,7 @@
         pickerItems[i] = pickerItem;
     }
     [self.locationPicker setItems:pickerItems];
+        [self.locationPicker focus];
 }
 
 - (IBAction)locationValueSelected:(NSInteger)value {
