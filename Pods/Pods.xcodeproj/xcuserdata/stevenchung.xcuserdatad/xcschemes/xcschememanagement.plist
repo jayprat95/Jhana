@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DZNEmptyDataSet.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Flurry-iOS-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,17 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1016F499C81C87CEF0E4A34A07E9CAFF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>57756854511CDF1B22BFD95EB2F154D2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>59896BC288E264C4AD31DC0950156076</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>736E57AD5AEFAAF68D47AE4E8FCB8F68</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -83,6 +83,11 @@
 			<true/>
 		</dict>
 		<key>D079C0B8D193CBDF60F39822F384E43F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FAB0013173757B3EB78AE856A24B4205</key>
 		<dict>
 			<key>primary</key>
 			<true/>

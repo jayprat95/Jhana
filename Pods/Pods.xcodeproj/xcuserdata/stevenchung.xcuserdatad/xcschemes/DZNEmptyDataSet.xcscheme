@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D200B5B2B0542499A02AAADD'
-               BlueprintName = 'BFPaperButton'
+               BlueprintIdentifier = '0265BCCAFEC59F4940D1D19D'
+               BlueprintName = 'DZNEmptyDataSet'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libBFPaperButton.a'>
+               BuildableName = 'libDZNEmptyDataSet.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

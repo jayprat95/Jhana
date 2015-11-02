@@ -8,3 +8,4 @@ pod ‘Flurry-iOS-SDK/FlurrySDK’
 pod 'Canvas'
 pod 'BFPaperButton', '~> 2.0.18'
 pod 'GraphKit'
+pod 'DZNEmptyDataSet'

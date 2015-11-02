@@ -62,19 +62,23 @@
 }
 
 - (void)setupGraph {
-    CGRect scrollViewFrame = CGRectMake(0, 240, self.view.bounds.size.width, 250);
-    self.scrollView = [[UIScrollView alloc] initWithFrame:scrollViewFrame];
-    [self.view addSubview:self.scrollView];
-    CGSize scrollViewContentSize = CGSizeMake(self.entryArray.count*100, 250);
-    [self.scrollView setContentSize:scrollViewContentSize];
-    
-    CGRect graphFrame = CGRectMake(0, 0, self.entryArray.count*100, 250);
-    self.graph = [[GKLineGraph alloc] initWithFrame:graphFrame];
-    self.graph.dataSource = self;
-    self.graph.lineWidth = 3.0;
-    self.graph.startFromZero = YES;
-    [self.graph draw];
-    [self.scrollView addSubview:self.graph];
+    if (self.entryArray.count > 0) {
+        CGRect scrollViewFrame = CGRectMake(0, 240, self.view.bounds.size.width, 250);
+        self.scrollView = [[UIScrollView alloc] initWithFrame:scrollViewFrame];
+        [self.view addSubview:self.scrollView];
+        CGSize scrollViewContentSize = CGSizeMake(self.entryArray.count*100, 250);
+        [self.scrollView setContentSize:scrollViewContentSize];
+        
+        CGRect graphFrame = CGRectMake(0, 0, self.entryArray.count*100, 250);
+        self.graph = [[GKLineGraph alloc] initWithFrame:graphFrame];
+        self.graph.dataSource = self;
+        self.graph.lineWidth = 3.0;
+        self.graph.startFromZero = YES;
+        [self.graph draw];
+        [self.scrollView addSubview:self.graph];
+    } else {
+        [self.graph removeFromSuperview];
+    }
 }
 
 #pragma mark - GKLineGraphDataSource

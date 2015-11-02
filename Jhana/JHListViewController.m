@@ -12,10 +12,10 @@
 #import <WatchConnectivity/WatchConnectivity.h>
 #import "Flurry.h"
 #import "UIColor+BFPaperColors.h"
-
+#import "UIScrollView+EmptyDataSet.h"
 #import <CoreData/CoreData.h>
 
-@interface JHListViewController () <NSFetchedResultsControllerDelegate, WCSessionDelegate>
+@interface JHListViewController () <NSFetchedResultsControllerDelegate, WCSessionDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *editButton;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
@@ -72,6 +72,10 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveEntry:) name:@"SaveData" object:nil];
     
     [self createLocalNotifications];
+    
+    self.tableView.emptyDataSetSource = self;
+    self.tableView.emptyDataSetDelegate = self;
+    self.tableView.tableFooterView = [UIView new];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -311,6 +315,77 @@
         NSManagedObjectModel *record = [self.fetchedResultsController objectAtIndexPath:indexPath];
         detailViewController.detailContext = record;
     }
+}
+
+#pragma mark - DZNEmptyDataSetSource Methods
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = @"No Prior Entries";
+    
+    NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
+    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:17.0],
+                                 NSForegroundColorAttributeName: [UIColor colorWithRed:170/255.0 green:171/255.0 blue:179/255.0 alpha:1.0],
+                                 NSParagraphStyleAttributeName: paragraphStyle};
+    
+    return [[NSMutableAttributedString alloc] initWithString:text attributes:attributes];
+}
+
+- (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = @"To get started, tap the red arrow button below.";
+    
+    NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
+    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:15.0],
+                                 NSForegroundColorAttributeName: [UIColor colorWithRed:170/255.0 green:171/255.0 blue:179/255.0 alpha:1.0],
+                                 NSParagraphStyleAttributeName: paragraphStyle};
+    
+    return [[NSMutableAttributedString alloc] initWithString:text attributes:attributes];
+}
+
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return [UIImage imageNamed:@"empty"];
+}
+
+- (UIColor *)backgroundColorForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return [UIColor whiteColor];
+}
+
+- (UIView *)customViewForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return nil;
+}
+
+- (CGFloat)spaceHeightForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return 0;
+}
+
+
+#pragma mark - DZNEmptyDataSetSource Methods
+
+- (BOOL)emptyDataSetShouldAllowTouch:(UIScrollView *)scrollView
+{
+    return YES;
+}
+
+- (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView
+{
+    return NO;
+}
+
+- (void)emptyDataSet:(UIScrollView *)scrollView didTapView:(UIView *)view
+{
+    
+    NSLog(@"%s",__FUNCTION__);
 }
 
 @end

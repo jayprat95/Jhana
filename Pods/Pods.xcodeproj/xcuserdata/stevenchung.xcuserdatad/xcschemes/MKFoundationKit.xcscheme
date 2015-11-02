@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E24E5F8A67E7F4E05D399E1C'
+               BlueprintIdentifier = '5969816631D94221752970A4'
                BlueprintName = 'MKFoundationKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libMKFoundationKit.a'>
