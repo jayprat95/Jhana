@@ -60,7 +60,6 @@
         
         if(self.attentionValue < 4) {
             self.attentionValue++;
-            NSLog(@"%d", self.attentionValue);
         }
         
     }else{
@@ -69,7 +68,6 @@
         
         if(self.attentionValue > 0) {
             self.attentionValue--;
-            NSLog(@"%d", self.attentionValue);
         }
 
     }

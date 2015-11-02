@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -11,30 +11,33 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="342" height="115"/>
+                <rect key="frame" x="0.0" y="0.0" width="342" height="116"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzR-iU-KR4">
-                        <rect key="frame" x="90" y="57" width="201" height="43"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzR-iU-KR4">
+                        <rect key="frame" x="75" y="59" width="201" height="43"/>
                         <animations/>
-                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="38"/>
+                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="30"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                             <rect key="frame" x="102" y="57" width="201" height="43"/>
                         </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ih7-e1-p2k">
-                        <rect key="frame" x="8" y="0.0" width="74" height="116"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ih7-e1-p2k">
+                        <rect key="frame" x="0.0" y="0.0" width="74" height="116"/>
                         <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="74" id="gRw-ew-knp"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUe-ay-jxm">
-                        <rect key="frame" x="98" y="8" width="193" height="61"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUe-ay-jxm">
+                        <rect key="frame" x="85" y="8" width="181" height="61"/>
                         <animations/>
-                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="38"/>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="30"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -42,12 +45,9 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0n-eM-68a">
-                        <rect key="frame" x="279" y="7" width="68" height="100"/>
+                        <rect key="frame" x="274" y="8" width="80" height="100"/>
                         <animations/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="68" id="h5u-a0-RVI"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -57,9 +57,21 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="a0n-eM-68a" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fsa-q4-8QP"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="a0n-eM-68a" secondAttribute="trailing" constant="-13" id="meq-Pp-WZw"/>
-                    <constraint firstItem="a0n-eM-68a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="vsz-6v-PKQ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="LUe-ay-jxm" secondAttribute="bottom" constant="38.5" id="4cM-le-p9T"/>
+                    <constraint firstItem="pzR-iU-KR4" firstAttribute="leading" secondItem="ih7-e1-p2k" secondAttribute="trailing" constant="1" id="7WA-cl-5zV"/>
+                    <constraint firstItem="ih7-e1-p2k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="87I-x1-t0t"/>
+                    <constraint firstItem="LUe-ay-jxm" firstAttribute="leading" secondItem="ih7-e1-p2k" secondAttribute="trailing" constant="11" id="8vF-NX-9yw"/>
+                    <constraint firstItem="ih7-e1-p2k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="FUp-9S-Rxg"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="pzR-iU-KR4" secondAttribute="bottom" constant="5.5" id="NTe-IQ-Nk8"/>
+                    <constraint firstItem="LUe-ay-jxm" firstAttribute="centerX" secondItem="pzR-iU-KR4" secondAttribute="centerX" id="Ohm-KH-Hwc"/>
+                    <constraint firstItem="a0n-eM-68a" firstAttribute="top" secondItem="LUe-ay-jxm" secondAttribute="top" id="RyL-pM-bRW"/>
+                    <constraint firstItem="a0n-eM-68a" firstAttribute="leading" secondItem="LUe-ay-jxm" secondAttribute="trailing" constant="8" symbolic="YES" id="Tkq-I9-6sT"/>
+                    <constraint firstItem="pzR-iU-KR4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="51" id="bWg-GU-UON"/>
+                    <constraint firstItem="LUe-ay-jxm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="btC-Un-THQ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="pzR-iU-KR4" secondAttribute="trailing" constant="58" id="iwf-8D-7ha"/>
+                    <constraint firstItem="a0n-eM-68a" firstAttribute="centerY" secondItem="ih7-e1-p2k" secondAttribute="centerY" id="p6F-Jt-tM5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="a0n-eM-68a" secondAttribute="trailing" constant="-20" id="w0s-IE-hrP"/>
+                    <constraint firstItem="ih7-e1-p2k" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zKn-PT-Y8k"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>

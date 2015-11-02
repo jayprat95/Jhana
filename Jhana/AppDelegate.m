@@ -50,6 +50,7 @@
 }
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(nonnull UILocalNotification *)notification {
+    
 }
 
 #pragma mark - Core Data stack

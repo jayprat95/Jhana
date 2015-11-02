@@ -18,6 +18,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>DZNEmptyDataSet.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 		<key>Flurry-iOS-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,6 +87,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>736E57AD5AEFAAF68D47AE4E8FCB8F68</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>951BAA5FA8501628A76E1461A7BA9AA9</key>
 		<dict>
 			<key>primary</key>
@@ -118,6 +128,11 @@
 			<true/>
 		</dict>
 		<key>F43885B233F4B9CCC43E1736A5087DD7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FAB0013173757B3EB78AE856A24B4205</key>
 		<dict>
 			<key>primary</key>
 			<true/>
