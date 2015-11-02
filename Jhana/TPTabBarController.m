@@ -10,7 +10,7 @@
 #import <BFPaperButton.h>
 #import <Canvas.h>
 #import "UIColor+BFPaperColors.h"
-#import "JHAttentionViewController.h"
+#import "JHAttentionGestureViewController.h"
 #import "Flurry.h"  
 #import "AppDelegate.h"
 
@@ -78,7 +78,7 @@
     // Set this by selecting 'Is Initial View Controller' on the appropriate view controller in the storyboard.
     //
 
-    JHAttentionViewController *addVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"JHAttentionViewController"];
+    JHAttentionGestureViewController *addVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"JHAttentionGestureViewController"];
     addVC.managedObjectContext = self.managedObjectContext;
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:addVC];
     // Presuming a view controller is asking for the modal transition in the first place.

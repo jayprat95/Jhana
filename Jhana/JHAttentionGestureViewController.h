@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JHLocationViewController.h"
 
 @interface JHAttentionGestureViewController : UIViewController 
-
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @end

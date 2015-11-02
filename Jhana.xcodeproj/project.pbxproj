@@ -15,7 +15,6 @@
 		A5035A1A1BD8129F000E929C /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5035A191BD8129F000E929C /* NotificationController.m */; };
 		A5035A1C1BD8129F000E929C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5035A1B1BD8129F000E929C /* Assets.xcassets */; };
 		A5035A201BD8129F000E929C /* JhanaWatchKit.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A50359FF1BD8129F000E929C /* JhanaWatchKit.app */; };
-		A516671B1BE154A200592FC6 /* JHAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A516671A1BE154A200592FC6 /* JHAttentionViewController.m */; };
 		A566FA951BD9429700FEDB38 /* AttentionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA941BD9429700FEDB38 /* AttentionInterfaceController.m */; };
 		A566FA981BD942AB00FEDB38 /* LocationInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA971BD942AB00FEDB38 /* LocationInterfaceController.m */; };
 		A566FA9B1BD942B700FEDB38 /* ActionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A566FA9A1BD942B700FEDB38 /* ActionInterfaceController.m */; };
@@ -115,8 +114,6 @@
 		A5035A191BD8129F000E929C /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		A5035A1B1BD8129F000E929C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5035A1D1BD8129F000E929C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A51667191BE154A200592FC6 /* JHAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHAttentionViewController.h; sourceTree = "<group>"; };
-		A516671A1BE154A200592FC6 /* JHAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHAttentionViewController.m; sourceTree = "<group>"; };
 		A566FA931BD9429700FEDB38 /* AttentionInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttentionInterfaceController.h; sourceTree = "<group>"; };
 		A566FA941BD9429700FEDB38 /* AttentionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttentionInterfaceController.m; sourceTree = "<group>"; };
 		A566FA961BD942AB00FEDB38 /* LocationInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationInterfaceController.h; sourceTree = "<group>"; };
@@ -309,8 +306,6 @@
 				F6AA36FE1BC5BA69007F4F26 /* JHListViewController.m */,
 				A5F3AE6F1BE7126300FBDF8B /* JHGraphViewController.h */,
 				A5F3AE701BE7126300FBDF8B /* JHGraphViewController.m */,
-				A51667191BE154A200592FC6 /* JHAttentionViewController.h */,
-				A516671A1BE154A200592FC6 /* JHAttentionViewController.m */,
 				A5F3AE601BE554AA00FBDF8B /* JHLocationViewController.h */,
 				A5F3AE611BE554AA00FBDF8B /* JHLocationViewController.m */,
 				A5F3AE631BE5745300FBDF8B /* JHActivityViewController.h */,
@@ -616,7 +611,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F63703EE1BE7BE3B008E4ECB /* JHAttentionGestureViewController.m in Sources */,
-				A516671B1BE154A200592FC6 /* JHAttentionViewController.m in Sources */,
 				F6AA36D51BC5B9E0007F4F26 /* Jhana.xcdatamodeld in Sources */,
 				F6AA36CC1BC5B9E0007F4F26 /* AppDelegate.m in Sources */,
 				A5F3AE681BE5749700FBDF8B /* JHAloneViewController.m in Sources */,

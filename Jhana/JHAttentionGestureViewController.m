@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"Attention";
     self.attentionValue = 2;
     [self.textLabel setText:@"Neutral"];
     [self.view setBackgroundColor:[UIColor paperColorTeal]];
@@ -44,8 +45,11 @@
 }
 
 - (IBAction)nextButtonClicked:(id)sender {
-    
-    //write code in here
+    [self performSegueWithIdentifier:@"attentionSegue" sender:self];
+}
+
+- (IBAction)cancelButtonClicked:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - gesture delegate 
@@ -109,14 +113,13 @@
 
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"attentionSegue"]) {
+        JHLocationViewController *locationViewController = (JHLocationViewController *)segue.destinationViewController;
+        NSMutableDictionary *applicationData = [NSMutableDictionary dictionary];
+        applicationData[@"attention"] = [NSNumber numberWithInt:self.attentionValue];
+        locationViewController.applicationData = applicationData;
+    }
 }
-*/
 
 @end
