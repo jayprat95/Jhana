@@ -116,6 +116,7 @@
                                        .bounds.size.height);
         self.barGraph = [[GKBarGraph alloc] initWithFrame:graphFrame];
         self.barGraph.dataSource = self;
+
         [self.barGraph draw];
         [self.scrollView addSubview:self.barGraph];
     } else {
@@ -138,7 +139,7 @@
             [self setupBarGraph];
             break;
         case 3:
-            self.textLabel.text = @"You attention with different people...";
+            self.textLabel.text = @"Your attention with different people...";
             [self setupBarGraph];
             break;
         default:
@@ -250,7 +251,7 @@
 }
 
 - (UIColor *)colorForBarBackgroundAtIndex:(NSInteger)index {
-    return [UIColor grayColor];
+    return [UIColor whiteColor];
 }
 
 - (CFTimeInterval)animationDurationForBarAtIndex:(NSInteger)index {

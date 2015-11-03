@@ -28,7 +28,7 @@
                         <rect key="frame" x="260" y="8" width="85" height="100"/>
                         <animations/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="85" id="1lj-Oo-tKl"/>
+                            <constraint firstAttribute="width" constant="85" id="e7l-Kh-Qbb"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,16 +36,6 @@
                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                             <rect key="frame" x="297" y="7" width="70" height="100"/>
                         </variation>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/12/15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-CK-nHe">
-                        <rect key="frame" x="8" y="78" width="69" height="21"/>
-                        <animations/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="69" id="hcT-HX-PdC"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:18 PM" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ih7-e1-p2k">
                         <rect key="frame" x="4" y="13" width="77" height="70"/>
@@ -64,27 +54,37 @@
                             <rect key="frame" x="106" y="8" width="193" height="61"/>
                         </variation>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/12/15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-CK-nHe">
+                        <rect key="frame" x="8" y="78" width="69" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="69" id="EdX-tL-0km"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="DuW-CK-nHe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="70" id="01a-c1-N9Y"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="ih7-e1-p2k" secondAttribute="bottom" constant="24.5" id="0bA-8a-guM"/>
-                    <constraint firstItem="a0n-eM-68a" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9uz-vi-HYF"/>
-                    <constraint firstItem="LUe-ay-jxm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="EBS-MM-AHt"/>
-                    <constraint firstItem="LUe-ay-jxm" firstAttribute="centerX" secondItem="pzR-iU-KR4" secondAttribute="centerX" id="Fr8-JH-8p7"/>
-                    <constraint firstItem="pzR-iU-KR4" firstAttribute="centerY" secondItem="DuW-CK-nHe" secondAttribute="centerY" id="Mwt-Yr-9vH"/>
-                    <constraint firstItem="LUe-ay-jxm" firstAttribute="top" secondItem="a0n-eM-68a" secondAttribute="top" id="RBQ-Pq-DMI"/>
-                    <constraint firstItem="pzR-iU-KR4" firstAttribute="leading" secondItem="DuW-CK-nHe" secondAttribute="trailing" constant="8" symbolic="YES" id="V95-hv-IU1"/>
-                    <constraint firstItem="pzR-iU-KR4" firstAttribute="baseline" secondItem="a0n-eM-68a" secondAttribute="baseline" id="YkD-OQ-ZbY"/>
-                    <constraint firstItem="pzR-iU-KR4" firstAttribute="leading" secondItem="ih7-e1-p2k" secondAttribute="trailing" constant="4" id="ZtQ-Ne-gSj"/>
-                    <constraint firstItem="DuW-CK-nHe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="c4L-FL-HNl"/>
-                    <constraint firstItem="pzR-iU-KR4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="59" id="cFG-bc-bWW"/>
-                    <constraint firstItem="LUe-ay-jxm" firstAttribute="leading" secondItem="ih7-e1-p2k" secondAttribute="trailing" constant="18" id="dTS-yJ-qHa"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="pzR-iU-KR4" secondAttribute="trailing" constant="48" id="o3p-66-UFx"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="LUe-ay-jxm" secondAttribute="bottom" constant="33.5" id="qv5-xr-VZb"/>
-                    <constraint firstItem="ih7-e1-p2k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="s3i-Rh-FOD"/>
-                    <constraint firstItem="ih7-e1-p2k" firstAttribute="centerX" secondItem="DuW-CK-nHe" secondAttribute="centerX" id="xGI-AJ-Neq"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="a0n-eM-68a" secondAttribute="trailing" constant="-11" id="yjG-hF-NI2"/>
+                    <constraint firstItem="DuW-CK-nHe" firstAttribute="centerX" secondItem="ih7-e1-p2k" secondAttribute="centerX" id="3hG-93-3DW"/>
+                    <constraint firstItem="pzR-iU-KR4" firstAttribute="leading" secondItem="DuW-CK-nHe" secondAttribute="trailing" constant="8" symbolic="YES" id="58b-LV-fHi"/>
+                    <constraint firstItem="LUe-ay-jxm" firstAttribute="leading" secondItem="ih7-e1-p2k" secondAttribute="trailing" constant="18" id="BKL-LG-iDB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="a0n-eM-68a" secondAttribute="trailing" constant="-11" id="DMs-Lu-pMX"/>
+                    <constraint firstItem="a0n-eM-68a" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="I09-YO-0SV"/>
+                    <constraint firstItem="ih7-e1-p2k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="JXU-eW-Znm"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ih7-e1-p2k" secondAttribute="bottom" constant="24.5" id="MvT-zJ-a0i"/>
+                    <constraint firstItem="LUe-ay-jxm" firstAttribute="centerX" secondItem="pzR-iU-KR4" secondAttribute="centerX" id="OXB-Y6-MEf"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="LUe-ay-jxm" secondAttribute="bottom" constant="33.5" id="P9B-NH-Lo5"/>
+                    <constraint firstItem="pzR-iU-KR4" firstAttribute="leading" secondItem="ih7-e1-p2k" secondAttribute="trailing" constant="4" id="PpF-da-8bl"/>
+                    <constraint firstItem="pzR-iU-KR4" firstAttribute="centerY" secondItem="DuW-CK-nHe" secondAttribute="centerY" id="Qbx-kE-n6z"/>
+                    <constraint firstItem="DuW-CK-nHe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="SDe-Hl-0pT"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="pzR-iU-KR4" secondAttribute="trailing" constant="48" id="aM6-x2-jRT"/>
+                    <constraint firstItem="pzR-iU-KR4" firstAttribute="baseline" secondItem="a0n-eM-68a" secondAttribute="baseline" id="az5-eN-vzm"/>
+                    <constraint firstItem="DuW-CK-nHe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="70" id="cHy-z8-jVK"/>
+                    <constraint firstItem="LUe-ay-jxm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="kYy-Pa-NlT"/>
+                    <constraint firstItem="pzR-iU-KR4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="59" id="pdB-fZ-mgv"/>
+                    <constraint firstItem="LUe-ay-jxm" firstAttribute="top" secondItem="a0n-eM-68a" secondAttribute="top" id="wvl-el-iKP"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>

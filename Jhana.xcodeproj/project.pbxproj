@@ -41,6 +41,8 @@
 		F6AA36E51BC5B9E0007F4F26 /* JhanaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36E41BC5B9E0007F4F26 /* JhanaTests.m */; };
 		F6AA36F01BC5B9E0007F4F26 /* JhanaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36EF1BC5B9E0007F4F26 /* JhanaUITests.m */; };
 		F6AA36FF1BC5BA69007F4F26 /* JHListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA36FE1BC5BA69007F4F26 /* JHListViewController.m */; };
+		F6F78C7E1BE950B7009AA442 /* JHDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F78C7C1BE950B7009AA442 /* JHDetailTableViewCell.m */; };
+		F6F78C7F1BE950B7009AA442 /* JHDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F78C7D1BE950B7009AA442 /* JHDetailTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +161,9 @@
 		F6AA36F11BC5B9E0007F4F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6AA36FD1BC5BA69007F4F26 /* JHListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHListViewController.h; sourceTree = "<group>"; };
 		F6AA36FE1BC5BA69007F4F26 /* JHListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHListViewController.m; sourceTree = "<group>"; };
+		F6F78C7B1BE950B7009AA442 /* JHDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHDetailTableViewCell.h; sourceTree = "<group>"; };
+		F6F78C7C1BE950B7009AA442 /* JHDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHDetailTableViewCell.m; sourceTree = "<group>"; };
+		F6F78C7D1BE950B7009AA442 /* JHDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHDetailTableViewCell.xib; sourceTree = "<group>"; };
 		FE1C545184401C4CB8C2B289 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -319,6 +324,9 @@
 				F681D0EF1BE69E8D006AD833 /* JHTableViewCell.xib */,
 				A5F3AE6C1BE6C90E00FBDF8B /* JHDetailViewController.h */,
 				A5F3AE6D1BE6C90E00FBDF8B /* JHDetailViewController.m */,
+				F6F78C7B1BE950B7009AA442 /* JHDetailTableViewCell.h */,
+				F6F78C7C1BE950B7009AA442 /* JHDetailTableViewCell.m */,
+				F6F78C7D1BE950B7009AA442 /* JHDetailTableViewCell.xib */,
 			);
 			path = Jhana;
 			sourceTree = "<group>";
@@ -525,6 +533,7 @@
 			files = (
 				F6AA36DA1BC5B9E0007F4F26 /* LaunchScreen.storyboard in Resources */,
 				F681D0F11BE69E8D006AD833 /* JHTableViewCell.xib in Resources */,
+				F6F78C7F1BE950B7009AA442 /* JHDetailTableViewCell.xib in Resources */,
 				F6AA36D71BC5B9E0007F4F26 /* Assets.xcassets in Resources */,
 				F6AA36D21BC5B9E0007F4F26 /* Main.storyboard in Resources */,
 			);
@@ -611,6 +620,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6F78C7E1BE950B7009AA442 /* JHDetailTableViewCell.m in Sources */,
 				F63703EE1BE7BE3B008E4ECB /* JHAttentionGestureViewController.m in Sources */,
 				F6AA36D51BC5B9E0007F4F26 /* Jhana.xcdatamodeld in Sources */,
 				F6AA36CC1BC5B9E0007F4F26 /* AppDelegate.m in Sources */,

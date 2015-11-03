@@ -10,11 +10,9 @@
 //#import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@interface JHDetailViewController : UIViewController
+@interface JHDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) NSManagedObjectModel *detailContext;
-@property (strong, nonatomic) IBOutlet UILabel *activityLabel;
-@property (strong, nonatomic) IBOutlet UILabel *attentionLabel;
-@property (strong, nonatomic) IBOutlet UILabel *locationLabel;
-@property (strong, nonatomic) IBOutlet UILabel *personLabel;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 
 @end
