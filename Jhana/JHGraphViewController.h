@@ -12,9 +12,13 @@
 #import <CoreData/CoreData.h>
 #import "UIScrollView+EmptyDataSet.h"
 
-@interface JHGraphViewController : UIViewController <GKLineGraphDataSource, UIScrollViewDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
-@property (nonatomic, strong) GKLineGraph *graph;
+@interface JHGraphViewController : UIViewController <GKLineGraphDataSource, GKBarGraphDataSource, UIScrollViewDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
+@property (nonatomic, strong) GKLineGraph *lineGraph;
+@property (nonatomic, strong) GKBarGraph *barGraph;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSArray *entryArray;
 @property (nonatomic, strong) UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (strong, nonatomic) IBOutlet UILabel *textLabel;
+@property (strong, nonatomic) NSMutableDictionary *barGraphData;
 @end

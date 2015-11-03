@@ -21,20 +21,17 @@
     
     [self refreshEntries:nil];
     
-    CGRect labelFrame = CGRectMake(50, 100, 200, 40);
-    UILabel *label = [[UILabel alloc] initWithFrame:labelFrame];
-    label.text = @"Your attention over time...";
-    [self.view addSubview:label];
+    self.textLabel.text = @"Your attention over time...";
     
     self.scrollView = [[UIScrollView alloc] init];
-    CGRect scrollViewFrame = CGRectMake(0, 240, self.view.bounds.size.width, 250);
+    CGRect scrollViewFrame = CGRectMake(0, 140, self.view.bounds.size.width, 400);
     self.scrollView.frame = scrollViewFrame;
     [self.view addSubview:self.scrollView];
     self.scrollView.delegate = self;
     self.scrollView.emptyDataSetSource = self;
     self.scrollView.emptyDataSetDelegate = self;
     
-    [self setupGraph];
+    [self setupLineGraph];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshEntries:) name:@"RefreshGraph" object:nil];
 }
 
@@ -63,26 +60,82 @@
     
     // Called to refresh from JHListViewController
     if (notification != nil) {
-        [self.graph removeFromSuperview];
-        [self setupGraph];
+        [self.lineGraph removeFromSuperview];
+        [self setupLineGraph];
     }
 }
 
-- (void)setupGraph {
+- (void)setupLineGraph {
+    // Remove existing bar graph if it exists
+    if (self.barGraph != nil) {
+        [self.barGraph removeFromSuperview];
+    }
     [self.scrollView reloadEmptyDataSet];
     if (self.entryArray.count > 0) {
-        CGSize scrollViewContentSize = CGSizeMake(self.entryArray.count*100, 250);
+        CGFloat width = self.entryArray.count*100;
+        CGSize scrollViewContentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
         [self.scrollView setContentSize:scrollViewContentSize];
-        
-        CGRect graphFrame = CGRectMake(0, 0, self.entryArray.count*100, 250);
-        self.graph = [[GKLineGraph alloc] initWithFrame:graphFrame];
-        self.graph.dataSource = self;
-        self.graph.lineWidth = 3.0;
-        self.graph.startFromZero = YES;
-        [self.graph draw];
-        [self.scrollView addSubview:self.graph];
+        CGRect graphFrame;
+        if (width < self.view.bounds.size.width) {
+            graphFrame = CGRectMake(0, 0, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
+        } else {
+            graphFrame = CGRectMake(0, 0, self.entryArray.count*100, self.scrollView.bounds.size.height);
+        }
+        self.lineGraph = [[GKLineGraph alloc] initWithFrame:graphFrame];
+        self.lineGraph.dataSource = self;
+        self.lineGraph.lineWidth = 3.0;
+        self.lineGraph.startFromZero = YES;
+        [self.lineGraph draw];
+        [self.scrollView addSubview:self.lineGraph];
     } else {
-        [self.graph removeFromSuperview];
+        [self.lineGraph removeFromSuperview];
+    }
+}
+
+- (void)setupBarGraph {
+    // Remove existing line graph if it exists
+    if (self.lineGraph != nil) {
+        [self.lineGraph removeFromSuperview];
+    }
+    // Remove existing bar graph if it exists
+    if (self.barGraph != nil) {
+        [self.barGraph removeFromSuperview];
+    }
+    [self.scrollView reloadEmptyDataSet];
+    if (self.entryArray.count > 0) {
+        CGSize scrollViewContentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
+        [self.scrollView setContentSize:scrollViewContentSize];
+        CGRect graphFrame = CGRectMake(0, 0, self.scrollView.bounds.size.width, self.scrollView
+                                       .bounds.size.height);
+        self.barGraph = [[GKBarGraph alloc] initWithFrame:graphFrame];
+        self.barGraph.dataSource = self;
+        [self.barGraph draw];
+        [self.scrollView addSubview:self.barGraph];
+    } else {
+        [self.barGraph removeFromSuperview];
+    }
+}
+
+- (IBAction)segmentedControlChanged:(UISegmentedControl *)sender {
+    switch (sender.selectedSegmentIndex) {
+        case 0:
+            self.textLabel.text = @"Your attention over time...";
+            [self setupLineGraph];
+            break;
+        case 1:
+            self.textLabel.text = @"Your attention at different locations...";
+            [self setupBarGraph];
+            break;
+        case 2:
+            self.textLabel.text = @"Your attention during different activities...";
+            [self setupBarGraph];
+            break;
+        case 3:
+            self.textLabel.text = @"You attention with different people...";
+            [self setupBarGraph];
+            break;
+        default:
+            break;
     }
 }
 
@@ -120,6 +173,94 @@
     [dateFormatter setDateFormat:@"h:mm\na"];
     return [dateFormatter stringFromDate:timeStamp];
 }
+
+#pragma mark - GKBarGraphDataSource
+
+- (NSInteger)numberOfBars {
+    NSMutableDictionary *barGraphData = [NSMutableDictionary dictionary];
+    NSInteger selectedIndex = self.segmentedControl.selectedSegmentIndex;
+    for (NSDictionary *entry in self.entryArray) {
+        NSNumber *attention = [entry valueForKey:@"attention"];
+        if (selectedIndex == 1) {
+            // Location
+            NSString *location = [entry valueForKey:@"location"];
+            if (barGraphData[location] == nil) {
+                barGraphData[location] = [NSMutableArray array];
+            }
+            [barGraphData[location] addObject:attention];
+        } else if (selectedIndex == 2) {
+            // Activity
+            NSString *activity = [entry valueForKey:@"activity"];
+            if (barGraphData[activity] == nil) {
+                barGraphData[activity] = [NSMutableArray array];
+            }
+            [barGraphData[activity] addObject:attention];
+        } else if (selectedIndex == 3) {
+            // People
+            if ([[entry valueForKey:@"isAlone"] isEqualToNumber:@1]) {
+                if (barGraphData[@"You"] == nil) {
+                    barGraphData[@"You"] = [NSMutableArray array];
+                }
+                [barGraphData[@"You"] addObject:attention];
+            } else {
+                NSString *people = [entry valueForKey:@"people"];
+                if (barGraphData[people] == nil) {
+                    barGraphData[people] = [NSMutableArray array];
+                }
+                [barGraphData[people] addObject:attention];
+            }
+        }
+    }
+    self.barGraphData = barGraphData;
+    return barGraphData.count;
+}
+
+- (NSNumber *)valueForBarAtIndex:(NSInteger)index {
+    NSInteger i = 0;
+    double avgVal = 0;
+    for (NSString *key in self.barGraphData) {
+        if (i == index) {
+            NSMutableArray *contents = self.barGraphData[key];
+            for (NSNumber *attentionValue in contents) {
+                avgVal += [attentionValue doubleValue];
+            }
+            avgVal /= contents.count;
+            break;
+        }
+        i++;
+    }
+    return [NSNumber numberWithDouble:avgVal*20];
+}
+
+- (UIColor *)colorForBarAtIndex:(NSInteger)index {
+    NSArray *colors = @[[UIColor gk_turquoiseColor],
+                        [UIColor gk_peterRiverColor],
+                        [UIColor gk_alizarinColor],
+                        [UIColor gk_sunflowerColor]
+                        ];
+    return colors[index%colors.count];
+}
+
+- (UIColor *)colorForBarBackgroundAtIndex:(NSInteger)index {
+    return [UIColor grayColor];
+}
+
+- (CFTimeInterval)animationDurationForBarAtIndex:(NSInteger)index {
+    NSArray *animationTimes = @[@1, @1.6, @2.2, @1.4];
+    return [animationTimes[index%animationTimes.count] doubleValue];
+}
+
+- (NSString *)titleForBarAtIndex:(NSInteger)index {
+    NSInteger i = 0;
+    for (NSString *key in self.barGraphData) {
+        if (i == index) {
+            return key;
+        }
+        i++;
+    }
+    return @"Error occurred";
+}
+
 
 #pragma mark - DZNEmptyDataSetSource Methods
 
