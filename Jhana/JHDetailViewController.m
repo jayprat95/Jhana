@@ -111,12 +111,15 @@
 {
     switch (indexPath.row) {
         case 1:
+            //call location vc
             NSLog(@"Case 1");
             break;
         case 2:
+            //call activity vc
             NSLog(@"Case 2");
             break;
         case 3:
+            //call alone vc
             NSLog(@"Case 3");
             break;
     }
