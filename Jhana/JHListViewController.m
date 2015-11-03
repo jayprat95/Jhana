@@ -111,7 +111,9 @@
     NSError *error = nil;
     
      if ([self.managedObjectContext save:&error]) {
-         [self.tableView reloadData]; 
+         [self.tableView reloadEmptyDataSet];
+         [self.tableView reloadData];
+         [[NSNotificationCenter defaultCenter] postNotificationName:@"RefreshGraph" object:self];
      }
 }
 
@@ -136,7 +138,9 @@
     if ([self.managedObjectContext save:&error]) {
         //Use this to update the UI instantaneously (otherwise, takes a little while)
         dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadEmptyDataSet];
             [self.tableView reloadData];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"RefreshGraph" object:self];
         });
     }
 }

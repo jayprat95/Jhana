@@ -204,7 +204,8 @@
             [barGraphData[activity] addObject:attention];
         } else if (selectedIndex == 3) {
             // People
-            if ([[entry valueForKey:@"isAlone"] isEqualToNumber:@1]) {
+            NSNumber *isAlone = [entry valueForKey:@"isAlone"];
+            if (isAlone == nil || [isAlone isEqualToNumber:@1]) {
                 if (barGraphData[@"You"] == nil) {
                     barGraphData[@"You"] = [NSMutableArray array];
                 }
