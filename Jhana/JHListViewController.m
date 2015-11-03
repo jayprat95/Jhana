@@ -265,11 +265,11 @@
     switch ([[record valueForKey:@"attention"] intValue])
     {
         case 0:
-            [cell.attentionLabel setText:@"Very Unattentive"];
+            [cell.attentionLabel setText:@"Very Unfocused"];
             [cell setBackgroundColor:[UIColor paperColorPurple800]];
             break;
         case 1:
-            [cell.attentionLabel setText:@"Unattentive"];
+            [cell.attentionLabel setText:@"Unfocused"];
             [cell setBackgroundColor:[UIColor paperColorIndigo]];
             break;
         case 2:
@@ -277,11 +277,11 @@
             [cell setBackgroundColor:[UIColor paperColorTeal]];
             break;
         case 3:
-            [cell.attentionLabel setText:@"Attentive"];
+            [cell.attentionLabel setText:@"Focused"];
             [cell setBackgroundColor:[UIColor paperColorLightGreen]];
             break;
         case 4:
-            [cell.attentionLabel setText:@"Very Attentive"];
+            [cell.attentionLabel setText:@"Very Unfocused"];
             [cell setBackgroundColor:[UIColor paperColorOrange]];
             break;
             
