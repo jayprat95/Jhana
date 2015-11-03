@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Jhana/JHGraphViewController.m"
-            timestampString = "468267585.694775"
+            timestampString = "468270503.602335"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "-numberOfBars"
             landmarkType = "5">
          </BreakpointContent>

@@ -60,12 +60,19 @@
     
     // Called to refresh from JHListViewController
     if (notification != nil) {
-        [self.lineGraph removeFromSuperview];
-        [self setupLineGraph];
+        if (self.segmentedControl.selectedSegmentIndex == 0) {
+            [self setupLineGraph];
+        } else {
+            [self setupBarGraph];
+        }
     }
 }
 
 - (void)setupLineGraph {
+    // Remove existing line graph if it exists
+    if (self.lineGraph != nil) {
+        [self.lineGraph removeFromSuperview];
+    }
     // Remove existing bar graph if it exists
     if (self.barGraph != nil) {
         [self.barGraph removeFromSuperview];
@@ -203,11 +210,11 @@
                 }
                 [barGraphData[@"You"] addObject:attention];
             } else {
-                NSString *people = [entry valueForKey:@"people"];
-                if (barGraphData[people] == nil) {
-                    barGraphData[people] = [NSMutableArray array];
+                NSString *person = [entry valueForKey:@"person"];
+                if (barGraphData[person] == nil) {
+                    barGraphData[person] = [NSMutableArray array];
                 }
-                [barGraphData[people] addObject:attention];
+                [barGraphData[person] addObject:attention];
             }
         }
     }
@@ -229,7 +236,7 @@
         }
         i++;
     }
-    return [NSNumber numberWithDouble:avgVal*20];
+    return [NSNumber numberWithDouble:avgVal*25];
 }
 
 - (UIColor *)colorForBarAtIndex:(NSInteger)index {
