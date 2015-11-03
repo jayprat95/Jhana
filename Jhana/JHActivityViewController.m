@@ -18,7 +18,7 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.activityValues = @[@"Work", @"Leisure", @"Errands", @"Commuting"];
+    self.activityValues = @[@"Eating", @"Watching TV", @"Reading", @"Working", @"Travelling", @"Talking", @"Using Technology", @"Exercising", @"Errands"];
     self.title = @"Activity";
 }
 

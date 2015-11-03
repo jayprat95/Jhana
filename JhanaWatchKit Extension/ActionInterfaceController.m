@@ -39,7 +39,7 @@
 }
 
 - (void)setUpPicker {
-    self.actionValues = @[@"Work", @"Leisure", @"Errands", @"Commuting"];
+    self.actionValues = @[@"Eating", @"Watching TV", @"Reading", @"Working", @"Travelling", @"Talking", @"Using Technology", @"Exercising", @"Errands"];
     NSMutableArray *pickerItems = [NSMutableArray array];
     for (int i=0; i<self.actionValues.count; i++) {
         WKPickerItem *pickerItem = [[WKPickerItem alloc] init];

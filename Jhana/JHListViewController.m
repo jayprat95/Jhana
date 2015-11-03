@@ -258,6 +258,9 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"h:mm\na"];
     NSString *startTimeString = [formatter stringFromDate:[record valueForKey:@"timeStamp"]];
+    formatter.dateFormat = @"MM/dd/yy";
+    
+    NSString *dateString = [formatter stringFromDate: [record valueForKey:@"timeStamp"]];
     
     switch ([[record valueForKey:@"attention"] intValue])
     {
@@ -288,10 +291,12 @@
     [cell.activityLabel setTextColor: [UIColor whiteColor]];
     [cell.timeLabel setTextColor: [UIColor whiteColor]];
     [cell.locationLabel setTextColor: [UIColor whiteColor]];
+    [cell.dateLabel setTextColor:[UIColor whiteColor]];
     
     [cell.activityLabel setText:[record valueForKey:@"activity"]];
     [cell.locationLabel setText:[record valueForKey:@"location"]];
-    [cell.timeLabel setText:startTimeString]; 
+    [cell.timeLabel setText:startTimeString];
+    [cell.dateLabel setText:dateString];
     
     return cell;
 }

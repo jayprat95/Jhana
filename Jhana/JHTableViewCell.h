@@ -13,5 +13,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *activityLabel;
 @property (strong, nonatomic) IBOutlet UILabel *locationLabel;
 @property (strong, nonatomic) IBOutlet UILabel *attentionLabel;
+@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 
 @end
