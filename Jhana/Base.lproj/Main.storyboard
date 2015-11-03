@@ -100,6 +100,10 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="1Jg-Z3-jba" id="SVA-Xs-RFv"/>
+                        <segue destination="khB-f0-sRm" kind="show" id="9aL-zA-3Lf"/>
+                        <segue destination="qts-2s-wNa" kind="show" id="FeC-3e-8DE"/>
+                        <segue destination="gR5-Zq-3Gc" kind="show" id="oBf-DR-GlG"/>
+                        <segue destination="cZE-TS-Zsa" kind="show" id="VSd-L5-3bM"/>
                     </connections>
                 </viewController>
             </objects>
@@ -607,4 +611,10 @@
         <image name="graph_icon" width="30" height="30"/>
         <image name="list_icon" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="VSd-L5-3bM"/>
+        <segue reference="FeC-3e-8DE"/>
+        <segue reference="9aL-zA-3Lf"/>
+        <segue reference="oBf-DR-GlG"/>
+    </inferredMetricsTieBreakers>
 </document>

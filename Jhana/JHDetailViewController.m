@@ -8,6 +8,8 @@
 
 #import "JHDetailViewController.h"
 #import "JHDetailTableViewCell.h"
+#import "UIColor+BFPaperColors.h"
+
 @interface JHDetailViewController ()
 
 @end
@@ -64,16 +66,23 @@
         case 0:
             [cell.questionLabel setText:@"What is your attention?"];
                 if ([attention isEqualToNumber:@0]) {
-                    cell.answerLabel.text = @"Attention: Very Distracted";
+                    cell.answerLabel.text = @"Very Distracted";
+                    cell.answerLabel.textColor = [UIColor paperColorPurple800];
                 } else if ([attention isEqualToNumber:@1]) {
-                    cell.answerLabel.text = @"Attention: Somewhat Distracted";
+                    cell.answerLabel.text = @"Somewhat Distracted";
+                    cell.answerLabel.textColor = [UIColor paperColorIndigo];
                 } else if ([attention isEqualToNumber:@2]) {
-                    cell.answerLabel.text = @"Attention: Neutral";
+                    cell.answerLabel.text = @"Neutral";
+                    cell.answerLabel.textColor = [UIColor paperColorTeal];
                 } else if ([attention isEqualToNumber:@3]) {
-                    cell.answerLabel.text = @"Attention: Somewhat Attentive";
+                    cell.answerLabel.text = @"Somewhat Attentive";
+                    cell.answerLabel.textColor = [UIColor paperColorLightGreen];
                 } else {
-                    cell.answerLabel.text = @"Attention: Very Attentive";
+                    cell.answerLabel.text = @"Very Attentive";
+                    cell.answerLabel.textColor = [UIColor paperColorOrange];
                 }
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.accessoryType = UITableViewCellAccessoryNone;
             break;
         case 1:
             [cell.questionLabel setText:@"Where are you located?"];
@@ -97,6 +106,22 @@
     
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row) {
+        case 1:
+            NSLog(@"Case 1");
+            break;
+        case 2:
+            NSLog(@"Case 2");
+            break;
+        case 3:
+            NSLog(@"Case 3");
+            break;
+    }
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 4;
