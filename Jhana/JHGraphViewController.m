@@ -31,6 +31,47 @@
     self.scrollView.emptyDataSetSource = self;
     self.scrollView.emptyDataSetDelegate = self;
     
+    CGRect zeroFrame = CGRectMake(0, self.scrollView.bounds.size.width-12, 40, 12);
+    self.zeroLabel = [[UILabel alloc] initWithFrame:zeroFrame];
+    self.zeroLabel.text = @"0";
+    self.zeroLabel.font = [UIFont boldSystemFontOfSize:12];
+    self.zeroLabel.textColor = [UIColor lightGrayColor];
+    self.zeroLabel.textAlignment = NSTextAlignmentRight;
+    [self.scrollView addSubview:self.zeroLabel];
+    
+    CGRect oneFrame = CGRectMake(0, self.scrollView.bounds.size.width-100, 40, 12);
+    self.oneLabel = [[UILabel alloc] initWithFrame:oneFrame];
+    self.oneLabel.text = @"1";
+    self.oneLabel.font = [UIFont boldSystemFontOfSize:12];
+    self.oneLabel.textColor = [UIColor lightGrayColor];
+    self.oneLabel.textAlignment = NSTextAlignmentRight;
+    [self.scrollView addSubview:self.oneLabel];
+    
+    CGRect twoFrame = CGRectMake(0, self.scrollView.bounds.size.width-190, 40, 12);
+    self.twoLabel = [[UILabel alloc] initWithFrame:twoFrame];
+    self.twoLabel.text = @"2";
+    self.twoLabel.font = [UIFont boldSystemFontOfSize:12];
+    self.twoLabel.textColor = [UIColor lightGrayColor];
+    self.twoLabel.textAlignment = NSTextAlignmentRight;
+    [self.scrollView addSubview:self.twoLabel];
+    
+    CGRect threeFrame = CGRectMake(0, self.scrollView.bounds.size.width-280, 40, 12);
+    self.threeLabel = [[UILabel alloc] initWithFrame:threeFrame];
+    self.threeLabel.text = @"3";
+    self.threeLabel.font = [UIFont boldSystemFontOfSize:12];
+    self.threeLabel.textColor = [UIColor lightGrayColor];
+    self.threeLabel.textAlignment = NSTextAlignmentRight;
+    [self.scrollView addSubview:self.threeLabel];
+    
+    CGRect fourFrame = CGRectMake(0, self.scrollView.bounds.size.width-370, 40, 12);
+    self.fourLabel = [[UILabel alloc] initWithFrame:fourFrame];
+    self.fourLabel.text = @"4";
+    self.fourLabel.font = [UIFont boldSystemFontOfSize:12];
+    self.fourLabel.textColor = [UIColor lightGrayColor];
+    self.fourLabel.textAlignment = NSTextAlignmentRight;
+    [self.scrollView addSubview:self.fourLabel];
+    
+    
     [self setupLineGraph];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshEntries:) name:@"RefreshGraph" object:nil];
 }
@@ -69,6 +110,12 @@
 }
 
 - (void)setupLineGraph {
+    self.zeroLabel.hidden = YES;
+    self.oneLabel.hidden = YES;
+    self.twoLabel.hidden = YES;
+    self.threeLabel.hidden = YES;
+    self.fourLabel.hidden = YES;
+    
     // Remove existing line graph if it exists
     if (self.lineGraph != nil) {
         [self.lineGraph removeFromSuperview];
@@ -102,6 +149,12 @@
 }
 
 - (void)setupBarGraph {
+    self.zeroLabel.hidden = NO;
+    self.oneLabel.hidden = NO;
+    self.twoLabel.hidden = NO;
+    self.threeLabel.hidden = NO;
+    self.fourLabel.hidden = NO;
+    
     // Remove existing line graph if it exists
     if (self.lineGraph != nil) {
         [self.lineGraph removeFromSuperview];
@@ -112,14 +165,22 @@
     }
     [self.scrollView reloadEmptyDataSet];
     if (self.entryArray.count > 0) {
-        CGSize scrollViewContentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
+        CGFloat width = self.entryArray.count*75;
+        CGSize scrollViewContentSize;
+        CGRect graphFrame;
+        if (width < self.view.bounds.size.width) {
+            scrollViewContentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
+            graphFrame = CGRectMake(0, 0, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
+        } else {
+            scrollViewContentSize = CGSizeMake(self.entryArray.count*75, self.scrollView.bounds.size.height);
+            graphFrame = CGRectMake(0, 0, self.entryArray.count*75, self.scrollView.bounds.size.height);
+        }
         [self.scrollView setContentSize:scrollViewContentSize];
-        CGRect graphFrame = CGRectMake(0, 0, self.scrollView.bounds.size.width, self.scrollView
-                                       .bounds.size.height);
+        
         self.barGraph = [[GKBarGraph alloc] initWithFrame:graphFrame];
         self.barGraph.dataSource = self;
 //        self.barGraph.marginBar = 50;
-        self.barGraph.barWidth = 50;
+        self.barGraph.barWidth = 40;
         self.barGraph.barHeight = self.scrollView.bounds.size.height;
         [self.barGraph draw];
         [self.scrollView addSubview:self.barGraph];

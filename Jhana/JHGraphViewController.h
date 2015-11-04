@@ -21,4 +21,9 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (strong, nonatomic) IBOutlet UILabel *textLabel;
 @property (strong, nonatomic) NSMutableDictionary *barGraphData;
+@property (strong, nonatomic) UILabel *zeroLabel;
+@property (strong, nonatomic) UILabel *oneLabel;
+@property (strong, nonatomic) UILabel *twoLabel;
+@property (strong, nonatomic) UILabel *threeLabel;
+@property (strong, nonatomic) UILabel *fourLabel;
 @end

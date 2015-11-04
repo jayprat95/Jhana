@@ -97,14 +97,14 @@
     else if (self.attentionValue == 3) {
         
         [UIView animateWithDuration:0.25 animations:^{
-            [self.textLabel setText:@"focused"];
+            [self.textLabel setText:@"Focused"];
             self.view.backgroundColor = [UIColor paperColorLightGreen];
         }];
     }
     else if (self.attentionValue == 4) {
         
         [UIView animateWithDuration:0.25 animations:^{
-            [self.textLabel setText:@"Very focused"];
+            [self.textLabel setText:@"Very Focused"];
             self.view.backgroundColor = [UIColor paperColorOrange];
         }];
     }
