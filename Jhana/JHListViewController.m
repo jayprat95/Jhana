@@ -257,9 +257,9 @@
     [cell.locationLabel setText:[record valueForKey:@"location"]];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"h:mm\na"];
+    [formatter setDateFormat:@"h:mm a"];
     NSString *startTimeString = [formatter stringFromDate:[record valueForKey:@"timeStamp"]];
-    formatter.dateFormat = @"MM/dd/yy";
+    formatter.dateFormat = @"MM/dd";
     
     NSString *dateString = [formatter stringFromDate: [record valueForKey:@"timeStamp"]];
     
@@ -304,7 +304,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 133;
+    return 109;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {

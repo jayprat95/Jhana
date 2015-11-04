@@ -16,6 +16,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+    NSLog(@"%@", self.timeLabel.text);
 
     // Configure the view for the selected state
 }
