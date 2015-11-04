@@ -24,14 +24,16 @@
     self.textLabel.text = @"Your attention over time...";
     
     self.scrollView = [[UIScrollView alloc] init];
-    CGRect scrollViewFrame = CGRectMake(0, 140, self.view.bounds.size.width, 400);
+    CGRect scrollViewFrame = CGRectMake(0, 140, self.view.bounds.size.width, 350);
     self.scrollView.frame = scrollViewFrame;
     [self.view addSubview:self.scrollView];
     self.scrollView.delegate = self;
     self.scrollView.emptyDataSetSource = self;
     self.scrollView.emptyDataSetDelegate = self;
     
-    CGRect zeroFrame = CGRectMake(0, self.scrollView.bounds.size.width-12, 40, 12);
+    CGFloat spacing = (self.scrollView.bounds.size.height-30)/4;
+    
+    CGRect zeroFrame = CGRectMake(0, self.scrollView.bounds.size.height-30, 40, 12);
     self.zeroLabel = [[UILabel alloc] initWithFrame:zeroFrame];
     self.zeroLabel.text = @"0";
     self.zeroLabel.font = [UIFont boldSystemFontOfSize:12];
@@ -39,7 +41,7 @@
     self.zeroLabel.textAlignment = NSTextAlignmentRight;
     [self.scrollView addSubview:self.zeroLabel];
     
-    CGRect oneFrame = CGRectMake(0, self.scrollView.bounds.size.width-100, 40, 12);
+    CGRect oneFrame = CGRectMake(0, self.scrollView.bounds.size.height-30-spacing, 40, 12);
     self.oneLabel = [[UILabel alloc] initWithFrame:oneFrame];
     self.oneLabel.text = @"1";
     self.oneLabel.font = [UIFont boldSystemFontOfSize:12];
@@ -47,7 +49,7 @@
     self.oneLabel.textAlignment = NSTextAlignmentRight;
     [self.scrollView addSubview:self.oneLabel];
     
-    CGRect twoFrame = CGRectMake(0, self.scrollView.bounds.size.width-190, 40, 12);
+    CGRect twoFrame = CGRectMake(0, (self.scrollView.bounds.size.height-50)/2, 40, 12);
     self.twoLabel = [[UILabel alloc] initWithFrame:twoFrame];
     self.twoLabel.text = @"2";
     self.twoLabel.font = [UIFont boldSystemFontOfSize:12];
@@ -55,7 +57,7 @@
     self.twoLabel.textAlignment = NSTextAlignmentRight;
     [self.scrollView addSubview:self.twoLabel];
     
-    CGRect threeFrame = CGRectMake(0, self.scrollView.bounds.size.width-280, 40, 12);
+    CGRect threeFrame = CGRectMake(0, self.scrollView.bounds.size.height-50-3*spacing, 40, 12);
     self.threeLabel = [[UILabel alloc] initWithFrame:threeFrame];
     self.threeLabel.text = @"3";
     self.threeLabel.font = [UIFont boldSystemFontOfSize:12];
@@ -63,7 +65,7 @@
     self.threeLabel.textAlignment = NSTextAlignmentRight;
     [self.scrollView addSubview:self.threeLabel];
     
-    CGRect fourFrame = CGRectMake(0, self.scrollView.bounds.size.width-370, 40, 12);
+    CGRect fourFrame = CGRectMake(0, 0, 40, 12);
     self.fourLabel = [[UILabel alloc] initWithFrame:fourFrame];
     self.fourLabel.text = @"4";
     self.fourLabel.font = [UIFont boldSystemFontOfSize:12];
@@ -133,8 +135,8 @@
             scrollViewContentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
             graphFrame = CGRectMake(0, 0, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
         } else {
-            scrollViewContentSize = CGSizeMake(self.entryArray.count*75, self.scrollView.bounds.size.height);
-            graphFrame = CGRectMake(0, 0, self.entryArray.count*75, self.scrollView.bounds.size.height);
+            scrollViewContentSize = CGSizeMake(width, self.scrollView.bounds.size.height);
+            graphFrame = CGRectMake(0, 0, width, self.scrollView.bounds.size.height);
         }
         [self.scrollView setContentSize:scrollViewContentSize];
         self.lineGraph = [[GKLineGraph alloc] initWithFrame:graphFrame];
@@ -164,16 +166,18 @@
         [self.barGraph removeFromSuperview];
     }
     [self.scrollView reloadEmptyDataSet];
+    // Call delegate method to populate dictionary containing data
+    [self numberOfBars];
     if (self.entryArray.count > 0) {
-        CGFloat width = self.entryArray.count*75;
+        CGFloat width = self.barGraphData.count*75;
         CGSize scrollViewContentSize;
         CGRect graphFrame;
         if (width < self.view.bounds.size.width) {
             scrollViewContentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
             graphFrame = CGRectMake(0, 0, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
         } else {
-            scrollViewContentSize = CGSizeMake(self.entryArray.count*75, self.scrollView.bounds.size.height);
-            graphFrame = CGRectMake(0, 0, self.entryArray.count*75, self.scrollView.bounds.size.height);
+            scrollViewContentSize = CGSizeMake(width, self.scrollView.bounds.size.height);
+            graphFrame = CGRectMake(0, 0, width, self.scrollView.bounds.size.height);
         }
         [self.scrollView setContentSize:scrollViewContentSize];
         
@@ -200,7 +204,7 @@
             [self setupBarGraph];
             break;
         case 2:
-            self.textLabel.text = @"Your attention during different activities...";
+            self.textLabel.text = @"Your attention for different activities...";
             [self setupBarGraph];
             break;
         case 3:
