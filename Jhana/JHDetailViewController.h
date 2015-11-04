@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 //#import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "JHLocationViewController.h"
+#import "JHDetailViewProtocol.h"
 
-@interface JHDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface JHDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, JHDetailViewProtocol>
 @property (strong, nonatomic) NSManagedObjectModel *detailContext;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 

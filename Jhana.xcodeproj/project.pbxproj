@@ -116,6 +116,7 @@
 		A5035A191BD8129F000E929C /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		A5035A1B1BD8129F000E929C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5035A1D1BD8129F000E929C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A52C24391BE9824400CAA0B7 /* JHDetailViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHDetailViewProtocol.h; sourceTree = "<group>"; };
 		A566FA931BD9429700FEDB38 /* AttentionInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttentionInterfaceController.h; sourceTree = "<group>"; };
 		A566FA941BD9429700FEDB38 /* AttentionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttentionInterfaceController.m; sourceTree = "<group>"; };
 		A566FA961BD942AB00FEDB38 /* LocationInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationInterfaceController.h; sourceTree = "<group>"; };
@@ -335,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				F6AA36C81BC5B9E0007F4F26 /* main.m */,
+				A52C24391BE9824400CAA0B7 /* JHDetailViewProtocol.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

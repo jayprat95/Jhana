@@ -60,14 +60,19 @@
 }
 
 - (IBAction)submitButtonClicked:(UIButton *)sender {
-    self.applicationData[@"isAlone"] = (self.aloneSegmentedControl.selectedSegmentIndex == 0) ? @YES : @NO;
-    if ([self.applicationData[@"isAlone"] isEqual: @NO]) {
-        self.applicationData[@"person"] = self.personTextField.text;
+    if ([self.delegate conformsToProtocol:@protocol(JHDetailViewProtocol)]) {
+        [self.delegate changePerson:self.personTextField.text];
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        self.applicationData[@"isAlone"] = (self.aloneSegmentedControl.selectedSegmentIndex == 0) ? @YES : @NO;
+//        if ([self.applicationData[@"isAlone"] isEqual: @NO]) {
+            self.applicationData[@"person"] = self.personTextField.text;
+//        }
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"SaveData" object:self.applicationData];
+        UINavigationController *navController = (UINavigationController *)self.navigationController;
+        JHAttentionGestureViewController *attentionViewController = (JHAttentionGestureViewController *)navController.viewControllers[0];
+        [attentionViewController cancelButtonClicked:self];
     }
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"SaveData" object:self.applicationData];
-    UINavigationController *navController = (UINavigationController *)self.navigationController;
-    JHAttentionGestureViewController *attentionViewController = (JHAttentionGestureViewController *)navController.viewControllers[0];
-    [attentionViewController cancelButtonClicked:self];
 }
 
 @end

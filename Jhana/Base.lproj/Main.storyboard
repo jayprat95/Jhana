@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="co5-QC-mmY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="co5-QC-mmY">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="116"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K16-4U-Z5c" id="4vw-0b-b7a">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="115.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -51,7 +51,6 @@
         <!--Detail View Controller-->
         <scene sceneID="lWV-hE-PtU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i7N-8M-rWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="FsC-6Z-jeQ" customClass="JHDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cb7-7L-9Qy"/>
@@ -80,10 +79,10 @@
                                 <exclude reference="1Jg-Z3-jba"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="mG6-wW-4iQ"/>
                                 <exclude reference="E96-z3-thg"/>
                                 <exclude reference="clH-he-dHP"/>
                                 <exclude reference="hR1-AV-awR"/>
-                                <exclude reference="mG6-wW-4iQ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -91,21 +90,18 @@
                                 <include reference="1Jg-Z3-jba"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="mG6-wW-4iQ"/>
                                 <include reference="E96-z3-thg"/>
                                 <include reference="clH-he-dHP"/>
                                 <include reference="hR1-AV-awR"/>
-                                <include reference="mG6-wW-4iQ"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="1Jg-Z3-jba" id="SVA-Xs-RFv"/>
-                        <segue destination="khB-f0-sRm" kind="show" id="9aL-zA-3Lf"/>
-                        <segue destination="qts-2s-wNa" kind="show" id="FeC-3e-8DE"/>
-                        <segue destination="gR5-Zq-3Gc" kind="show" id="oBf-DR-GlG"/>
-                        <segue destination="cZE-TS-Zsa" kind="show" id="VSd-L5-3bM"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i7N-8M-rWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2956.5" y="513.75"/>
         </scene>
@@ -381,7 +377,7 @@
         <!--Location View Controller-->
         <scene sceneID="8y6-OQ-lHd">
             <objects>
-                <viewController id="qts-2s-wNa" customClass="JHLocationViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JHLocationViewController" id="qts-2s-wNa" customClass="JHLocationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="txB-em-hUz"/>
                         <viewControllerLayoutGuide type="bottom" id="XGR-2u-rNE"/>
@@ -398,7 +394,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rlb-Gu-Skc">
-                                <rect key="frame" x="0.0" y="146" width="414" height="244"/>
+                                <rect key="frame" x="0.0" y="146" width="414" height="590"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -406,14 +402,11 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dPg-uU-quU" id="ULx-yd-ZZg">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
-                                        <connections>
-                                            <segue destination="gR5-Zq-3Gc" kind="show" identifier="locationSegue" id="Em6-PU-SRN"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -421,28 +414,27 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XGR-2u-rNE" firstAttribute="top" secondItem="Rlb-Gu-Skc" secondAttribute="bottom" constant="346" id="Cm4-lt-a37">
-                                <variation key="heightClass=regular-widthClass=compact" constant="70"/>
-                            </constraint>
-                            <constraint firstItem="798-t0-O5J" firstAttribute="top" secondItem="txB-em-hUz" secondAttribute="bottom" constant="53" id="Gxa-gL-FwS"/>
-                            <constraint firstItem="Rlb-Gu-Skc" firstAttribute="top" secondItem="798-t0-O5J" secondAttribute="bottom" constant="8" symbolic="YES" id="NYF-WT-fy6"/>
-                            <constraint firstItem="Rlb-Gu-Skc" firstAttribute="leading" secondItem="sNn-53-bAb" secondAttribute="leading" id="Pce-Oy-mTb"/>
-                            <constraint firstItem="798-t0-O5J" firstAttribute="leading" secondItem="sNn-53-bAb" secondAttribute="leadingMargin" id="flg-h0-Te6"/>
-                            <constraint firstAttribute="trailing" secondItem="Rlb-Gu-Skc" secondAttribute="trailing" id="nQY-YL-Oii"/>
+                            <constraint firstItem="XGR-2u-rNE" firstAttribute="top" secondItem="Rlb-Gu-Skc" secondAttribute="bottom" id="3Jc-ST-Tmx"/>
+                            <constraint firstItem="Rlb-Gu-Skc" firstAttribute="leading" secondItem="sNn-53-bAb" secondAttribute="leading" id="H19-C2-wXs"/>
+                            <constraint firstItem="Rlb-Gu-Skc" firstAttribute="top" secondItem="798-t0-O5J" secondAttribute="bottom" constant="8" symbolic="YES" id="YXs-rF-0nQ"/>
+                            <constraint firstItem="798-t0-O5J" firstAttribute="top" secondItem="txB-em-hUz" secondAttribute="bottom" constant="53" id="ipI-DN-r27"/>
+                            <constraint firstItem="798-t0-O5J" firstAttribute="leading" secondItem="sNn-53-bAb" secondAttribute="leadingMargin" id="rTZ-lI-Mf7"/>
+                            <constraint firstAttribute="trailing" secondItem="Rlb-Gu-Skc" secondAttribute="trailing" id="ufU-U4-wNt"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Rlb-Gu-Skc" id="jVI-Zp-0Rj"/>
+                        <segue destination="gR5-Zq-3Gc" kind="show" identifier="locationSegue" id="LL0-pQ-vnt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Sf-a5-mrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3639" y="2167.5"/>
+            <point key="canvasLocation" x="3639" y="2167"/>
         </scene>
         <!--Activity View Controller-->
         <scene sceneID="e04-4Y-H6u">
             <objects>
-                <viewController id="gR5-Zq-3Gc" customClass="JHActivityViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JHActivityViewController" id="gR5-Zq-3Gc" customClass="JHActivityViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s2U-jc-tOP"/>
                         <viewControllerLayoutGuide type="bottom" id="qbl-fq-kFo"/>
@@ -459,7 +451,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kgh-cB-4eK">
-                                <rect key="frame" x="0.0" y="146" width="414" height="244"/>
+                                <rect key="frame" x="0.0" y="146" width="414" height="590"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -467,14 +459,11 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sWz-qm-rGP" id="q8P-MC-5L7">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
-                                        <connections>
-                                            <segue destination="cZE-TS-Zsa" kind="show" identifier="activitySegue" id="DLV-LJ-ZY8"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -482,28 +471,27 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qbl-fq-kFo" firstAttribute="top" secondItem="Kgh-cB-4eK" secondAttribute="bottom" constant="346" id="0IF-sz-4YN">
-                                <variation key="heightClass=regular-widthClass=compact" constant="102"/>
-                            </constraint>
-                            <constraint firstItem="Kgh-cB-4eK" firstAttribute="top" secondItem="eAN-9h-dTB" secondAttribute="bottom" constant="8" symbolic="YES" id="87O-ZZ-2V2"/>
-                            <constraint firstAttribute="trailing" secondItem="Kgh-cB-4eK" secondAttribute="trailing" id="Igu-wZ-RXV"/>
-                            <constraint firstItem="eAN-9h-dTB" firstAttribute="top" secondItem="s2U-jc-tOP" secondAttribute="bottom" constant="53" id="T61-gb-EhE"/>
-                            <constraint firstItem="Kgh-cB-4eK" firstAttribute="leading" secondItem="sP9-sY-20V" secondAttribute="leading" id="rXo-Tz-VnO"/>
-                            <constraint firstItem="eAN-9h-dTB" firstAttribute="leading" secondItem="sP9-sY-20V" secondAttribute="leadingMargin" id="yVU-f7-CuJ"/>
+                            <constraint firstItem="eAN-9h-dTB" firstAttribute="top" secondItem="s2U-jc-tOP" secondAttribute="bottom" constant="53" id="7G6-WC-rDr"/>
+                            <constraint firstAttribute="trailing" secondItem="Kgh-cB-4eK" secondAttribute="trailing" id="B8c-9g-rRN"/>
+                            <constraint firstItem="eAN-9h-dTB" firstAttribute="leading" secondItem="sP9-sY-20V" secondAttribute="leadingMargin" id="Wk0-RF-Lte"/>
+                            <constraint firstItem="Kgh-cB-4eK" firstAttribute="leading" secondItem="sP9-sY-20V" secondAttribute="leading" id="fuN-Oc-pOa"/>
+                            <constraint firstItem="Kgh-cB-4eK" firstAttribute="top" secondItem="eAN-9h-dTB" secondAttribute="bottom" constant="8" symbolic="YES" id="i1h-e3-3oe"/>
+                            <constraint firstItem="qbl-fq-kFo" firstAttribute="top" secondItem="Kgh-cB-4eK" secondAttribute="bottom" id="rFd-ck-Ctm"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Kgh-cB-4eK" id="gWF-YH-y5Q"/>
+                        <segue destination="cZE-TS-Zsa" kind="show" identifier="activitySegue" id="r7T-xn-1Uy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ccp-JE-3hA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4311" y="2167.5"/>
+            <point key="canvasLocation" x="4311" y="2167"/>
         </scene>
         <!--Alone View Controller-->
         <scene sceneID="CeC-sO-ZDY">
             <objects>
-                <viewController id="cZE-TS-Zsa" customClass="JHAloneViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JHAloneViewController" id="cZE-TS-Zsa" customClass="JHAloneViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sCm-Xe-cVB"/>
                         <viewControllerLayoutGuide type="bottom" id="wWL-e3-ecY"/>
@@ -533,7 +521,7 @@
                                     <action selector="aloneSegmentedControlValueSelected:" destination="cZE-TS-Zsa" eventType="valueChanged" id="bCL-mJ-RIJ"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter person name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3w-Bv-OkE">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter person name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3w-Bv-OkE">
                                 <rect key="frame" x="20" y="255" width="374" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -549,7 +537,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfg-VG-Uv4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfg-VG-Uv4">
                                 <rect key="frame" x="183" y="321" width="49" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit"/>
@@ -611,10 +599,4 @@
         <image name="graph_icon" width="30" height="30"/>
         <image name="list_icon" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="VSd-L5-3bM"/>
-        <segue reference="FeC-3e-8DE"/>
-        <segue reference="9aL-zA-3Lf"/>
-        <segue reference="oBf-DR-GlG"/>
-    </inferredMetricsTieBreakers>
 </document>

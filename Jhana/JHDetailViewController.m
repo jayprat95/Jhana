@@ -19,37 +19,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.delegate = self;
-    self.tableView.dataSource = self; 
+    self.tableView.dataSource = self;
+    NSDate *time = [self.detailContext valueForKey:@"timeStamp"];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM/dd/yy"];
+    NSString *dateString = [formatter stringFromDate:time];
+    formatter.dateFormat = @"h:mm a";
+    self.title = [NSString stringWithFormat:@"%@ at %@", dateString, [formatter stringFromDate:time]];
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:animated];
+}
+
+//- (void)viewWillDisappear:(BOOL)animated {
+//    self.title = @"Back";
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//- (void)setup {
-//    self.activityLabel.text = [NSString stringWithFormat:@"Activity: %@", [self.detailContext valueForKey:@"activity"]];
-//    NSNumber *attention = [self.detailContext valueForKey:@"attention"];
-//    if ([attention isEqualToNumber:@0]) {
-//        self.attentionLabel.text = @"Attention: Very Distracted";
-//    } else if ([attention isEqualToNumber:@1]) {
-//        self.attentionLabel.text = @"Attention: Somewhat Distracted";
-//    } else if ([attention isEqualToNumber:@2]) {
-//        self.attentionLabel.text = @"Attention: Neutral";
-//    } else if ([attention isEqualToNumber:@3]) {
-//        self.attentionLabel.text = @"Attention: Somewhat Attentive";
-//    } else {
-//        self.attentionLabel.text = @"Attention: Very Attentive";
-//    }
-//    self.locationLabel.text = [NSString stringWithFormat:@"You were at: %@", [self.detailContext valueForKey:@"location"]];
-//    NSNumber *isAlone = [self.detailContext valueForKey:@"isAlone"];
-//    if ([isAlone isEqualToNumber:@0]) {
-//        self.personLabel.text = [NSString stringWithFormat:@"You were with: %@", [self.detailContext valueForKey:@"person"]];
-//    } else {
-//        self.personLabel.text = @"You were alone";
-//    }
-//}
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"JHDetailCell";
@@ -57,8 +48,6 @@
     if (cell == nil) {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"JHDetailTableViewCell" owner:self options:nil]objectAtIndex:0];
     }
-    
-    
     
     NSNumber *attention = [self.detailContext valueForKey:@"attention"];
     
@@ -102,27 +91,30 @@
             }
             break;
     }
-
-    
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    switch (indexPath.row) {
-        case 1:
-            //call location vc
-            NSLog(@"Case 1");
-            break;
-        case 2:
-            //call activity vc
-            NSLog(@"Case 2");
-            break;
-        case 3:
-            //call alone vc
-            NSLog(@"Case 3");
-            break;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    if (indexPath.row == 1) {
+        //call location vc
+        JHLocationViewController *locationViewController =
+        [storyboard instantiateViewControllerWithIdentifier:@"JHLocationViewController"];
+        locationViewController.delegate = self;
+        [self.navigationController pushViewController:locationViewController animated:YES];
+    } else if (indexPath.row == 2) {
+        //call activity vc
+        JHActivityViewController *activityViewController = [storyboard instantiateViewControllerWithIdentifier:@"JHActivityViewController"];
+        activityViewController.delegate = self;
+        [self.navigationController pushViewController:activityViewController animated:YES];
+    } else if (indexPath.row == 3) {
+        //call alone vc
+        JHAloneViewController *aloneViewController = [storyboard instantiateViewControllerWithIdentifier:@"JHAloneViewController"];
+        aloneViewController.delegate = self;
+        [self.navigationController pushViewController:aloneViewController animated:YES];
     }
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationItem setBackBarButtonItem:backItem];
 }
 
 
@@ -135,5 +127,36 @@
     return 97;
 }
 
+- (void)changeLocation:(NSString *)newLocation {
+    JHDetailTableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
+    cell.answerLabel.text = newLocation;
+    [self.detailContext setValue:newLocation forKey:@"location"];
+    // Save Record
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SaveData" object:nil];
+}
+
+- (void)changeActivity:(NSString *)newActivity {
+    JHDetailTableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]];
+    cell.answerLabel.text = newActivity;
+    [self.detailContext setValue:newActivity forKey:@"activity"];
+    // Save Record
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SaveData" object:nil];
+}
+
+- (void)changePerson:(NSString *)newPerson {
+    JHDetailTableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]];
+    if ([newPerson isEqualToString:@""]) {
+        cell.answerLabel.text = @"You were alone";
+        [self.detailContext setValue:@YES forKey:@"isAlone"];
+        [self.detailContext setValue:@"" forKey:@"person"];
+    } else {
+        cell.answerLabel.text = [NSString stringWithFormat:@"You were with: %@", newPerson];
+        [self.detailContext setValue:@NO forKey:@"isAlone"];
+        [self.detailContext setValue:newPerson forKey:@"person"];
+    }
+    // Save Record
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SaveData" object:nil];
+
+}
 
 @end

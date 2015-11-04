@@ -24,7 +24,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,6 +41,15 @@
     }
     cell.textLabel.text = self.locationValues[indexPath.row];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.delegate conformsToProtocol:@protocol(JHDetailViewProtocol)]) {
+        [self.delegate changeLocation:self.locationValues[indexPath.row]];
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        [self performSegueWithIdentifier:@"locationSegue" sender:self];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -91,21 +91,23 @@
 
 - (void)saveEntry:(NSNotification *) notification {
     // Create Entity
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"JHReport" inManagedObjectContext:self.managedObjectContext];
+    if (notification != nil && [notification.object isKindOfClass:[NSMutableDictionary class]]) {
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"JHReport" inManagedObjectContext:self.managedObjectContext];
+        
+        // Initialize Record
+        NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
     
-    // Initialize Record
-    NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
-    
-    NSMutableDictionary *applicationData = notification.object;
-    
-    // Populate Record
-    [record setValue:applicationData[@"activity"] forKey:@"activity"];
-    [record setValue:applicationData[@"attention"] forKey:@"attention"];
-    [record setValue:applicationData[@"location"] forKey:@"location"];
-    [record setValue:applicationData[@"isAlone"] forKey:@"isAlone"];
-    [record setValue:applicationData[@"person"] forKey:@"person"];
-    [record setValue:[NSDate date] forKey:@"createdAt"];
-    [record setValue:[NSDate date] forKey:@"timeStamp"];
+        NSMutableDictionary *applicationData = notification.object;
+        
+        // Populate Record
+        [record setValue:applicationData[@"activity"] forKey:@"activity"];
+        [record setValue:applicationData[@"attention"] forKey:@"attention"];
+        [record setValue:applicationData[@"location"] forKey:@"location"];
+        [record setValue:applicationData[@"isAlone"] forKey:@"isAlone"];
+        [record setValue:applicationData[@"person"] forKey:@"person"];
+        [record setValue:[NSDate date] forKey:@"createdAt"];
+        [record setValue:[NSDate date] forKey:@"timeStamp"];
+    }
     
     // Save Record
     NSError *error = nil;
@@ -192,7 +194,6 @@
         [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
     }
 }
-
 
 #pragma mark Fetched Results Controller Delegate Methods
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {

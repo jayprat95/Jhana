@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "JHAloneViewController.h"
+#import "JHDetailViewProtocol.h"
 
 @interface JHActivityViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *activityValues;
 @property (strong, nonatomic) NSMutableDictionary *applicationData;
+@property (nonatomic, weak) id <JHDetailViewProtocol> delegate;
 @end

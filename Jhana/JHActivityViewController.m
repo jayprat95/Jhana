@@ -18,8 +18,13 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.activityValues = @[@"Eating", @"Watching TV", @"Reading", @"Working", @"Travelling", @"Talking", @"Using Technology", @"Exercising", @"Errands"];
+    self.activityValues = @[@"Eating", @"Watching TV", @"Reading", @"Working", @"Traveling", @"Talking", @"Using Technology", @"Exercising", @"Errands"];
     self.title = @"Activity";
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,6 +44,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.activityValues.count;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.delegate conformsToProtocol:@protocol(JHDetailViewProtocol)]) {
+        [self.delegate changeActivity:self.activityValues[indexPath.row]];
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        [self performSegueWithIdentifier:@"activitySegue" sender:self];
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "JHAttentionGestureViewController.h"
+#import "JHDetailViewProtocol.h"
 
 @interface JHAloneViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UISegmentedControl *aloneSegmentedControl;
@@ -15,4 +16,5 @@
 @property (strong, nonatomic) IBOutlet UITextField *personTextField;
 @property (strong, nonatomic) IBOutlet UIButton *submitButton;
 @property (strong, nonatomic) NSMutableDictionary *applicationData;
+@property (nonatomic, weak) id <JHDetailViewProtocol> delegate;
 @end

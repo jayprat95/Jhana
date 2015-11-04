@@ -79,15 +79,17 @@
     }
     [self.scrollView reloadEmptyDataSet];
     if (self.entryArray.count > 0) {
-        CGFloat width = self.entryArray.count*100;
-        CGSize scrollViewContentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
-        [self.scrollView setContentSize:scrollViewContentSize];
+        CGFloat width = self.entryArray.count*75;
+        CGSize scrollViewContentSize;
         CGRect graphFrame;
         if (width < self.view.bounds.size.width) {
+            scrollViewContentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
             graphFrame = CGRectMake(0, 0, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
         } else {
-            graphFrame = CGRectMake(0, 0, self.entryArray.count*100, self.scrollView.bounds.size.height);
+            scrollViewContentSize = CGSizeMake(self.entryArray.count*75, self.scrollView.bounds.size.height);
+            graphFrame = CGRectMake(0, 0, self.entryArray.count*75, self.scrollView.bounds.size.height);
         }
+        [self.scrollView setContentSize:scrollViewContentSize];
         self.lineGraph = [[GKLineGraph alloc] initWithFrame:graphFrame];
         self.lineGraph.dataSource = self;
         self.lineGraph.lineWidth = 3.0;
@@ -116,7 +118,9 @@
                                        .bounds.size.height);
         self.barGraph = [[GKBarGraph alloc] initWithFrame:graphFrame];
         self.barGraph.dataSource = self;
-
+//        self.barGraph.marginBar = 50;
+        self.barGraph.barWidth = 50;
+        self.barGraph.barHeight = self.scrollView.bounds.size.height;
         [self.barGraph draw];
         [self.scrollView addSubview:self.barGraph];
     } else {

@@ -44,7 +44,7 @@
     if (self.hasPreviouslyLoaded) {
         [self.attentionPicker setSelectedItemIndex:self.selectedAttentionValue];
     } else {
-        [self.attentionPicker setSelectedItemIndex:2];
+        [self.attentionPicker setSelectedItemIndex:self.attentionValues.count/2];
         self.hasPreviouslyLoaded = YES;
     }
     [self.attentionPicker focus];
