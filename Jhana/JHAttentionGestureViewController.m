@@ -75,7 +75,7 @@
     if (self.attentionValue == 0) {
         
         [UIView animateWithDuration:0.25 animations:^{
-            [self.textLabel setText:@"Very Unattentive"];
+            [self.textLabel setText:@"Very Unfocused"];
             self.view.backgroundColor = [UIColor paperColorPurple800];
         }];
 
@@ -83,7 +83,7 @@
     else if (self.attentionValue == 1) {
        
         [UIView animateWithDuration:0.25 animations:^{
-             [self.textLabel setText:@"Unattentive"];
+             [self.textLabel setText:@"Unfocused"];
             self.view.backgroundColor = [UIColor paperColorIndigo];
         }];
     }
@@ -97,14 +97,14 @@
     else if (self.attentionValue == 3) {
         
         [UIView animateWithDuration:0.25 animations:^{
-            [self.textLabel setText:@"Attentive"];
+            [self.textLabel setText:@"focused"];
             self.view.backgroundColor = [UIColor paperColorLightGreen];
         }];
     }
     else if (self.attentionValue == 4) {
         
         [UIView animateWithDuration:0.25 animations:^{
-            [self.textLabel setText:@"Very Attentive"];
+            [self.textLabel setText:@"Very focused"];
             self.view.backgroundColor = [UIColor paperColorOrange];
         }];
     }
