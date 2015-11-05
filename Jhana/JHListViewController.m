@@ -234,7 +234,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"Test";
+    return @"Today";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -282,7 +282,7 @@
             [cell setBackgroundColor:[UIColor paperColorLightGreen]];
             break;
         case 4:
-            [cell.attentionLabel setText:@"Very Unfocused"];
+            [cell.attentionLabel setText:@"Very Focused"];
             [cell setBackgroundColor:[UIColor paperColorOrange]];
             break;
             
