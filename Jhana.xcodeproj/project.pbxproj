@@ -715,7 +715,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				IBSC_MODULE = JhanaWatchKit_Extension;
 				INFOPLIST_FILE = JhanaWatchKit/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.TT.Jhana.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.touchtap.jhana.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
@@ -733,7 +733,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				IBSC_MODULE = JhanaWatchKit_Extension;
 				INFOPLIST_FILE = JhanaWatchKit/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.TT.Jhana.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.touchtap.jhana.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
@@ -748,7 +748,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = "JhanaWatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TT.Jhana.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.touchtap.jhana.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -762,7 +762,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = "JhanaWatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TT.Jhana.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.touchtap.jhana.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -859,7 +859,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Jhana/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TT.Jhana;
+				PRODUCT_BUNDLE_IDENTIFIER = com.touchtap.jhana;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -872,7 +872,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Jhana/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TT.Jhana;
+				PRODUCT_BUNDLE_IDENTIFIER = com.touchtap.jhana;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
