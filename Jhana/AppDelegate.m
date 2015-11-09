@@ -59,7 +59,11 @@
         NSArray *scheduledNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
         NSDate *date = [NSDate date];
         NSDate *dateHourAhead = [date dateByAddingTimeInterval:60*60];
-        for (int i=0; i<2; i++) {
+        for (int i=0; i<scheduledNotifications.count; i++) {
+            if (i > 2) {
+                // No need to look past 2 notifications since they're scheduled for 30 min intervals
+                break;
+            }
             UILocalNotification *notification = scheduledNotifications[i];
             if ([notification.fireDate compare:dateHourAhead] == NSOrderedAscending) {
                 [[UIApplication sharedApplication] cancelLocalNotification:notification];
