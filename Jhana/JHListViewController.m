@@ -38,6 +38,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    [self createLocalNotifications];
+    
     [self.tableView registerNib:[UINib nibWithNibName:@"JHTableViewCell" bundle:nil] forCellReuseIdentifier:@"JHCell"];
     
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
@@ -77,8 +79,6 @@
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveEntry:) name:@"SaveData" object:nil];
-    
-    [self createLocalNotifications];
     
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;
