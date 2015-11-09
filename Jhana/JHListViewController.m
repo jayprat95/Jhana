@@ -201,11 +201,11 @@ NSString * const NotificationActionOneIdent = @"ACTION_MUTE";
     NSDate *itemDate = [NSDate date];
     
     // The local notification queue has a maximum capacity of 64
-    for (int i=0; i<64; i++) {
+    for (int i=1; i<=64; i++) {
         UILocalNotification *localNotif = [[UILocalNotification alloc] init];
         if (localNotif == nil)
             return;
-        localNotif.fireDate = [itemDate dateByAddingTimeInterval:10*i];
+        localNotif.fireDate = [itemDate dateByAddingTimeInterval:60*30*i];
         NSCalendar *calendar = [NSCalendar currentCalendar];
         NSDateComponents *components = [calendar components:NSCalendarUnitHour fromDate:localNotif.fireDate];
         NSInteger hour = [components hour];

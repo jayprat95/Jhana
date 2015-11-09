@@ -56,7 +56,15 @@
 // TODO!!
 - (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler  {
     if ([identifier isEqualToString:@"ACTION_MUTE"]) {
-        //write code in here to delete notifcations for an hour...........
+        NSArray *scheduledNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
+        NSDate *date = [NSDate date];
+        NSDate *dateHourAhead = [date dateByAddingTimeInterval:60*60];
+        for (int i=0; i<2; i++) {
+            UILocalNotification *notification = scheduledNotifications[i];
+            if ([notification.fireDate compare:dateHourAhead] == NSOrderedAscending) {
+                [[UIApplication sharedApplication] cancelLocalNotification:notification];
+            }
+        }
     }
     completionHandler(UIBackgroundFetchResultNoData);
 }
