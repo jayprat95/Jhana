@@ -20,6 +20,8 @@
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (strong, nonatomic) IBOutlet UILabel *textLabel;
+@property (strong, nonatomic) UILabel *mostAttentiveLabel;
+@property (strong, nonatomic) UILabel *leastAttentiveLabel;
 @property (strong, nonatomic) NSMutableDictionary *barGraphData;
 @property (strong, nonatomic) UILabel *zeroLabel;
 @property (strong, nonatomic) UILabel *oneLabel;

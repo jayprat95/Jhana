@@ -8,6 +8,8 @@
 
 #import "JHGraphViewController.h"
 
+CGFloat const labelPadding = 75.0f;
+
 @interface JHGraphViewController ()
 
 @end
@@ -24,16 +26,16 @@
     self.textLabel.text = @"Your attention over time...";
     
     self.scrollView = [[UIScrollView alloc] init];
-    CGRect scrollViewFrame = CGRectMake(0, 140, self.view.bounds.size.width, 350);
+    CGRect scrollViewFrame = CGRectMake(0, 140, self.view.bounds.size.width, 400);
     self.scrollView.frame = scrollViewFrame;
     [self.view addSubview:self.scrollView];
     self.scrollView.delegate = self;
     self.scrollView.emptyDataSetSource = self;
     self.scrollView.emptyDataSetDelegate = self;
     
-    CGFloat spacing = (self.scrollView.bounds.size.height-30)/4;
+    CGFloat spacing = (self.scrollView.bounds.size.height-30-labelPadding)/4;
     
-    CGRect zeroFrame = CGRectMake(0, self.scrollView.bounds.size.height-30, 40, 12);
+    CGRect zeroFrame = CGRectMake(0, self.scrollView.bounds.size.height-30-labelPadding, 40, 12);
     self.zeroLabel = [[UILabel alloc] initWithFrame:zeroFrame];
     self.zeroLabel.text = @"0";
     self.zeroLabel.font = [UIFont boldSystemFontOfSize:12];
@@ -41,7 +43,7 @@
     self.zeroLabel.textAlignment = NSTextAlignmentRight;
     [self.scrollView addSubview:self.zeroLabel];
     
-    CGRect oneFrame = CGRectMake(0, self.scrollView.bounds.size.height-30-spacing, 40, 12);
+    CGRect oneFrame = CGRectMake(0, self.scrollView.bounds.size.height-30-spacing-labelPadding, 40, 12);
     self.oneLabel = [[UILabel alloc] initWithFrame:oneFrame];
     self.oneLabel.text = @"1";
     self.oneLabel.font = [UIFont boldSystemFontOfSize:12];
@@ -49,7 +51,7 @@
     self.oneLabel.textAlignment = NSTextAlignmentRight;
     [self.scrollView addSubview:self.oneLabel];
     
-    CGRect twoFrame = CGRectMake(0, (self.scrollView.bounds.size.height-50)/2, 40, 12);
+    CGRect twoFrame = CGRectMake(0, (self.scrollView.bounds.size.height-50-labelPadding)/2, 40, 12);
     self.twoLabel = [[UILabel alloc] initWithFrame:twoFrame];
     self.twoLabel.text = @"2";
     self.twoLabel.font = [UIFont boldSystemFontOfSize:12];
@@ -57,7 +59,7 @@
     self.twoLabel.textAlignment = NSTextAlignmentRight;
     [self.scrollView addSubview:self.twoLabel];
     
-    CGRect threeFrame = CGRectMake(0, self.scrollView.bounds.size.height-50-3*spacing, 40, 12);
+    CGRect threeFrame = CGRectMake(0, self.scrollView.bounds.size.height-50-3*spacing-labelPadding, 40, 12);
     self.threeLabel = [[UILabel alloc] initWithFrame:threeFrame];
     self.threeLabel.text = @"3";
     self.threeLabel.font = [UIFont boldSystemFontOfSize:12];
@@ -73,6 +75,13 @@
     self.fourLabel.textAlignment = NSTextAlignmentRight;
     [self.scrollView addSubview:self.fourLabel];
     
+    CGRect mostAttentiveLabelFrame = CGRectMake(0, 325, self.scrollView.frame.size.width, 20);
+    self.mostAttentiveLabel = [[UILabel alloc] initWithFrame:mostAttentiveLabelFrame];
+    [self.scrollView addSubview:self.mostAttentiveLabel];
+    
+    CGRect leastAttentiveLabelFrame = CGRectMake(0, 350, self.scrollView.frame.size.width, 20);
+    self.leastAttentiveLabel = [[UILabel alloc] initWithFrame:leastAttentiveLabelFrame];
+    [self.scrollView addSubview:self.leastAttentiveLabel];
     
     [self setupLineGraph];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshEntries:) name:@"RefreshGraph" object:nil];
@@ -117,6 +126,8 @@
     self.twoLabel.hidden = YES;
     self.threeLabel.hidden = YES;
     self.fourLabel.hidden = YES;
+    self.mostAttentiveLabel.hidden = YES;
+    self.leastAttentiveLabel.hidden = YES;
     
     // Remove existing line graph if it exists
     if (self.lineGraph != nil) {
@@ -132,11 +143,11 @@
         CGSize scrollViewContentSize;
         CGRect graphFrame;
         if (width < self.view.bounds.size.width) {
-            scrollViewContentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
-            graphFrame = CGRectMake(0, 0, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
+            scrollViewContentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.height-labelPadding);
+            graphFrame = CGRectMake(0, 0, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height-labelPadding);
         } else {
-            scrollViewContentSize = CGSizeMake(width, self.scrollView.bounds.size.height);
-            graphFrame = CGRectMake(0, 0, width, self.scrollView.bounds.size.height);
+            scrollViewContentSize = CGSizeMake(width, self.scrollView.bounds.size.height-labelPadding);
+            graphFrame = CGRectMake(0, 0, width, self.scrollView.bounds.size.height-labelPadding);
         }
         [self.scrollView setContentSize:scrollViewContentSize];
         self.lineGraph = [[GKLineGraph alloc] initWithFrame:graphFrame];
@@ -156,6 +167,8 @@
     self.twoLabel.hidden = NO;
     self.threeLabel.hidden = NO;
     self.fourLabel.hidden = NO;
+    self.mostAttentiveLabel.hidden = NO;
+    self.leastAttentiveLabel.hidden = NO;
     
     // Remove existing line graph if it exists
     if (self.lineGraph != nil) {
@@ -174,10 +187,10 @@
         CGRect graphFrame;
         if (width < self.view.bounds.size.width) {
             scrollViewContentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
-            graphFrame = CGRectMake(0, 0, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
+            graphFrame = CGRectMake(0, 0, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height-labelPadding);
         } else {
             scrollViewContentSize = CGSizeMake(width, self.scrollView.bounds.size.height);
-            graphFrame = CGRectMake(0, 0, width, self.scrollView.bounds.size.height);
+            graphFrame = CGRectMake(0, 0, width, self.scrollView.bounds.size.height-labelPadding);
         }
         [self.scrollView setContentSize:scrollViewContentSize];
         
@@ -185,9 +198,41 @@
         self.barGraph.dataSource = self;
 //        self.barGraph.marginBar = 50;
         self.barGraph.barWidth = 40;
-        self.barGraph.barHeight = self.scrollView.bounds.size.height;
+        self.barGraph.barHeight = self.scrollView.bounds.size.height-labelPadding;
         [self.barGraph draw];
         [self.scrollView addSubview:self.barGraph];
+        
+        double minValue = MAXFLOAT;
+        double maxValue = 0;
+        double avgValue = 0;
+        NSString *minKey;
+        NSString *maxKey;
+        
+        for (NSString *key in self.barGraphData) {
+            for (NSNumber *attention in self.barGraphData[key]) {
+                avgValue += [attention doubleValue];
+            }
+            if (avgValue <= minValue) {
+                if (avgValue == minValue) {
+                    minKey = [NSString stringWithFormat:@"%@, %@", minKey, key];
+                } else {
+                    minKey = key;
+                }
+                minValue = avgValue;
+            }
+            if (avgValue >= maxValue) {
+                if (avgValue == maxValue) {
+                    maxKey = [NSString stringWithFormat:@"%@, %@", maxKey, key];
+                } else {
+                    maxKey = key;
+                }
+                maxValue = avgValue;
+            }
+            avgValue = 0;
+        }
+        
+        self.mostAttentiveLabel.text = [NSString stringWithFormat:@"You were most attentive: %@", maxKey];
+        self.leastAttentiveLabel.text = [NSString stringWithFormat:@"You were least attentive: %@", minKey];
     } else {
         [self.barGraph removeFromSuperview];
     }
