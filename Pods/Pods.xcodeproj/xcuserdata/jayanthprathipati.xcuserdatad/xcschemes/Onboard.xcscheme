@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DEEB3043DE8F18B269888920'
-               BlueprintName = 'Canvas'
+               BlueprintIdentifier = '7F9269DE7731DEBEDEE77E44'
+               BlueprintName = 'Onboard'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libCanvas.a'>
+               BuildableName = 'libOnboard.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

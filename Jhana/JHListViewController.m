@@ -21,6 +21,7 @@
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property BOOL editing;
 
+
 @end
 
 @implementation JHListViewController
@@ -164,8 +165,38 @@
 
     }
 }
+
+NSString * const NotificationCategoryIdent  = @"ACTIONABLE";
+NSString * const NotificationActionOneIdent = @"ACTION_MUTE";
+
+
 - (void)createLocalNotifications {
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
+    UIMutableUserNotificationAction *action1;
+    action1 = [[UIMutableUserNotificationAction alloc] init];
+    [action1 setActivationMode:UIUserNotificationActivationModeBackground];
+    [action1 setTitle:@"Mute Notifications for One Hour"];
+    [action1 setIdentifier:NotificationActionOneIdent];
+    [action1 setDestructive:NO];
+    [action1 setAuthenticationRequired:NO];
+    
+    UIMutableUserNotificationCategory *actionCategory;
+    actionCategory = [[UIMutableUserNotificationCategory alloc] init];
+    [actionCategory setIdentifier:NotificationCategoryIdent];
+    [actionCategory setActions:@[action1]
+                    forContext:UIUserNotificationActionContextDefault];
+    
+    NSSet *categories = [NSSet setWithObject:actionCategory];
+    UIUserNotificationType types = (UIUserNotificationTypeAlert|
+                                    UIUserNotificationTypeSound|
+                                    UIUserNotificationTypeBadge);
+    
+    UIUserNotificationSettings *settings;
+    settings = [UIUserNotificationSettings settingsForTypes:types
+                                                 categories:categories];
+    
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
     
     NSDate *itemDate = [NSDate date];
     
@@ -174,7 +205,7 @@
         UILocalNotification *localNotif = [[UILocalNotification alloc] init];
         if (localNotif == nil)
             return;
-        localNotif.fireDate = [itemDate dateByAddingTimeInterval:1800*i];
+        localNotif.fireDate = [itemDate dateByAddingTimeInterval:10*i];
         NSCalendar *calendar = [NSCalendar currentCalendar];
         NSDateComponents *components = [calendar components:NSCalendarUnitHour fromDate:localNotif.fireDate];
         NSInteger hour = [components hour];
@@ -187,6 +218,7 @@
         localNotif.alertBody = @"Are you focused? Check how attentive you are!";
         localNotif.alertAction = @"Log an Entry";
         localNotif.alertTitle = @"Jhana";
+        localNotif.category = NotificationCategoryIdent;
         
         localNotif.soundName = UILocalNotificationDefaultSoundName;
         localNotif.applicationIconBadgeNumber = 1;

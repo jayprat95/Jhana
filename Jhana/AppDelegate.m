@@ -53,6 +53,14 @@
     
 }
 
+// TODO!!
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler  {
+    if ([identifier isEqualToString:@"ACTION_MUTE"]) {
+        //write code in here to delete notifcations for an hour...........
+    }
+    completionHandler(UIBackgroundFetchResultNoData);
+}
+
 #pragma mark - Core Data stack
 
 @synthesize managedObjectContext = _managedObjectContext;

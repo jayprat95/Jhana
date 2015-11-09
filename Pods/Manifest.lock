@@ -9,6 +9,7 @@ PODS:
     - FrameAccessor (~> 1.3.2)
     - MKFoundationKit/NSArray (~> 1.2.2)
   - MKFoundationKit/NSArray (1.2.3)
+  - Onboard (2.1.7)
   - UIColor+BFPaperColors (1.7.1)
 
 DEPENDENCIES:
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - DZNEmptyDataSet
   - Flurry-iOS-SDK/FlurrySDK
   - GraphKit
+  - Onboard
 
 SPEC CHECKSUMS:
   BFPaperButton: 16b3ec9c2964d24f89f623a4113321d3f003ed60
@@ -26,6 +28,7 @@ SPEC CHECKSUMS:
   FrameAccessor: 0f7ba6ce37be9a5d0302a27c731dca70af8d438b
   GraphKit: e2336bed87d9313020af525dedbca54b62e93533
   MKFoundationKit: 882d74557944790d4d9e172961ed71d6a66804b7
+  Onboard: 87648089e1b76d13b4f5bf8f7a1cdb144092f0af
   UIColor+BFPaperColors: b1efa4320e2f56c4b14f73232faf967ba0e5b4a2
 
 COCOAPODS: 0.39.0
