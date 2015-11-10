@@ -175,6 +175,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="f1g-iZ-kzE">
+                                <rect key="frame" x="355" y="349" width="39" height="37"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="VED-qm-JFJ"/>
+                                </constraints>
+                            </pageControl>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.48257869530000003" green="0.94454265510000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -185,6 +192,7 @@
                             <constraint firstItem="u6S-8E-5qh" firstAttribute="leading" secondItem="QrG-ca-Olt" secondAttribute="leadingMargin" constant="72" id="GXW-Zt-NCN"/>
                             <constraint firstItem="u6S-8E-5qh" firstAttribute="centerX" secondItem="mdL-l6-1eb" secondAttribute="centerX" id="NM6-Bu-2ri"/>
                             <constraint firstItem="q5u-oB-KFi" firstAttribute="top" secondItem="mdL-l6-1eb" secondAttribute="bottom" constant="191" id="OMu-dS-0bW"/>
+                            <constraint firstItem="f1g-iZ-kzE" firstAttribute="centerY" secondItem="QrG-ca-Olt" secondAttribute="centerY" id="Rmd-bc-Qfq"/>
                             <constraint firstItem="AZ7-k2-R3c" firstAttribute="centerX" secondItem="Dew-PY-8Vm" secondAttribute="centerX" id="SGD-Mh-nYp"/>
                             <constraint firstItem="mdL-l6-1eb" firstAttribute="top" secondItem="Dew-PY-8Vm" secondAttribute="bottom" constant="21" id="Sdh-lq-ImJ"/>
                             <constraint firstItem="mdL-l6-1eb" firstAttribute="centerX" secondItem="QrG-ca-Olt" secondAttribute="centerX" id="UkG-hK-wrV"/>
@@ -193,6 +201,7 @@
                             <constraint firstItem="q5u-oB-KFi" firstAttribute="top" secondItem="u6S-8E-5qh" secondAttribute="bottom" constant="50" id="dyT-kz-Szc"/>
                             <constraint firstItem="u6S-8E-5qh" firstAttribute="top" secondItem="mdL-l6-1eb" secondAttribute="bottom" constant="78" id="pra-9q-IAm"/>
                             <constraint firstItem="Dew-PY-8Vm" firstAttribute="leading" secondItem="QrG-ca-Olt" secondAttribute="leadingMargin" constant="5" id="wZ1-jf-g4q"/>
+                            <constraint firstItem="f1g-iZ-kzE" firstAttribute="trailing" secondItem="QrG-ca-Olt" secondAttribute="trailingMargin" id="zOI-qV-zm3"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -202,8 +211,6 @@
                                 <exclude reference="Dew-PY-8Vm"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="OMu-dS-0bW"/>
-                                <exclude reference="dyT-kz-Szc"/>
                                 <exclude reference="GXW-Zt-NCN"/>
                                 <exclude reference="NM6-Bu-2ri"/>
                                 <exclude reference="pra-9q-IAm"/>
@@ -216,6 +223,8 @@
                                 <exclude reference="42E-FR-UQz"/>
                                 <exclude reference="Sdh-lq-ImJ"/>
                                 <exclude reference="UkG-hK-wrV"/>
+                                <exclude reference="OMu-dS-0bW"/>
+                                <exclude reference="dyT-kz-Szc"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -226,8 +235,6 @@
                                 <include reference="Dew-PY-8Vm"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="OMu-dS-0bW"/>
-                                <include reference="dyT-kz-Szc"/>
                                 <include reference="GXW-Zt-NCN"/>
                                 <include reference="NM6-Bu-2ri"/>
                                 <include reference="pra-9q-IAm"/>
@@ -240,6 +247,8 @@
                                 <include reference="42E-FR-UQz"/>
                                 <include reference="Sdh-lq-ImJ"/>
                                 <include reference="UkG-hK-wrV"/>
+                                <include reference="OMu-dS-0bW"/>
+                                <include reference="dyT-kz-Szc"/>
                             </mask>
                         </variation>
                     </view>
@@ -252,6 +261,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nextButton" destination="u6S-8E-5qh" id="5vj-Tc-zlM"/>
+                        <outlet property="pageControl" destination="f1g-iZ-kzE" id="7Iz-Mo-MOW"/>
                         <outlet property="textLabel" destination="Dew-PY-8Vm" id="xCh-ap-p2h"/>
                         <segue destination="qts-2s-wNa" kind="show" identifier="attentionSegue" id="Cx2-0C-8vr"/>
                     </connections>

@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *textLabel;
 @property int attentionValue;
 @property (strong, nonatomic) IBOutlet UIButton *nextButton;
+@property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @end
 
@@ -28,6 +29,8 @@
     [self.view setBackgroundColor:[UIColor paperColorTeal]];
     [[self.nextButton layer] setBorderWidth:1.0f];
     [[self.nextButton layer] setBorderColor:[UIColor whiteColor].CGColor];
+    
+    [self.pageControl setTransform:CGAffineTransformMakeRotation(M_PI / 2)];
     
     //up gesture
     UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
@@ -60,6 +63,7 @@
         
         if(self.attentionValue < 4) {
             self.attentionValue++;
+            self.pageControl.currentPage++;
         }
         
     }else{
@@ -68,6 +72,7 @@
         
         if(self.attentionValue > 0) {
             self.attentionValue--;
+            self.pageControl.currentPage--;
         }
 
     }
