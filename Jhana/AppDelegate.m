@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import "Flurry.h"
+#import "OnboardingViewController.h"
+#import "TPTabBarController.h"
+
+static NSString * const kUserHasOnboardedKey = @"user_has_onboarded";
 
 @interface AppDelegate ()
 
@@ -22,7 +26,26 @@
     
     // Override point for customization after application launch.
     [Flurry startSession:@"2WRXHZNGKJXSCM86D9WZ"];
+    
+    BOOL userHasOnboarded = [[NSUserDefaults standardUserDefaults] boolForKey:kUserHasOnboardedKey];
+    if (!userHasOnboarded) {
+        self.window.rootViewController = [self generateOnboardViewController];
+    }
     return YES;
+}
+
+- (OnboardingViewController *)generateOnboardViewController {
+    OnboardingContentViewController *firstPage = [OnboardingContentViewController contentWithTitle:@"Welcome to Jhana!" body:@"Journal. Reflect. Change." image:nil buttonText:@"Get Started" action:^{
+        UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        TPTabBarController *tabBarController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
+        self.window.rootViewController = tabBarController;
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserHasOnboardedKey];
+    }];
+    OnboardingViewController *onboardViewController = [OnboardingViewController onboardWithBackgroundImage:nil contents:@[firstPage]];
+    onboardViewController.shouldFadeTransitions = YES;
+    onboardViewController.fadePageControlOnLastPage = YES;
+    onboardViewController.fadeSkipButtonOnLastPage = YES;
+    return onboardViewController;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -53,7 +76,6 @@
     
 }
 
-// TODO!!
 - (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler  {
     if ([identifier isEqualToString:@"ACTION_MUTE"]) {
         NSArray *scheduledNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
