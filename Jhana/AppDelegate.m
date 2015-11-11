@@ -27,8 +27,7 @@ static NSString * const kUserHasOnboardedKey = @"user_has_onboarded";
     // Override point for customization after application launch.
     [Flurry startSession:@"2WRXHZNGKJXSCM86D9WZ"];
     
-//    BOOL userHasOnboarded = [[NSUserDefaults standardUserDefaults] boolForKey:kUserHasOnboardedKey];
-    BOOL userHasOnboarded = false;
+    BOOL userHasOnboarded = [[NSUserDefaults standardUserDefaults] boolForKey:kUserHasOnboardedKey];
     if (!userHasOnboarded) {
         self.window.rootViewController = [self generateOnboardViewController];
     }
