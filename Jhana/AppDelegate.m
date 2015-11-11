@@ -27,7 +27,8 @@ static NSString * const kUserHasOnboardedKey = @"user_has_onboarded";
     // Override point for customization after application launch.
     [Flurry startSession:@"2WRXHZNGKJXSCM86D9WZ"];
     
-    BOOL userHasOnboarded = [[NSUserDefaults standardUserDefaults] boolForKey:kUserHasOnboardedKey];
+//    BOOL userHasOnboarded = [[NSUserDefaults standardUserDefaults] boolForKey:kUserHasOnboardedKey];
+    BOOL userHasOnboarded = false;
     if (!userHasOnboarded) {
         self.window.rootViewController = [self generateOnboardViewController];
     }
@@ -35,16 +36,32 @@ static NSString * const kUserHasOnboardedKey = @"user_has_onboarded";
 }
 
 - (OnboardingViewController *)generateOnboardViewController {
-    OnboardingContentViewController *firstPage = [OnboardingContentViewController contentWithTitle:@"Welcome to Jhana!" body:@"Journal. Reflect. Change." image:nil buttonText:@"Get Started" action:^{
-        UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        TPTabBarController *tabBarController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
-        self.window.rootViewController = tabBarController;
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserHasOnboardedKey];
+    UIImage *image = [UIImage imageNamed:@"jhana_onboarding_1"];
+    UIImage *brain = [UIImage imageNamed:@"brain_icon"];
+    UIImage *color = [UIImage imageNamed:@"color_scale"];
+    UIImage *watch = [UIImage imageNamed:@"watch_icon"];
+    OnboardingContentViewController *firstPage = [OnboardingContentViewController contentWithTitle:@"Welcome to Jhana!" body:@"Journal. Reflect. Analyze." image:brain buttonText:@"" action:nil];
+    OnboardingContentViewController *secondPage = [OnboardingContentViewController contentWithTitle:@"Survey With Jhana" body:@"Jhana helps you find trends within your focus" image:nil buttonText:@"" action:nil];
+    OnboardingContentViewController *thirdPage = [OnboardingContentViewController contentWithTitle:@"Colors help" body:@"Use Colors to identify your focus" image:color buttonText:@"" action:nil];
+    OnboardingContentViewController *fourthPage = [OnboardingContentViewController contentWithTitle:@"Have an Apple Watch?" body:@"Install the Apple Watch app to make fast Reports!" image:watch buttonText:@"" action:nil];
+    OnboardingContentViewController *fifthPage = [OnboardingContentViewController contentWithTitle:@"Ready?" body:@"" image:nil buttonText:@"Get Started" action:^{
+            UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            TPTabBarController *tabBarController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
+            self.window.rootViewController = tabBarController;
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserHasOnboardedKey];
     }];
-    OnboardingViewController *onboardViewController = [OnboardingViewController onboardWithBackgroundImage:nil contents:@[firstPage]];
+    
+    
+
+    
+    OnboardingViewController *onboardViewController = [OnboardingViewController onboardWithBackgroundImage:image contents:@[firstPage, secondPage, thirdPage, fourthPage, fifthPage]];
     onboardViewController.shouldFadeTransitions = YES;
     onboardViewController.fadePageControlOnLastPage = YES;
     onboardViewController.fadeSkipButtonOnLastPage = YES;
+    onboardViewController.shouldMaskBackground = NO;
+
+    onboardViewController.fontName = @"Avenir-Black";
+    onboardViewController.bodyFontSize = 25;
     return onboardViewController;
 }
 
