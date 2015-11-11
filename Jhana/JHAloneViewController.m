@@ -22,6 +22,20 @@
     self.personTextField.hidden = YES;
     self.submitButton.hidden = YES;
     self.aloneSegmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment;
+    
+    if ([self.delegate conformsToProtocol:@protocol(JHDetailViewProtocol)]) {
+        JHDetailViewController *detailViewController = (JHDetailViewController *)self.delegate;
+        BOOL isAlone = [[detailViewController.detailContext valueForKey:@"isAlone"] boolValue];
+        if (!isAlone) {
+            self.aloneSegmentedControl.selectedSegmentIndex = 1;
+            NSString *personName = [detailViewController.detailContext valueForKey:@"person"];
+            self.personTextField.text = personName;
+            self.personTextField.hidden = NO;
+            self.submitButton.hidden = NO;
+        } else {
+            self.aloneSegmentedControl.selectedSegmentIndex = 0;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,7 +58,9 @@
         self.personTextField.hidden = YES;
     } else {
         // User is with other people
-        self.submitButton.hidden = YES;
+        if ([self.personTextField.text isEqualToString:@""]) {
+            self.submitButton.hidden = YES;
+        }
         self.personTextField.hidden = NO;
         self.personLabel.hidden = NO;
     }

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JHAttentionGestureViewController.h"
 #import "JHDetailViewProtocol.h"
+#import "JHDetailViewController.h"
 
 @interface JHAloneViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UISegmentedControl *aloneSegmentedControl;

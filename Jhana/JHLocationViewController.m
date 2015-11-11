@@ -44,6 +44,24 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([[tableView cellForRowAtIndexPath:indexPath].textLabel.text isEqualToString:@"Other"]) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Other Location..." message:@"Please enter location" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *enterAction = [UIAlertAction actionWithTitle:@"Enter" style:UIAlertActionStyleDefault handler:^(UIAlertAction *alertAction) {
+            self.otherLocation = ((UITextField *)[alert.textFields objectAtIndex:0]).text;
+            [self checkForAppropriateSegue:indexPath];
+        }];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:nil];
+        [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+            textField.placeholder = @"Enter location here";
+        }];
+        [alert addAction:enterAction];
+        [alert addAction:cancelAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    [self checkForAppropriateSegue:indexPath];
+}
+
+- (void)checkForAppropriateSegue:(NSIndexPath *)indexPath {
     if ([self.delegate conformsToProtocol:@protocol(JHDetailViewProtocol)]) {
         [self.delegate changeLocation:self.locationValues[indexPath.row]];
         [self.navigationController popViewControllerAnimated:YES];
@@ -60,7 +78,11 @@
     if ([segue.identifier isEqualToString:@"locationSegue"]) {
         JHActivityViewController *activityViewController = (JHActivityViewController *)segue.destinationViewController;
         NSMutableDictionary *applicationData = [NSMutableDictionary dictionaryWithDictionary:self.applicationData];
-        applicationData[@"location"] = self.locationValues[self.tableView.indexPathForSelectedRow.row];
+        if (self.otherLocation) {
+            applicationData[@"location"] = self.otherLocation;
+        } else {
+            applicationData[@"location"] = self.locationValues[self.tableView.indexPathForSelectedRow.row];
+        }
         activityViewController.applicationData = applicationData;
     }
 }

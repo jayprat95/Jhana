@@ -15,4 +15,5 @@
 @property (strong, nonatomic) NSArray *locationValues;
 @property (strong, nonatomic) NSMutableDictionary *applicationData;
 @property (nonatomic, weak) id <JHDetailViewProtocol> delegate;
+@property (strong, nonatomic) NSString *otherLocation;
 @end
