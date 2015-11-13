@@ -388,7 +388,7 @@ NSString * const NotificationActionOneIdent = @"ACTION_MUTE";
 
 - (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
 {
-    NSString *text = @"To get started, tap the red arrow button below.";
+    NSString *text = @"To get started, tap the red plus button below.";
     
     NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
     paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;

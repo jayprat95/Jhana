@@ -18,7 +18,7 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.activityValues = @[@"Eating", @"Watching TV", @"Reading", @"Working", @"Traveling", @"Talking", @"Using Technology", @"Exercising", @"Errands"];
+    self.activityValues = @[@"Eating", @"Watching TV", @"Reading", @"Working", @"Traveling", @"Talking", @"Using Technology", @"Exercising", @"Errands", @"Other"];
     self.title = @"Activity";
 }
 
@@ -47,6 +47,24 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([[tableView cellForRowAtIndexPath:indexPath].textLabel.text isEqualToString:@"Other"]) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Other Activity..." message:@"Please enter activity" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *enterAction = [UIAlertAction actionWithTitle:@"Enter" style:UIAlertActionStyleDefault handler:^(UIAlertAction *alertAction) {
+            self.otherLocation = ((UITextField *)[alert.textFields objectAtIndex:0]).text;
+            [self checkForAppropriateSegue:indexPath];
+        }];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:nil];
+        [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+            textField.placeholder = @"Enter activity here";
+        }];
+        [alert addAction:enterAction];
+        [alert addAction:cancelAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    [self checkForAppropriateSegue:indexPath];
+}
+
+- (void)checkForAppropriateSegue:(NSIndexPath *)indexPath {
     if ([self.delegate conformsToProtocol:@protocol(JHDetailViewProtocol)]) {
         [self.delegate changeActivity:self.activityValues[indexPath.row]];
         [self.navigationController popViewControllerAnimated:YES];
@@ -59,7 +77,11 @@
     if ([segue.identifier isEqualToString:@"activitySegue"]) {
         JHAloneViewController *aloneViewController = (JHAloneViewController *)segue.destinationViewController;
         NSMutableDictionary *applicationData = [NSMutableDictionary dictionaryWithDictionary:self.applicationData];
-        applicationData[@"activity"] = self.activityValues[self.tableView.indexPathForSelectedRow.row];
+        if (self.otherLocation) {
+            applicationData[@"activity"] = self.otherLocation;
+        } else {
+            applicationData[@"activity"] = self.activityValues[self.tableView.indexPathForSelectedRow.row];
+        }
         aloneViewController.applicationData = applicationData;
     }
 }
