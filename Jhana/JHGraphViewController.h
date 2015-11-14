@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import <CoreData/CoreData.h>
 #import "UIScrollView+EmptyDataSet.h"
+#import "UIColor+BFPaperColors.h"
 
 @interface JHGraphViewController : UIViewController <GKLineGraphDataSource, GKBarGraphDataSource, UIScrollViewDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 @property (nonatomic, strong) GKLineGraph *lineGraph;

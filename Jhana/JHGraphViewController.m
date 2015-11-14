@@ -9,6 +9,7 @@
 #import "JHGraphViewController.h"
 
 CGFloat const labelPadding = 75.0f;
+CGFloat const labelCombinedHeights = 25.0f;
 
 @interface JHGraphViewController ()
 
@@ -33,47 +34,58 @@ CGFloat const labelPadding = 75.0f;
     self.scrollView.emptyDataSetSource = self;
     self.scrollView.emptyDataSetDelegate = self;
     
-    CGFloat spacing = (self.scrollView.bounds.size.height-30-labelPadding)/4;
+    CGFloat spacing = (self.scrollView.bounds.size.height-labelCombinedHeights-labelPadding)/4;
     
-    CGRect zeroFrame = CGRectMake(0, self.scrollView.bounds.size.height-30-labelPadding, 40, 12);
+    CGRect zeroFrame = CGRectMake(0, self.scrollView.bounds.size.height-labelCombinedHeights-labelPadding, 40, 12);
     self.zeroLabel = [[UILabel alloc] initWithFrame:zeroFrame];
-    self.zeroLabel.text = @"0";
+    self.zeroLabel.text = @"VD";
     self.zeroLabel.font = [UIFont boldSystemFontOfSize:12];
     self.zeroLabel.textColor = [UIColor lightGrayColor];
     self.zeroLabel.textAlignment = NSTextAlignmentRight;
+    self.zeroLabel.numberOfLines = 0;
     [self.scrollView addSubview:self.zeroLabel];
     
-    CGRect oneFrame = CGRectMake(0, self.scrollView.bounds.size.height-30-spacing-labelPadding, 40, 12);
+    CGRect oneFrame = CGRectMake(0, self.scrollView.bounds.size.height-labelCombinedHeights-spacing-labelPadding, 40, 12);
     self.oneLabel = [[UILabel alloc] initWithFrame:oneFrame];
-    self.oneLabel.text = @"1";
+    self.oneLabel.text = @"SD";
     self.oneLabel.font = [UIFont boldSystemFontOfSize:12];
     self.oneLabel.textColor = [UIColor lightGrayColor];
     self.oneLabel.textAlignment = NSTextAlignmentRight;
+    self.zeroLabel.numberOfLines = 0;
     [self.scrollView addSubview:self.oneLabel];
     
-    CGRect twoFrame = CGRectMake(0, (self.scrollView.bounds.size.height-50-labelPadding)/2, 40, 12);
+    CGRect twoFrame = CGRectMake(0, (self.scrollView.bounds.size.height-labelCombinedHeights-labelPadding)/2, 40, 12);
     self.twoLabel = [[UILabel alloc] initWithFrame:twoFrame];
-    self.twoLabel.text = @"2";
+    self.twoLabel.text = @"N";
     self.twoLabel.font = [UIFont boldSystemFontOfSize:12];
     self.twoLabel.textColor = [UIColor lightGrayColor];
     self.twoLabel.textAlignment = NSTextAlignmentRight;
+    self.zeroLabel.numberOfLines = 0;
     [self.scrollView addSubview:self.twoLabel];
     
-    CGRect threeFrame = CGRectMake(0, self.scrollView.bounds.size.height-50-3*spacing-labelPadding, 40, 12);
+    CGRect threeFrame = CGRectMake(0, self.scrollView.bounds.size.height-labelCombinedHeights-3*spacing-labelPadding, 40, 12);
     self.threeLabel = [[UILabel alloc] initWithFrame:threeFrame];
-    self.threeLabel.text = @"3";
+    self.threeLabel.text = @"SA";
     self.threeLabel.font = [UIFont boldSystemFontOfSize:12];
     self.threeLabel.textColor = [UIColor lightGrayColor];
     self.threeLabel.textAlignment = NSTextAlignmentRight;
+    self.zeroLabel.numberOfLines = 0;
     [self.scrollView addSubview:self.threeLabel];
     
     CGRect fourFrame = CGRectMake(0, 0, 40, 12);
     self.fourLabel = [[UILabel alloc] initWithFrame:fourFrame];
-    self.fourLabel.text = @"4";
+    self.fourLabel.text = @"VA";
     self.fourLabel.font = [UIFont boldSystemFontOfSize:12];
     self.fourLabel.textColor = [UIColor lightGrayColor];
     self.fourLabel.textAlignment = NSTextAlignmentRight;
+    self.zeroLabel.numberOfLines = 0;
     [self.scrollView addSubview:self.fourLabel];
+    
+    self.zeroLabel.backgroundColor = [UIColor whiteColor];
+    self.oneLabel.backgroundColor = [UIColor whiteColor];
+    self.twoLabel.backgroundColor = [UIColor whiteColor];
+    self.threeLabel.backgroundColor = [UIColor whiteColor];
+    self.fourLabel.backgroundColor = [UIColor whiteColor];
     
     CGRect mostAttentiveLabelFrame = CGRectMake(0, 325, self.scrollView.frame.size.width, 20);
     self.mostAttentiveLabel = [[UILabel alloc] initWithFrame:mostAttentiveLabelFrame];
@@ -198,7 +210,7 @@ CGFloat const labelPadding = 75.0f;
         self.barGraph.dataSource = self;
 //        self.barGraph.marginBar = 50;
         self.barGraph.barWidth = 40;
-        self.barGraph.barHeight = self.scrollView.bounds.size.height-labelPadding;
+        self.barGraph.barHeight = graphFrame.size.height-25;
         [self.barGraph draw];
         [self.scrollView addSubview:self.barGraph];
         
@@ -230,9 +242,24 @@ CGFloat const labelPadding = 75.0f;
             }
             avgValue = 0;
         }
-        
-        self.mostAttentiveLabel.text = [NSString stringWithFormat:@"You were most attentive: %@", maxKey];
-        self.leastAttentiveLabel.text = [NSString stringWithFormat:@"You were least attentive: %@", minKey];
+        NSMutableString *mostAttentiveString = [NSMutableString stringWithString:@"You were most attentive "];
+        NSMutableString *leastAttentiveString = [NSMutableString stringWithString:@"You were least attentive "];
+        if (self.segmentedControl.selectedSegmentIndex == 1) {
+            [mostAttentiveString appendString:@"at "];
+            [leastAttentiveString appendString:@"at "];
+        } else if (self.segmentedControl.selectedSegmentIndex == 2) {
+            [mostAttentiveString appendString:@"when "];
+            [leastAttentiveString appendString:@"when "];
+        } else {
+            [mostAttentiveString appendString:@"with "];
+            [leastAttentiveString appendString:@"with "];
+        }
+        [mostAttentiveString appendString:maxKey];
+        [leastAttentiveString appendString:minKey];
+        self.mostAttentiveLabel.text = mostAttentiveString;
+        self.mostAttentiveLabel.textAlignment = NSTextAlignmentCenter;
+        self.leastAttentiveLabel.text = leastAttentiveString;
+        self.leastAttentiveLabel.textAlignment = NSTextAlignmentCenter;
     } else {
         [self.barGraph removeFromSuperview];
     }
@@ -261,6 +288,18 @@ CGFloat const labelPadding = 75.0f;
     }
 }
 
+- (UIColor *)blendTwoColors:(UIColor *)color1 withColor:(UIColor *)color2 withAlpha:(CGFloat)alpha {
+    alpha = MIN(1.f, MAX(0.f, alpha));
+    float beta = 1.f - alpha;
+    CGFloat r1, g1, b1, a1, r2, g2, b2, a2;
+    [color1 getRed:&r1 green:&g1 blue:&b1 alpha:&a1];
+    [color2 getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
+    CGFloat r = r1 * beta + r2 * alpha;
+    CGFloat g = g1 * beta + g2 * alpha;
+    CGFloat b = b1 * beta + b2 * alpha;
+    return [UIColor colorWithRed:r green:g blue:b alpha:1.f];
+}
+
 #pragma mark - GKLineGraphDataSource
 
 - (NSInteger)numberOfLines {
@@ -268,25 +307,30 @@ CGFloat const labelPadding = 75.0f;
 }
 
 - (UIColor *)colorForLineAtIndex:(NSInteger)index {
-    NSArray *colors = @[[UIColor gk_turquoiseColor],
-                  [UIColor gk_peterRiverColor],
-                  [UIColor gk_alizarinColor],
-                  [UIColor gk_sunflowerColor]
-                  ];
-    return colors[index%colors.count];
+    NSArray *colors = @[[UIColor paperColorPurple800],
+                        [UIColor paperColorIndigo],
+                        [UIColor paperColorTeal],
+                        [UIColor paperColorLightGreen],
+                        [UIColor paperColorOrange]
+                        ];
+    NSArray *attentionValues = [self valuesForLineAtIndex:0];
+    NSInteger lastAttentionValue = [attentionValues[attentionValues.count-1] integerValue];
+    return colors[lastAttentionValue];
 }
 
 - (NSArray *)valuesForLineAtIndex:(NSInteger)index {
-    NSMutableArray *valuesArray = [NSMutableArray array];
-    for (NSDictionary *entry in self.entryArray) {
-        [valuesArray addObject:[entry valueForKey:@"attention"]];
+    if (index == 0) {
+        NSMutableArray *valuesArray = [NSMutableArray array];
+        for (NSDictionary *entry in self.entryArray) {
+            [valuesArray addObject:[entry valueForKey:@"attention"]];
+        }
+        return valuesArray;
     }
-    return valuesArray;
+    return @[];
 }
 
 - (CFTimeInterval)animationDurationForLineAtIndex:(NSInteger)index {
-    NSArray *animationTimes = @[@1, @1.6, @2.2, @1.4];
-    return [animationTimes[index%animationTimes.count] doubleValue];
+    return .25*[self valuesForLineAtIndex:0].count;
 }
 
 - (NSString *)titleForLineAtIndex:(NSInteger)index {
@@ -321,8 +365,8 @@ CGFloat const labelPadding = 75.0f;
             // People
             NSNumber *isAlone = [entry valueForKey:@"isAlone"];
             if (isAlone == nil || [isAlone isEqualToNumber:@1]) {
-                if (barGraphData[@"You"] == nil) {
-                    barGraphData[@"You"] = [NSMutableArray array];
+                if (barGraphData[@"Yourself"] == nil) {
+                    barGraphData[@"Yourself"] = [NSMutableArray array];
                 }
                 [barGraphData[@"You"] addObject:attention];
             } else {
@@ -352,16 +396,46 @@ CGFloat const labelPadding = 75.0f;
         }
         i++;
     }
+    if (isnan(avgVal)) {
+        // Case where attention has value 0, still want user to see bar
+        return [NSNumber numberWithDouble:1];
+    }
     return [NSNumber numberWithDouble:avgVal*25];
 }
 
 - (UIColor *)colorForBarAtIndex:(NSInteger)index {
-    NSArray *colors = @[[UIColor gk_turquoiseColor],
-                        [UIColor gk_peterRiverColor],
-                        [UIColor gk_alizarinColor],
-                        [UIColor gk_sunflowerColor]
+    NSArray *colors = @[[UIColor paperColorPurple800],
+                        [UIColor paperColorIndigo],
+                        [UIColor paperColorTeal],
+                        [UIColor paperColorLightGreen],
+                        [UIColor paperColorOrange]
                         ];
-    return colors[index%colors.count];
+    double attentionValue = [[self valueForBarAtIndex:index] doubleValue];
+    if (attentionValue == 100) {
+        return colors[4];
+    }
+    if (attentionValue > 75) {
+        return [self blendTwoColors:colors[4] withColor:colors[3] withAlpha:(100-attentionValue)/25];
+    }
+    if (attentionValue == 75) {
+        return colors[3];
+    }
+    if (attentionValue > 50) {
+        return [self blendTwoColors:colors[3] withColor:colors[2] withAlpha:(75-attentionValue)/25];
+    }
+    if (attentionValue == 50) {
+        return colors[2];
+    }
+    if (attentionValue > 25) {
+        return [self blendTwoColors:colors[2] withColor:colors[1] withAlpha:(50-attentionValue)/25];
+    }
+    if (attentionValue == 25) {
+        return colors[1];
+    }
+    if (attentionValue > 1) {
+        return [self blendTwoColors:colors[1] withColor:colors[0] withAlpha:(25-attentionValue)/25];
+    }
+    return colors[0];
 }
 
 - (UIColor *)colorForBarBackgroundAtIndex:(NSInteger)index {
