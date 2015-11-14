@@ -215,7 +215,7 @@ CGFloat const labelCombinedHeights = 25.0f;
         [self.scrollView addSubview:self.barGraph];
         
         double minValue = MAXFLOAT;
-        double maxValue = 0;
+        double maxValue = -MAXFLOAT;
         double avgValue = 0;
         NSString *minKey;
         NSString *maxKey;
