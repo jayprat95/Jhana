@@ -47,7 +47,7 @@
     if ([[tableView cellForRowAtIndexPath:indexPath].textLabel.text isEqualToString:@"Other"]) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Other Location..." message:@"Please enter location" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *enterAction = [UIAlertAction actionWithTitle:@"Enter" style:UIAlertActionStyleDefault handler:^(UIAlertAction *alertAction) {
-            self.otherLocation = ((UITextField *)[alert.textFields objectAtIndex:0]).text;
+            self.otherLocation = [((UITextField *)[alert.textFields objectAtIndex:0]).text capitalizedString];
             [self checkForAppropriateSegue:indexPath];
         }];
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:nil];

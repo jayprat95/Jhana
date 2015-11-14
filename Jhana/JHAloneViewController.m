@@ -42,6 +42,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)personTextFieldWasEdited:(UITextField *)sender {
     if ([self.personTextField.text isEqualToString:@""]) {
         self.submitButton.hidden = YES;
@@ -81,9 +82,7 @@
         [self.navigationController popViewControllerAnimated:YES];
     } else {
         self.applicationData[@"isAlone"] = (self.aloneSegmentedControl.selectedSegmentIndex == 0) ? @YES : @NO;
-//        if ([self.applicationData[@"isAlone"] isEqual: @NO]) {
-            self.applicationData[@"person"] = self.personTextField.text;
-//        }
+        self.applicationData[@"person"] = [self.personTextField.text capitalizedString];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"SaveData" object:self.applicationData];
         UINavigationController *navController = (UINavigationController *)self.navigationController;
         JHAttentionGestureViewController *attentionViewController = (JHAttentionGestureViewController *)navController.viewControllers[0];
