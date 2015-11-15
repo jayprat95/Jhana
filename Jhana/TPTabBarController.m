@@ -71,7 +71,13 @@
 
 - (void)buttonPressed:(id)sender
 { 
-    [Flurry logEvent:@"New Event Creation Started"];
+    
+    
+    NSDictionary *params = @{
+                                @"Phone" : @YES
+                            };
+    
+    [Flurry logEvent:@"New Event Creation Started" withParameters:params timed:YES];
     
     // Get the storyboard named secondStoryBoard from the main bundle:
     // Load the initial view controller from the storyboard.

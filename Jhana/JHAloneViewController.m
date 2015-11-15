@@ -7,6 +7,7 @@
 //
 
 #import "JHAloneViewController.h"
+#import "Flurry.h"
 
 @interface JHAloneViewController ()
 
@@ -86,6 +87,8 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:@"SaveData" object:self.applicationData];
         UINavigationController *navController = (UINavigationController *)self.navigationController;
         JHAttentionGestureViewController *attentionViewController = (JHAttentionGestureViewController *)navController.viewControllers[0];
+        [Flurry logEvent:@"New Event Created"];
+        [Flurry endTimedEvent:@"New Event Creation Started" withParameters:self.applicationData];
         [attentionViewController cancelButtonClicked:self];
     }
 }

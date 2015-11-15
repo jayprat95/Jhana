@@ -21,8 +21,7 @@ static NSString * const kUserHasOnboardedKey = @"user_has_onboarded";
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Register device for local push notifications
-    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+
     
     // Override point for customization after application launch.
     [Flurry startSession:@"2WRXHZNGKJXSCM86D9WZ"];
@@ -43,7 +42,18 @@ static NSString * const kUserHasOnboardedKey = @"user_has_onboarded";
     OnboardingContentViewController *secondPage = [OnboardingContentViewController contentWithTitle:@"Survey With Jhana" body:@"Jhana helps you find trends within your focus" image:nil buttonText:@"" action:nil];
     OnboardingContentViewController *thirdPage = [OnboardingContentViewController contentWithTitle:@"Colors help" body:@"Use Colors to identify your focus" image:color buttonText:@"" action:nil];
     OnboardingContentViewController *fourthPage = [OnboardingContentViewController contentWithTitle:@"Have an Apple Watch?" body:@"Install the Apple Watch app to make fast Reports!" image:watch buttonText:@"" action:nil];
-    OnboardingContentViewController *fifthPage = [OnboardingContentViewController contentWithTitle:@"Ready?" body:@"" image:nil buttonText:@"Get Started" action:^{
+    OnboardingContentViewController *fifthPage = [OnboardingContentViewController contentWithTitle:@"Please enable Notifications" body:@"Get a better overall view on your day with reminders to fill out surveys" image:nil buttonText:@"" action:nil];
+    
+    OnboardingContentViewController *sixthPage = [OnboardingContentViewController contentWithTitle:@"Ready?" body:@"" image:nil buttonText:@"" action:nil];
+    
+    sixthPage.viewDidAppearBlock = ^{
+        // Register device for local push notifications
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+    };
+    
+
+    
+    OnboardingContentViewController *seventhPage = [OnboardingContentViewController contentWithTitle:@"" body:@"Let's get started!!" image:nil buttonText:@"Click Here" action:^{
             UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             TPTabBarController *tabBarController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
             self.window.rootViewController = tabBarController;
@@ -53,7 +63,7 @@ static NSString * const kUserHasOnboardedKey = @"user_has_onboarded";
     
 
     
-    OnboardingViewController *onboardViewController = [OnboardingViewController onboardWithBackgroundImage:image contents:@[firstPage, secondPage, thirdPage, fourthPage, fifthPage]];
+    OnboardingViewController *onboardViewController = [OnboardingViewController onboardWithBackgroundImage:image contents:@[firstPage, secondPage, thirdPage, fourthPage, fifthPage, sixthPage, seventhPage]];
     onboardViewController.shouldFadeTransitions = YES;
     onboardViewController.fadePageControlOnLastPage = YES;
     onboardViewController.fadeSkipButtonOnLastPage = YES;
@@ -94,6 +104,7 @@ static NSString * const kUserHasOnboardedKey = @"user_has_onboarded";
 
 - (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler  {
     if ([identifier isEqualToString:@"ACTION_MUTE"]) {
+        [Flurry logEvent:@"Notification_Muted"];
         NSArray *scheduledNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
         NSDate *date = [NSDate date];
         NSDate *dateHourAhead = [date dateByAddingTimeInterval:60*60];
