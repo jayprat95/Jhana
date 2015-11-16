@@ -24,6 +24,20 @@
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
     [self setUpPicker];
+    if ([WCSession isSupported]) {
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+        NSDictionary *timeStarted = @{@"start": [NSDate date]};
+        [session sendMessage:timeStarted
+                                   replyHandler:^(NSDictionary *reply) {
+                                       //handle reply from iPhone app here
+                                   }
+                                   errorHandler:^(NSError *error) {
+                                       //catch any errors here
+                                   }
+         ];
+    }
 }
 
 - (void)didDeactivate {

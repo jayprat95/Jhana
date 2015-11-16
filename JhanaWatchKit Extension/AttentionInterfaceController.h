@@ -8,8 +8,9 @@
 
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
+#import <WatchConnectivity/WatchConnectivity.h>
 
-@interface AttentionInterfaceController : WKInterfaceController
+@interface AttentionInterfaceController : WKInterfaceController <WCSessionDelegate>
 @property (strong, nonatomic) IBOutlet WKInterfacePicker *attentionPicker;
 @property (strong, nonatomic) NSArray *attentionValues;
 @property NSInteger selectedAttentionValue;

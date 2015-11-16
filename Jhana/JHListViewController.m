@@ -121,6 +121,17 @@
 }
 
 - (void)session:(nonnull WCSession *)session didReceiveMessage:(nonnull NSDictionary<NSString *,id> *)message replyHandler:(nonnull void (^)(NSDictionary<NSString *,id> * _Nonnull))replyHandler {
+    
+    NSDate *startDate = message[@"start"];
+    if (startDate) {
+        // User started a watch survey
+        NSDictionary *params = @{
+                                 @"Phone": @NO
+                                 };
+        [Flurry logEvent:@"New Event Creation Started" withParameters:params timed:YES];
+        return;
+    }
+    
     // Create Entity
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"JHReport" inManagedObjectContext:self.managedObjectContext];
     
@@ -146,6 +157,9 @@
             [[NSNotificationCenter defaultCenter] postNotificationName:@"RefreshGraph" object:self];
         });
     }
+    
+    [Flurry logEvent:@"New Event Created"];
+    [Flurry endTimedEvent:@"New Event Creation Started" withParameters:message];
 }
 
 - (IBAction)editButtonClicked:(id)sender {
