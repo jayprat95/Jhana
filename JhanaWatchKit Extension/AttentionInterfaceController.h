@@ -11,7 +11,7 @@
 #import <WatchConnectivity/WatchConnectivity.h>
 
 @interface AttentionInterfaceController : WKInterfaceController <WCSessionDelegate>
-@property (strong, nonatomic) IBOutlet WKInterfacePicker *attentionPicker;
+@property (weak, nonatomic) IBOutlet WKInterfacePicker *attentionPicker;
 @property (strong, nonatomic) NSArray *attentionValues;
 @property NSInteger selectedAttentionValue;
 @property BOOL hasPreviouslyLoaded;

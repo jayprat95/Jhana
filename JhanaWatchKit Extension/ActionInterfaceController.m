@@ -61,7 +61,7 @@
                                }
      ];
     WKAlertAction *action = [WKAlertAction actionWithTitle:@"OK" style:WKAlertActionStyleCancel handler:^{
-        [self popToRootController];
+        [self performSelector:@selector(popToRootController) withObject:nil afterDelay:1.0];
     }];
     [self presentAlertControllerWithTitle:@"Hooray!" message:@"Thanks for filling out this survey." preferredStyle:WKAlertControllerStyleAlert actions:@[action]];
     [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeSuccess];
