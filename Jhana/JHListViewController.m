@@ -131,7 +131,7 @@ static NSString * const kUserID = @"user_id";
         NSDictionary *params = @{
                                  @"Phone": @NO
                                  };
-        [Flurry logEvent:[NSString stringWithFormat:@"@%@-New_Event_Creation_Started", userID] withParameters:params timed:YES];
+        [Flurry logEvent:[NSString stringWithFormat:@"%@-New_Event_Creation_Started", userID] withParameters:params timed:YES];
         return;
     }
     
@@ -161,8 +161,8 @@ static NSString * const kUserID = @"user_id";
         });
     }
     
-    [Flurry logEvent:[NSString stringWithFormat:@"@%@-New_Event_Created", userID]];
-    [Flurry endTimedEvent:[NSString stringWithFormat:@"@%@-New_Event_Creation_Started", userID] withParameters:message];
+    [Flurry logEvent:[NSString stringWithFormat:@"%@-New_Event_Created", userID]];
+    [Flurry endTimedEvent:[NSString stringWithFormat:@"%@-New_Event_Creation_Started", userID] withParameters:message];
 }
 
 - (IBAction)editButtonClicked:(id)sender {
@@ -362,7 +362,7 @@ NSString * const NotificationActionOneIdent = @"ACTION_MUTE";
         
         if (record) {
             NSString *userID = [[NSUserDefaults standardUserDefaults] valueForKey:kUserID];
-            [Flurry logEvent:[NSString stringWithFormat:@"@%@-Deleted_Report", userID]];
+            [Flurry logEvent:[NSString stringWithFormat:@"%@-Deleted_Report", userID]];
             [self.fetchedResultsController.managedObjectContext deleteObject:record];
             NSError *error = nil;
             if (![self.managedObjectContext save:&error]) {

@@ -121,7 +121,7 @@ static NSString * const kUserID = @"user_id";
 - (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler  {
     if ([identifier isEqualToString:@"ACTION_MUTE"]) {
         NSString *userID = [[NSUserDefaults standardUserDefaults] valueForKey:kUserID];
-        [Flurry logEvent:[NSString stringWithFormat:@"@%@-Notification_Muted", userID]];
+        [Flurry logEvent:[NSString stringWithFormat:@"%@-Notification_Muted", userID]];
         NSArray *scheduledNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
         NSDate *date = [NSDate date];
         NSDate *dateHourAhead = [date dateByAddingTimeInterval:60*60];

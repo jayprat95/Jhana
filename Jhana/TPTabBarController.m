@@ -78,7 +78,8 @@ static NSString * const kUserID = @"user_id";
                                 @"Phone" : @YES
                             };
     NSString *userID = [[NSUserDefaults standardUserDefaults] valueForKey:kUserID];
-    [Flurry logEvent:[NSString stringWithFormat:@"@%@-New_Event_Creation_Started", userID] withParameters:params timed:YES];
+    userID = [NSString stringWithFormat:@"%@-New_Event_Creation_Started", userID];
+    [Flurry logEvent:userID withParameters:params timed:YES];
     
     // Get the storyboard named secondStoryBoard from the main bundle:
     // Load the initial view controller from the storyboard.

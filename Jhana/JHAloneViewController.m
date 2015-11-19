@@ -90,8 +90,8 @@ static NSString * const kUserID = @"user_id";
         UINavigationController *navController = (UINavigationController *)self.navigationController;
         JHAttentionGestureViewController *attentionViewController = (JHAttentionGestureViewController *)navController.viewControllers[0];
         NSString *userID = [[NSUserDefaults standardUserDefaults] valueForKey:kUserID];
-        [Flurry logEvent:[NSString stringWithFormat:@"@%@-New_Event_Created", userID]];
-        [Flurry endTimedEvent:[NSString stringWithFormat:@"@%@-New_Event_Creation_Started", userID] withParameters:self.applicationData];
+        [Flurry logEvent:[NSString stringWithFormat:@"%@-New_Event_Created", userID]];
+        [Flurry endTimedEvent:[NSString stringWithFormat:@"%@-New_Event_Creation_Started", userID] withParameters:self.applicationData];
         [attentionViewController cancelButtonClicked:self];
     }
 }
