@@ -33,7 +33,7 @@
 }
 
 - (void)setUpPicker {
-    self.locationValues = @[@"Work", @"Home", @"Restaurant", @"Coffee Shop", @"Bar/Pub", @"Store", @"Outside", @"Hotel/Lodging", @"Friend's House", @"Other"];
+    self.locationValues = @[@"Work", @"School", @"Home", @"Restaurant", @"Coffee Shop", @"Bar/Pub", @"Store", @"Outside", @"Hotel/Lodging", @"Friend's House", @"Other"];
     NSMutableArray *pickerItems = [NSMutableArray array];
     for (int i=0; i<self.locationValues.count; i++) {
         WKPickerItem *pickerItem = [[WKPickerItem alloc] init];

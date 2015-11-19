@@ -18,7 +18,7 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.locationValues = @[@"Work", @"Home", @"Restaurant", @"Coffee Shop", @"Bar/Pub", @"Store", @"Outside", @"Hotel/Lodging", @"Friend's House", @"Other"];
+    self.locationValues = @[@"Work", @"School", @"Home", @"Restaurant", @"Coffee Shop", @"Bar/Pub", @"Store", @"Outside", @"Hotel/Lodging", @"Friend's House", @"Other"];
     self.title = @"Location";
 }
 
