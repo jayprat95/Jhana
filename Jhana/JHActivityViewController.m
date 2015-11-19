@@ -66,7 +66,12 @@
 
 - (void)checkForAppropriateSegue:(NSIndexPath *)indexPath {
     if ([self.delegate conformsToProtocol:@protocol(JHDetailViewProtocol)]) {
-        [self.delegate changeActivity:self.activityValues[indexPath.row]];
+        if (self.otherLocation) {
+            [self.delegate changeActivity:self.otherLocation];
+        } else {
+            [self.delegate changeActivity:self.activityValues[indexPath.row]];
+        }
+        
         [self.navigationController popViewControllerAnimated:YES];
     } else {
         [self performSegueWithIdentifier:@"activitySegue" sender:self];

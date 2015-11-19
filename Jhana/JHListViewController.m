@@ -162,7 +162,7 @@ static NSString * const kUserID = @"user_id";
     }
     
     [Flurry logEvent:[NSString stringWithFormat:@"%@-New_Event_Created", userID]];
-    [Flurry endTimedEvent:[NSString stringWithFormat:@"%@-New_Event_Creation_Started", userID] withParameters:message];
+    [Flurry endTimedEvent:[NSString stringWithFormat:@"%@-New_Event_Creation_Started", userID] withParameters:nil];
 }
 
 - (IBAction)editButtonClicked:(id)sender {

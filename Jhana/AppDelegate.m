@@ -115,7 +115,8 @@ static NSString * const kUserID = @"user_id";
 }
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(nonnull UILocalNotification *)notification {
-    
+    NSString *userID = [[NSUserDefaults standardUserDefaults] valueForKey:kUserID];
+    [Flurry logEvent:[NSString stringWithFormat:@"%@-Notification_Received", userID]];
 }
 
 - (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler  {
