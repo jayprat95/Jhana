@@ -14,6 +14,7 @@
 #import "Flurry.h"  
 #import "AppDelegate.h"
 
+static NSString * const kUserID = @"user_id";
 
 @interface TPTabBarController ()
 
@@ -76,8 +77,8 @@
     NSDictionary *params = @{
                                 @"Phone" : @YES
                             };
-    
-    [Flurry logEvent:@"New Event Creation Started" withParameters:params timed:YES];
+    NSString *userID = [[NSUserDefaults standardUserDefaults] valueForKey:kUserID];
+    [Flurry logEvent:[NSString stringWithFormat:@"@%@-New_Event_Creation_Started", userID] withParameters:params timed:YES];
     
     // Get the storyboard named secondStoryBoard from the main bundle:
     // Load the initial view controller from the storyboard.

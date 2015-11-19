@@ -9,6 +9,8 @@
 #import "JHAloneViewController.h"
 #import "Flurry.h"
 
+static NSString * const kUserID = @"user_id";
+
 @interface JHAloneViewController ()
 
 @end
@@ -87,8 +89,9 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:@"SaveData" object:self.applicationData];
         UINavigationController *navController = (UINavigationController *)self.navigationController;
         JHAttentionGestureViewController *attentionViewController = (JHAttentionGestureViewController *)navController.viewControllers[0];
-        [Flurry logEvent:@"New Event Created"];
-        [Flurry endTimedEvent:@"New Event Creation Started" withParameters:self.applicationData];
+        NSString *userID = [[NSUserDefaults standardUserDefaults] valueForKey:kUserID];
+        [Flurry logEvent:[NSString stringWithFormat:@"@%@-New_Event_Created", userID]];
+        [Flurry endTimedEvent:[NSString stringWithFormat:@"@%@-New_Event_Creation_Started", userID] withParameters:self.applicationData];
         [attentionViewController cancelButtonClicked:self];
     }
 }

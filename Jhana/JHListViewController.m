@@ -15,6 +15,8 @@
 #import "UIScrollView+EmptyDataSet.h"
 #import <CoreData/CoreData.h>
 
+static NSString * const kUserID = @"user_id";
+
 @interface JHListViewController () <NSFetchedResultsControllerDelegate, WCSessionDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *editButton;
@@ -122,13 +124,14 @@
 
 - (void)session:(nonnull WCSession *)session didReceiveMessage:(nonnull NSDictionary<NSString *,id> *)message replyHandler:(nonnull void (^)(NSDictionary<NSString *,id> * _Nonnull))replyHandler {
     
+    NSString *userID = [[NSUserDefaults standardUserDefaults] valueForKey:kUserID];
     NSDate *startDate = message[@"start"];
     if (startDate) {
         // User started a watch survey
         NSDictionary *params = @{
                                  @"Phone": @NO
                                  };
-        [Flurry logEvent:@"New Event Creation Started" withParameters:params timed:YES];
+        [Flurry logEvent:[NSString stringWithFormat:@"@%@-New_Event_Creation_Started", userID] withParameters:params timed:YES];
         return;
     }
     
@@ -158,8 +161,8 @@
         });
     }
     
-    [Flurry logEvent:@"New Event Created"];
-    [Flurry endTimedEvent:@"New Event Creation Started" withParameters:message];
+    [Flurry logEvent:[NSString stringWithFormat:@"@%@-New_Event_Created", userID]];
+    [Flurry endTimedEvent:[NSString stringWithFormat:@"@%@-New_Event_Creation_Started", userID] withParameters:message];
 }
 
 - (IBAction)editButtonClicked:(id)sender {
@@ -358,7 +361,8 @@ NSString * const NotificationActionOneIdent = @"ACTION_MUTE";
         NSManagedObject *record = [self.fetchedResultsController objectAtIndexPath:indexPath];
         
         if (record) {
-            [Flurry logEvent:@"Deleted Report"];
+            NSString *userID = [[NSUserDefaults standardUserDefaults] valueForKey:kUserID];
+            [Flurry logEvent:[NSString stringWithFormat:@"@%@-Deleted_Report", userID]];
             [self.fetchedResultsController.managedObjectContext deleteObject:record];
             NSError *error = nil;
             if (![self.managedObjectContext save:&error]) {

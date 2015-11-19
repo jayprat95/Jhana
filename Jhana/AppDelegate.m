@@ -12,6 +12,7 @@
 #import "TPTabBarController.h"
 
 static NSString * const kUserHasOnboardedKey = @"user_has_onboarded";
+static NSString * const kUserID = @"user_id";
 
 @interface AppDelegate ()
 
@@ -39,6 +40,21 @@ static NSString * const kUserHasOnboardedKey = @"user_has_onboarded";
     UIImage *color = [UIImage imageNamed:@"color_scale"];
     UIImage *watch = [UIImage imageNamed:@"watch_icon"];
     OnboardingContentViewController *firstPage = [OnboardingContentViewController contentWithTitle:@"Welcome to Jhana!" body:@"Journal. Reflect. Analyze." image:brain buttonText:@"" action:nil];
+    NSString *userID = [[NSUserDefaults standardUserDefaults] valueForKey:kUserID];
+    if (!userID) {
+        firstPage.viewDidAppearBlock = ^{
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Please Enter User ID..." message:@"If you are seeing this as a participant of the study, please contact the researcher responsible for the study." preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *enterAction = [UIAlertAction actionWithTitle:@"Enter" style:UIAlertActionStyleDefault handler:^(UIAlertAction *alertAction) {
+                NSString *userID = ((UITextField *)[alert.textFields objectAtIndex:0]).text;
+                [[NSUserDefaults standardUserDefaults] setValue:userID forKey:kUserID];
+            }];
+            [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+                textField.placeholder = @"Enter User ID Here";
+            }];
+            [alert addAction:enterAction];
+            [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+        };
+    }
     OnboardingContentViewController *secondPage = [OnboardingContentViewController contentWithTitle:@"Survey With Jhana" body:@"Jhana helps you find trends within your focus" image:nil buttonText:@"" action:nil];
     OnboardingContentViewController *thirdPage = [OnboardingContentViewController contentWithTitle:@"Colors help" body:@"Use Colors to identify your focus" image:color buttonText:@"" action:nil];
     OnboardingContentViewController *fourthPage = [OnboardingContentViewController contentWithTitle:@"Have an Apple Watch?" body:@"Install the Apple Watch app to make fast Reports!" image:watch buttonText:@"" action:nil];
@@ -104,7 +120,8 @@ static NSString * const kUserHasOnboardedKey = @"user_has_onboarded";
 
 - (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler  {
     if ([identifier isEqualToString:@"ACTION_MUTE"]) {
-        [Flurry logEvent:@"Notification_Muted"];
+        NSString *userID = [[NSUserDefaults standardUserDefaults] valueForKey:kUserID];
+        [Flurry logEvent:[NSString stringWithFormat:@"@%@-Notification_Muted", userID]];
         NSArray *scheduledNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
         NSDate *date = [NSDate date];
         NSDate *dateHourAhead = [date dateByAddingTimeInterval:60*60];
