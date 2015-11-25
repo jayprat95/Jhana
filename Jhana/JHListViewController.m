@@ -125,15 +125,6 @@ static NSString * const kUserID = @"user_id";
 - (void)session:(nonnull WCSession *)session didReceiveMessage:(nonnull NSDictionary<NSString *,id> *)message replyHandler:(nonnull void (^)(NSDictionary<NSString *,id> * _Nonnull))replyHandler {
     
     NSString *userID = [[NSUserDefaults standardUserDefaults] valueForKey:kUserID];
-    NSDate *startDate = message[@"start"];
-    if (startDate) {
-        // User started a watch survey
-        NSDictionary *params = @{
-                                 @"Phone": @NO
-                                 };
-        [Flurry logEvent:[NSString stringWithFormat:@"%@-New_Event_Creation_Started", userID] withParameters:params timed:YES];
-        return;
-    }
     
     // Create Entity
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"JHReport" inManagedObjectContext:self.managedObjectContext];
@@ -147,8 +138,21 @@ static NSString * const kUserID = @"user_id";
     [record setValue:message[@"location"] forKey:@"location"];
     [record setValue:message[@"isAlone"] forKey:@"isAlone"];
     [record setValue:message[@"person"] forKey:@"person"];
-    [record setValue:[NSDate date] forKey:@"createdAt"];
-    [record setValue:[NSDate date] forKey:@"timeStamp"];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"h:mm:ss a"];
+    NSDate *currDate = [NSDate date];
+    NSString *dateString = [formatter stringFromDate:currDate];
+    NSMutableDictionary *mutableMessage = [NSMutableDictionary dictionaryWithDictionary:message];
+    mutableMessage[@"createdAt"] = dateString;
+    
+    NSString *timeStampString = [formatter stringFromDate:message[@"timeStamp"]];
+    mutableMessage[@"timeStamp"] = timeStampString;
+    
+    [record setValue:currDate forKey:@"createdAt"];
+    [record setValue:currDate forKey:@"timeStamp"];
+    
+    mutableMessage[@"phone"] = @NO;
     
     // Save Record
     NSError *error = nil;
@@ -160,9 +164,7 @@ static NSString * const kUserID = @"user_id";
             [[NSNotificationCenter defaultCenter] postNotificationName:@"RefreshGraph" object:self];
         });
     }
-    
-    [Flurry logEvent:[NSString stringWithFormat:@"%@-New_Event_Created", userID]];
-    [Flurry endTimedEvent:[NSString stringWithFormat:@"%@-New_Event_Creation_Started", userID] withParameters:nil];
+    [Flurry logEvent:[NSString stringWithFormat:@"%@-New_Event_Created", userID] withParameters:mutableMessage];
 }
 
 - (IBAction)editButtonClicked:(id)sender {

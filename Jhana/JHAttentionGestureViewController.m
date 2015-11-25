@@ -119,9 +119,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"attentionSegue"]) {
         JHLocationViewController *locationViewController = (JHLocationViewController *)segue.destinationViewController;
-        NSMutableDictionary *applicationData = [NSMutableDictionary dictionary];
-        applicationData[@"attention"] = [NSNumber numberWithInt:self.attentionValue];
-        locationViewController.applicationData = applicationData;
+        self.applicationData[@"attention"] = [NSNumber numberWithInt:self.attentionValue];
+        locationViewController.applicationData = self.applicationData;
     }
 }
 

@@ -90,8 +90,18 @@ static NSString * const kUserID = @"user_id";
         UINavigationController *navController = (UINavigationController *)self.navigationController;
         JHAttentionGestureViewController *attentionViewController = (JHAttentionGestureViewController *)navController.viewControllers[0];
         NSString *userID = [[NSUserDefaults standardUserDefaults] valueForKey:kUserID];
-        [Flurry logEvent:[NSString stringWithFormat:@"%@-New_Event_Created", userID]];
-        [Flurry endTimedEvent:[NSString stringWithFormat:@"%@-New_Event_Creation_Started", userID] withParameters:self.applicationData];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"h:mm:ss a"];
+        NSDate *currDate = [NSDate date];
+        NSString *dateString = [formatter stringFromDate:currDate];
+        NSMutableDictionary *mutableMessage = [NSMutableDictionary dictionaryWithDictionary:self.applicationData];
+        mutableMessage[@"createdAt"] = dateString;
+        
+        NSString *timeStampString = [formatter stringFromDate:self.applicationData[@"timeStamp"]];
+        mutableMessage[@"timeStamp"] = timeStampString;
+        
+        mutableMessage[@"phone"] = @1;
+        [Flurry logEvent:[NSString stringWithFormat:@"%@-New_Event_Created", userID] withParameters:mutableMessage];
         [attentionViewController cancelButtonClicked:self];
     }
 }

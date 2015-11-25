@@ -24,20 +24,7 @@
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
     [self setUpPicker];
-    if ([WCSession isSupported]) {
-        WCSession *session = [WCSession defaultSession];
-        session.delegate = self;
-        [session activateSession];
-        NSDictionary *timeStarted = @{@"start": [NSDate date]};
-        [session sendMessage:timeStarted
-                                   replyHandler:^(NSDictionary *reply) {
-                                       //handle reply from iPhone app here
-                                   }
-                                   errorHandler:^(NSError *error) {
-                                       //catch any errors here
-                                   }
-         ];
-    }
+    
 }
 
 - (void)didDeactivate {
@@ -46,6 +33,8 @@
 }
 
 - (void)setUpPicker {
+    self.applicationData = [NSMutableDictionary dictionary];
+    self.applicationData[@"timeStamp"] = [NSDate date];
     self.attentionValues = @[@"veryUnfocused", @"unfocused", @"neutral", @"focused", @"veryFocused"];
     NSMutableArray *pickerItems = [NSMutableArray array];
     for (int i=0; i<self.attentionValues.count; i++) {
@@ -79,9 +68,8 @@
 
 - (id)contextForSegueWithIdentifier:(NSString *)segueIdentifier {
     if ([segueIdentifier isEqualToString:@"attention"]) {
-        NSMutableDictionary *applicationData = [NSMutableDictionary dictionary];
-        applicationData[@"attention"] = [NSNumber numberWithInt:self.selectedAttentionValue];
-        return applicationData;
+        self.applicationData[@"attention"] = [NSNumber numberWithInt:self.selectedAttentionValue];
+        return self.applicationData;
     }
     return nil;
 }

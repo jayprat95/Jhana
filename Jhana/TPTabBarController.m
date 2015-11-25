@@ -71,15 +71,8 @@ static NSString * const kUserID = @"user_id";
 
 
 - (void)buttonPressed:(id)sender
-{ 
-    
-    
-    NSDictionary *params = @{
-                                @"Phone" : @YES
-                            };
+{
     NSString *userID = [[NSUserDefaults standardUserDefaults] valueForKey:kUserID];
-    userID = [NSString stringWithFormat:@"%@-New_Event_Creation_Started", userID];
-    [Flurry logEvent:userID withParameters:params timed:YES];
     
     // Get the storyboard named secondStoryBoard from the main bundle:
     // Load the initial view controller from the storyboard.
@@ -88,6 +81,8 @@ static NSString * const kUserID = @"user_id";
 
     JHAttentionGestureViewController *addVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"JHAttentionGestureViewController"];
     addVC.managedObjectContext = self.managedObjectContext;
+    addVC.applicationData = [NSMutableDictionary dictionary];
+    addVC.applicationData[@"timeStamp"] = [NSDate date];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:addVC];
     // Presuming a view controller is asking for the modal transition in the first place.
     [self presentViewController:navController animated:YES completion:nil];
